@@ -1,7 +1,7 @@
 import {useState} from "react"
 import {useRouter} from "next/router"
 
-import {questionList, listenerTypeList} from "../utils/constant";
+import {questionList, listenerTypeList} from "../../utils/constant";
 
 export default function TestPage() {
   const [currentNum, setCurrentNum] = useState(0);
