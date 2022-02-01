@@ -19,7 +19,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "baseUrl": ".",
   "exclude": [
     "node_modules"
   ],
