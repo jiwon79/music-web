@@ -1,4 +1,4 @@
-import {questionType} from "./types";
+import {questionType, listenerType} from "./types";
 
 export const questionList: Array<questionType> = [
   {
@@ -16,3 +16,10 @@ export const questionList: Array<questionType> = [
     ]
   }
 ];
+
+export const listenerTypeList: Array<listenerType> = [
+  {
+    name: 'name1',
+    description: 'description1'
+  }
+]
