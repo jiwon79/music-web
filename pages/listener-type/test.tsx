@@ -1,13 +1,14 @@
 import {useState} from "react"
 import {useRouter} from "next/router"
 
-import {questionList} from "../utils/constant";
+import {questionList, listenerTypeList} from "../utils/constant";
 
 export default function TestPage() {
   const [currentNum, setCurrentNum] = useState(0);
   const router = useRouter();
   const question = questionList[currentNum];
 
+  console.log(listenerTypeList);
   const nextAction = () => {
     if (currentNum === questionList.length-1) {
       router.push('/listener-type/result/3').then(r => console.log(r));
