@@ -1,21 +1,31 @@
 import {useState} from "react"
 import {useRouter} from "next/router"
 
-import {questionList, listenerTypeList} from "../../utils/constant";
+import {questionList} from "../../utils/constant";
 
 export default function TestPage() {
-  const [currentNum, setCurrentNum] = useState(0);
+  const [currentNum, setCurrentNum] = useState<number>(0);
+  const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
   const router = useRouter();
   const question = questionList[currentNum];
 
-  console.log(listenerTypeList);
-  const nextAction = () => {
+  const nextAction = (answerNum) => {
     if (currentNum === questionList.length-1) {
       router.push('/listener-type/result/3').then(r => console.log(r));
     } else {
       setCurrentNum(currentNum+1);
+      setUserAnswers([...userAnswers, answerNum]);
     }
   }
+
+  const answerComponents = question.answers.map((answer, index) =>
+    <button
+      key={index}
+      onClick={() => nextAction(index)}
+    >
+      {answer}
+    </button>
+  );
 
   return (
     <div>
@@ -23,12 +33,7 @@ export default function TestPage() {
       <div>
         {question.question}
       </div>
-      <div>
-        {question.answers}
-      </div>
-      <button onClick={() => nextAction()}>
-        다음 문제
-      </button>
+      {answerComponents}
     </div>
   )
 }
