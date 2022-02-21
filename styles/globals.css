@@ -14,6 +14,7 @@ body {
   margin: 0;
   font-family: galmuri, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #ddd;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   border: 1px #000 solid;
+  background-color: #fff;
 }
 
 a {
