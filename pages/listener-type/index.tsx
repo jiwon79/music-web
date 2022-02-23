@@ -14,22 +14,25 @@ export default function ListenerType() {
           T.ype<br/>
           T.est
         </div>
-        <div>
-
+        <div className={styles.content}>
+          <Link href={"/listener-type/test"}>
+            <a className={styles.startButton}>
+              <div>
+                <Image
+                  src={"/icons/musicIcon.png"}
+                  alt={"start button"}
+                  width={76}
+                  height={76}
+                />
+                <p>START</p>
+              </div>
+            </a>
+          </Link>
+          <p>
+            Hello, World!
+          </p>
+          <p>Music is the art of arranging sounds in time through the elements of melody, harmony, rhythm, and timbre. It is one of the universal cultural aspects of all human societies. General definitions of music include common elements such as pitch rhythm (and its associated concepts tempo, meter, and articulation), dynamics, and the sonic qualities of timbre and texture. Different styles or types of music may emphasize, de-emphasize or omit some of these elements</p>
         </div>
-        <Link href={"/listener-type/test"}>
-          <a>
-            <div className={styles.startButton}>
-              <Image
-                src={"/icons/musicIcon.png"}
-                alt={"start button"}
-                width={76}
-                height={76}
-              />
-              <p>START</p>
-            </div>
-          </a>
-        </Link>
       </div>
     </div>
   )
