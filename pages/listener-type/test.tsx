@@ -33,10 +33,11 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header />
-      <p>Q0{currentNum+1}.</p>
+      <p className={styles.questionNumber}>Q0{currentNum+1}.</p>
       <p className={styles.question}>{question.question}</p>
+      <div className={styles.line}></div>
       {answerComponents}
-      <progress max={questionList.length} value={currentNum} />
+      <progress max={questionList.length} value={currentNum} className={styles.progress}/>
     </div>
   )
 }
