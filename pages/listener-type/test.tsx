@@ -24,6 +24,7 @@ export default function TestPage() {
     <button
       key={index}
       onClick={() => nextAction(index)}
+      className={styles.answer}
     >
       {answer}
     </button>
@@ -33,9 +34,7 @@ export default function TestPage() {
     <div className={styles.container}>
       <Header />
       <p>Q0{currentNum+1}.</p>
-      <div>
-        {question.question}
-      </div>
+      <p className={styles.question}>{question.question}</p>
       {answerComponents}
       <progress max={questionList.length} value={currentNum} />
     </div>
