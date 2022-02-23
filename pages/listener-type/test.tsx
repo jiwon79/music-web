@@ -2,6 +2,8 @@ import {useState} from "react"
 import {useRouter} from "next/router"
 
 import {questionList} from "../../utils/constant";
+import Header from "../../components/listener-type/Header";
+import styles from "../../styles/listener-type/Test.module.css"
 
 export default function TestPage() {
   const [currentNum, setCurrentNum] = useState<number>(0);
@@ -28,7 +30,8 @@ export default function TestPage() {
   );
 
   return (
-    <div>
+    <div className={styles.container}>
+      <Header />
       {currentNum}
       <div>
         {question.question}
