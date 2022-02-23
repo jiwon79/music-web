@@ -2,8 +2,24 @@
     padding: 24px 32px 32px 32px;
 }
 
-
 .title {
     font-family: 'galmuri-bold', sans-serif;
     font-size: 56px;
+}
+
+.startButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 156px;
+    height: 156px;
+    background-color: #000;
+}
+
+.startButton p {
+    font-family: galmuri-bold, serif;
+    font-size: 15px;
+    color: #f5fa10;
+    margin-top: 5px;
 }

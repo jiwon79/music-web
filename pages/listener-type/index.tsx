@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Image from 'next/image'
+
 import styles from "../../styles/listener-type/index.module.css"
 import Header from "./../../components/listener-type/Header"
 
@@ -12,21 +14,23 @@ export default function ListenerType() {
           T.ype<br/>
           T.est
         </div>
-        <button>
-          <Link href={"/listener-type/test"}>
-            <a>테스트 하기</a>
-          </Link>
-        </button>
+        <div>
+
+        </div>
+        <Link href={"/listener-type/test"}>
+          <a>
+            <div className={styles.startButton}>
+              <Image
+                src={"/icons/musicIcon.png"}
+                alt={"start button"}
+                width={76}
+                height={76}
+              />
+              <p>START</p>
+            </div>
+          </a>
+        </Link>
       </div>
-      <table>
-        <tr>
-          <td>item1</td>
-          <td>item2</td>
-          <td>item3</td>
-          <td>item4</td>
-          <td>item5</td>
-        </tr>
-      </table>
     </div>
   )
 }
