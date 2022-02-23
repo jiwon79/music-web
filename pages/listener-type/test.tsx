@@ -32,11 +32,12 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header />
-      {currentNum}
+      <p>Q0{currentNum+1}.</p>
       <div>
         {question.question}
       </div>
       {answerComponents}
+      <progress max={questionList.length} value={currentNum} />
     </div>
   )
 }
