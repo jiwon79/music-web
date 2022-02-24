@@ -4,6 +4,7 @@ import {useRouter} from "next/router"
 import {questionList} from "../../utils/constant";
 import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Test.module.css"
+import Menu from "../../components/listener-type/Menu";
 
 export default function TestPage() {
   const router = useRouter();
@@ -35,6 +36,7 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header />
+      <Menu/>
       <div className={styles.question}>
         <p>Q0{currentNum+1}.</p>
         <p>{question.question}</p>
