@@ -35,12 +35,13 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header />
-      <p className={styles.questionNumber}>Q0{currentNum+1}.</p>
-      <p className={styles.question}>{question.question}</p>
-      <div className={styles.line}></div>
+      <div className={styles.question}>
+        <p>Q0{currentNum+1}.</p>
+        <p>{question.question}</p>
+      </div>
       {answerComponents}
       <div className={styles.progressBar}>
-        <div style={{ width: `${progress}%`}} className={styles.progress}></div>
+        <div style={{ width: `${progress}%`}} className={styles.progress}> </div>
       </div>
     </div>
   )
