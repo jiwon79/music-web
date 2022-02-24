@@ -6,10 +6,12 @@ import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Test.module.css"
 
 export default function TestPage() {
+  const router = useRouter();
   const [currentNum, setCurrentNum] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
-  const router = useRouter();
   const question = questionList[currentNum];
+  const progress = (currentNum*100/questionList.length).toString();
+  console.log(currentNum);
 
   const nextAction = (answerNum) => {
     if (currentNum === questionList.length-1) {
@@ -37,7 +39,9 @@ export default function TestPage() {
       <p className={styles.question}>{question.question}</p>
       <div className={styles.line}></div>
       {answerComponents}
-      <progress max={questionList.length} value={currentNum} className={styles.progress}/>
+      <div className={styles.progressBar}>
+        <div style={{ width: `${progress}%`}} className={styles.progress}></div>
+      </div>
     </div>
   )
 }
