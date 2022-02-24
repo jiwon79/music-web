@@ -61,7 +61,37 @@ export const questionList: Array<questionType> = [
 
 export const listenerTypeList: Array<listenerType> = [
   {
-    name: 'name1',
-    description: 'description1'
+    name: '체리쉬',
+    description: '음악이 지닌 소중한 가치를 깨우치는 유형',
+    keywords: ['편안', '따뜻', '소확행'],
+    listenMusic: [
+      '감동을 주는 표현들을 마음에 간직해요.',
+      '귀에 익은 선율이 주는 안정된 느낌을 선호해요.',
+      '시간이 흐를수록 그 음악이 지닌 가치가 견고해짐을 느껴요.',
+    ],
+    findMusic: [
+      '기분 좋은 날씨에 적당한 바람이 살랑일 때',
+      '익숙함에 가려진 소중함을 느끼고 싶을 때',
+      '불안한 기운이 엄습해 안정을 되찾고 싶을 때',
+    ],
+    enjoyMusic: [
+      'CD, LP 등을 차곡차곡 수집해요.',
+      '대놓고 드러내진 않더라도 진심을 다해 아티스트를 응원해요.',
+      '비슷한 느낌을 주는 또 다른 노래가 있나 찾아보기도 해요.',
+    ],
+    recommend: [
+      {
+        title: '그대와 영원히',
+        singer: '이문세',
+      },
+      {
+        title: '네가 사랑한 것들을 기억할게',
+        singer: '알레프'
+      },
+      {
+        title: 'Catching Feelings',
+        singer: 'Justin Bieber'
+      }
+    ]
   }
 ]

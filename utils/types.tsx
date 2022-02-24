@@ -6,4 +6,14 @@ export interface questionType {
 export interface listenerType {
   name: string,
   description: string,
+  keywords: Array<string>,
+  listenMusic: Array<string>,
+  findMusic: Array<string>,
+  enjoyMusic: Array<string>,
+  recommend: Array<Music>
+}
+
+interface Music {
+  title: string,
+  singer: string,
 }
