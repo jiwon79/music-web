@@ -9,7 +9,7 @@ export default function ListenerType() {
   return (
     <div>
       <div className={styles.container}>
-        <Header />
+        <Header title={"What's your listener type?"}/>
         <div className={styles.title}>
           L.istener<br/>
           T.ype<br/>

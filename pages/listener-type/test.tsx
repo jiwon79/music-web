@@ -11,7 +11,7 @@ export default function TestPage() {
   const [currentNum, setCurrentNum] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
   const question = questionList[currentNum];
-  const progress = (currentNum*100/questionList.length).toString();
+  const progress = ((currentNum+1)*100/questionList.length).toString();
   console.log(currentNum);
 
   const nextAction = (answerNum) => {
@@ -35,7 +35,7 @@ export default function TestPage() {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <Header title={"What's your listener type?"}/>
       <Menu/>
       <div className={styles.question}>
         <p>Q0{currentNum+1}.</p>
