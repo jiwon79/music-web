@@ -1,0 +1,25 @@
+.menu {
+  width: 100%;
+  /*TODO: height를 width의 20%로 맞추는 방법 찾기*/
+  height: 60px;
+  display: table;
+  border-collapse: collapse;
+  background-color: #fff;
+
+  .menu__item {
+    display: table-cell;
+    width: 20%;
+    height: 100%;
+    border: 2px solid black;
+    vertical-align: middle;
+  }
+
+  .menu__image {
+    width: 60%;
+    height: 60%;
+    background-color: black;
+    margin: 0 auto;
+  }
+}
+
+

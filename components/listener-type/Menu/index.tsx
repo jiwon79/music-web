@@ -1,4 +1,4 @@
-import styles from "../../styles/listener-type/Menu.module.scss"
+import styles from "./style.module.scss"
 
 export default function Menu() {
   return (

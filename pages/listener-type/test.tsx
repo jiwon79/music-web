@@ -2,9 +2,9 @@ import {useState} from "react"
 import {useRouter} from "next/router"
 
 import {questionList} from "../../utils/constant";
-import Header from "../../components/listener-type/Header";
+import Header from "../../components/listener-type/Header/";
 import styles from "../../styles/listener-type/Test.module.scss"
-import Menu from "../../components/listener-type/Menu";
+import Menu from "../../components/listener-type/Menu/";
 
 export default function TestPage() {
   const router = useRouter();

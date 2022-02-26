@@ -2,8 +2,8 @@ import Link from "next/link"
 import Image from 'next/image'
 
 import styles from "../../styles/listener-type/index.module.scss"
-import Header from "./../../components/listener-type/Header"
-import Menu from "../../components/listener-type/Menu";
+import Header from "./../../components/listener-type/Header/"
+import Menu from "../../components/listener-type/Menu/";
 
 export default function ListenerType() {
   return (
