@@ -16,7 +16,7 @@ export default function TestPage() {
 
   const nextAction = (answerNum) => {
     if (currentNum === questionList.length-1) {
-      router.push('/listener-type/result/3').then(r => console.log(r));
+      router.push('/listener-type/result/0').then(r => console.log(r));
     } else {
       setCurrentNum(currentNum+1);
       setUserAnswers([...userAnswers, answerNum]);
