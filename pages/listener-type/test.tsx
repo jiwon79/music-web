@@ -5,6 +5,7 @@ import {questionList} from "../../utils/constant";
 import Header from "../../components/listener-type/Header/";
 import styles from "../../styles/listener-type/Test.module.scss"
 import Menu from "../../components/listener-type/Menu/";
+import MusicBar from "../../components/listener-type/MusicBar";
 
 export default function TestPage() {
   const router = useRouter();
@@ -36,6 +37,7 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header title={"What's your listener type?"}/>
+      <MusicBar/>
       <Menu/>
       <div className={styles.question}>
         <p>Q0{currentNum+1}.</p>

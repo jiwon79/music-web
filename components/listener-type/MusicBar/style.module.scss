@@ -1,3 +1,5 @@
+@import "../../common/styleGuide.module";
+
 .musicBar {
   display: flex;
   align-items: flex-end;
@@ -12,7 +14,7 @@
     width: 100%;
     margin: 0 1px 0 1px;
     height: 100%;
-    background-color: white;
+    background-color: $brand-01;
     transform-origin: bottom;
     animation: music 1s ease-in-out Infinite Alternate;
   }
