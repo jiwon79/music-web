@@ -1,8 +1,11 @@
 import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
+import {useRouter} from "next/router";
 
 export default function Loading() {
+  const router = useRouter();
+  console.log(router);
   const loading = useRef<string>('결과 분석 중.');
   const [loadingText, setLoadingText] = useState('결과 분석 중.');
 

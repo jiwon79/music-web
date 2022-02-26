@@ -13,11 +13,15 @@ export default function TestPage() {
   const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
   const question = questionList[currentNum];
   const progress = ((currentNum+1)*100/questionList.length).toString();
-  console.log(currentNum);
 
   const nextAction = (answerNum) => {
-    if (currentNum === questionList.length-1) {
-      router.push('/listener-type/result/0').then(r => console.log(r));
+    if (currentNum === questionList.length - 1) {
+      router.push({
+        pathname: '/listener-type/loading',
+        query: {
+          answers: [...userAnswers, answerNum]
+        },
+      }).then(r => console.log(r));
     } else {
       setCurrentNum(currentNum+1);
       setUserAnswers([...userAnswers, answerNum]);
