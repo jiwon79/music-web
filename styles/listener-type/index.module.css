@@ -1,0 +1,45 @@
+.container {
+    padding: 24px 32px 32px 32px;
+}
+
+.title {
+    font-family: 'galmuri-bold', sans-serif;
+    font-size: 56px;
+}
+
+.content {
+    padding: 24px 0 24px 0;
+    border: 2px solid #000000;
+    border-left: 0;
+    border-right: 0;
+}
+
+.content p:nth-child(2) {
+    font-family: galmuri-bold, serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.content p:nth-child(3) {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.startButton div {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 156px;
+    height: 156px;
+    margin: 0 0 8px 8px;
+    background-color: #000;
+}
+
+.startButton div p {
+    font-family: galmuri-bold, serif;
+    font-size: 15px;
+    color: #f5fa10;
+    margin-top: 5px;
+}
