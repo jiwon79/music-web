@@ -2,22 +2,25 @@ import Header from "../../../components/listener-type/Header";
 import Menu from "../../../components/listener-type/Menu";
 import styles from "../../../styles/listener-type/Result.module.css"
 import {listenerTypeList} from "../../../utils/constant";
+import {listenerType} from "../../../utils/types";
 
-export default function ResultPage({ listenerType }) {
-  console.log(listenerType);
+interface props {
+  listenerType: listenerType
+}
 
+export default function ResultPage({ listenerType }: props) {
   return (
     <div>
       <div className={styles.container}>
         <Header title={"Hello, CLASSIC!"}/>
-        <div>
-          <p>00:03 / 2:35</p>
-          <p>{listenerType.recommend[0].title}</p>
-          {/*<p>{listenerType.recommend[0].singer}</p>*/}
+        <div className={styles.music}>
+          <p className={styles.music__play}>00:03 / 2:35</p>
+          <p className={styles.music__title}>{listenerType.recommend[0].title}</p>
+          <p className={styles.music__singer}>{listenerType.recommend[0].singer}</p>
         </div>
-        <div>
-          {/*<p>{listenerType.name}</p>*/}
-          {/*<p>{listenerType.default}</p>*/}
+        <div className={styles.listenerType}>
+          <p className={styles.typeName}>{listenerType.name}</p>
+          <p className={styles.typeDesc}>{listenerType.description}</p>
         </div>
       </div>
       <Menu/>
