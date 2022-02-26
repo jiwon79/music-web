@@ -1,0 +1,32 @@
+@import "../../components/common/styleGuide.module";
+
+.container {
+  padding: 24px 32px 24px 32px;
+  background-color: $brand-01;
+  height: 100vh;
+}
+
+.content {
+  align-content: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .image {
+    text-align: center;
+    margin: 0 auto;
+    width: 156px;
+    height: 156px;
+    background-color: #dddddd;
+  }
+
+  .text {
+    margin-top: 28px;
+    text-align: center;
+    font-family: galmuri-bold, sans-serif;
+    font-size: 32px;
+    line-height: 43px;
+  }
+}

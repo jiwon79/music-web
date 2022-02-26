@@ -28,8 +28,9 @@ export default function Loading() {
     <div className={styles.container}>
       <Header title={""} />
       <div className={styles.content}>
-        <div>icon</div>
-        <p>{loadingText}</p>
+        <div className={styles.image}>
+        </div>
+        <p className={styles.text}>{loadingText}</p>
       </div>
     </div>
   )
