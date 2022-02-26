@@ -1,6 +1,6 @@
 import Header from "../../../components/listener-type/Header";
 import Menu from "../../../components/listener-type/Menu";
-import styles from "../../../styles/listener-type/Result.module.css"
+import styles from "../../../styles/listener-type/Result.module.scss"
 import {listenerTypeList} from "../../../utils/constant";
 import {listenerType} from "../../../utils/types";
 

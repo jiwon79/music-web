@@ -1,4 +1,4 @@
-import styles from "./../../styles/listener-type/Header.module.css"
+import styles from "../../styles/listener-type/Header.module.scss"
 
 export default function Header({title}) {
   const delayList = [0.3, 0.1, 0.2, 0.4, 0.5, 0.9, 1.0, 0.8, 0.7, 0.1, 0.5];
