@@ -1,6 +1,9 @@
 import styles from "./../../styles/listener-type/Header.module.css"
 
 export default function Header({title}) {
+  const delayList = [0.3, 0.1, 0.2, 0.4, 0.5, 0.9, 1.0, 0.8, 0.7, 0.1, 0.5];
+  const scaleList = [0.3, 0.3, 0.3, 0.4, 1.0, 1.0, 1.0, 1.0, 1.0, 0.4, 0.1];
+
   return (
     <div className={styles.header}>
       <div className={styles.toolBar}>
@@ -21,7 +24,21 @@ export default function Header({title}) {
           </svg>
         </div>
       </div>
-      <div className={styles.musicBar}></div>
+      <div className={styles.musicBar}>
+        {delayList.map((delay, index) => {
+          const delayString = delay.toString() + 's';
+          const scaleString = "scale(1, " + scaleList[index].toString() + ')';
+          return <div
+            key={index.toString()}
+            style={{
+              animationDelay: delayString,
+              // animation: "move 1s ease-in Infinite Alternate"
+              transform: scaleString
+            }}
+          >
+          </div>
+        })}
+      </div>
     </div>
   )
 }
