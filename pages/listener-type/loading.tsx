@@ -5,26 +5,44 @@ import {useRouter} from "next/router";
 
 export default function Loading() {
   const router = useRouter();
-  console.log(router);
   const loading = useRef<string>('결과 분석 중.');
   const [loadingText, setLoadingText] = useState('결과 분석 중.');
+  const [isLoading, setIsLoading] = useState(true);
+  const [repeat, setRepeat] = useState();
+  const delay = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
   useEffect(() => {
-    setInterval(function() {
-      if (loading.current === '결과 분석 중.') {
-        loading.current = '결과 분석 중..';
-        setLoadingText('결과 분석 중..');
-      } else if (loading.current === '결과 분석 중..') {
-        loading.current = '결과 분석 중...';
-        setLoadingText('결과 분석 중...');
-      } else {
-        loading.current = '결과 분석 중.';
-        setLoadingText('결과 분석 중.');
-      }
-      console.log(loading.current);
-      console.log(1);
-    }, 1000);
-  }, []);
+    async function wait() {
+      await delay(4000);
+      setIsLoading(false);
+      await router.push({
+        pathname: '/listener-type/result/0'
+      });
+    }
+    wait();
+  }, [])
+
+  useEffect(() => {
+    let interval;
+    if (isLoading) {
+      interval = setInterval(function () {
+        console.log(loading.current);
+        if (loading.current === '결과 분석 중.') {
+          loading.current = '결과 분석 중..';
+          setLoadingText('결과 분석 중..');
+        } else if (loading.current === '결과 분석 중..') {
+          loading.current = '결과 분석 중...';
+          setLoadingText('결과 분석 중...');
+        } else {
+          loading.current = '결과 분석 중.';
+          setLoadingText('결과 분석 중.');
+        }
+      }, 1000);
+      setRepeat(interval)
+    } else {
+      clearInterval(repeat);
+    }
+  }, [isLoading]);
 
 
   return (

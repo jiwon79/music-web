@@ -22,6 +22,7 @@ export default function TestPage() {
           answers: [...userAnswers, answerNum]
         },
       }).then(r => console.log(r));
+      setCurrentNum(0);
     } else {
       setCurrentNum(currentNum+1);
       setUserAnswers([...userAnswers, answerNum]);
