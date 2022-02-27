@@ -2,9 +2,10 @@ import {useState} from "react"
 import {useRouter} from "next/router"
 
 import {questionList} from "../../utils/constant";
-import Header from "../../components/listener-type/Header";
-import styles from "../../styles/listener-type/Test.module.css"
-import Menu from "../../components/listener-type/Menu";
+import Header from "../../components/listener-type/Header/";
+import styles from "../../styles/listener-type/Test.module.scss"
+import Menu from "../../components/listener-type/Menu/";
+import MusicBar from "../../components/listener-type/MusicBar";
 
 export default function TestPage() {
   const router = useRouter();
@@ -12,11 +13,16 @@ export default function TestPage() {
   const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
   const question = questionList[currentNum];
   const progress = ((currentNum+1)*100/questionList.length).toString();
-  console.log(currentNum);
 
   const nextAction = (answerNum) => {
-    if (currentNum === questionList.length-1) {
-      router.push('/listener-type/result/0').then(r => console.log(r));
+    if (currentNum === questionList.length - 1) {
+      router.push({
+        pathname: '/listener-type/loading',
+        query: {
+          answers: [...userAnswers, answerNum]
+        },
+      }).then(r => console.log(r));
+      setCurrentNum(0);
     } else {
       setCurrentNum(currentNum+1);
       setUserAnswers([...userAnswers, answerNum]);
@@ -36,6 +42,7 @@ export default function TestPage() {
   return (
     <div className={styles.container}>
       <Header title={"What's your listener type?"}/>
+      <MusicBar/>
       <Menu/>
       <div className={styles.question}>
         <p>Q0{currentNum+1}.</p>
@@ -43,7 +50,7 @@ export default function TestPage() {
       </div>
       {answerComponents}
       <div className={styles.progressBar}>
-        <div style={{ width: `${progress}%`}} className={styles.progress}> </div>
+        <div style={{ width: `${progress}%`}}> </div>
       </div>
     </div>
   )

@@ -1,0 +1,54 @@
+@import "../../components/common/styleGuide.module";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    min-height: 100vh;
+    padding: 24px 32px 32px 32px;
+    background-color: $brand-01;
+}
+
+.title {
+    font-family: 'galmuri-bold', sans-serif;
+    font-size: 56px;
+}
+
+.content {
+    margin-top: 24px;
+    padding: 24px 0 24px 0;
+    border: 2px solid #000000;
+    border-left: 0;
+    border-right: 0;
+
+    .content__title {
+        font-family: galmuri-bold, serif;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .content__desc {
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.startButton div {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 156px;
+    height: 156px;
+    margin: 0 0 8px 8px;
+    background-color: #000;
+
+    p {
+        font-family: galmuri-bold, serif;
+        font-size: 15px;
+        color: #f5fa10;
+        margin-top: 5px;
+    }
+}

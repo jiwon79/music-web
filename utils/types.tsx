@@ -15,5 +15,5 @@ export interface listenerType {
 
 interface Music {
   title: string,
-  singer: string,
+  artist: string,
 }

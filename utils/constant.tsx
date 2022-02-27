@@ -82,15 +82,15 @@ export const listenerTypeList: Array<listenerType> = [
     recommend: [
       {
         title: '그대와 영원히',
-        singer: '이문세',
+        artist: '이문세',
       },
       {
         title: '네가 사랑한 것들을 기억할게',
-        singer: '알레프'
+        artist: '알레프'
       },
       {
         title: 'Catching Feelings',
-        singer: 'Justin Bieber'
+        artist: 'Justin Bieber'
       }
     ]
   }

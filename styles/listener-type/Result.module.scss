@@ -1,0 +1,80 @@
+@import "../../components/common/styleGuide.module";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $brand-01;
+    min-height: 100vh;
+}
+
+.content {
+    min-height: 100%;
+    padding: 24px 32px 28px 32px;
+}
+
+.music {
+    .music__play {
+        font-family: galmuri-bold, serif;
+        font-size: 16px;
+        margin-bottom: 13px;
+    }
+
+    .music__title {
+        font-family: galmuri-bold, serif;
+        font-size: 32px;
+        line-height: 43px;
+        margin-bottom: 6px;
+    }
+
+    .music__artist {
+        font-family: galmuri-bold, serif;
+        font-size: 20px;
+        line-height: 17px;
+    }
+}
+
+.listenerType {
+    margin: 22px 0 32px 0;
+    padding: 22px 0 40px 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    .typeName {
+        font-family: galmuri-bold, serif;
+        font-size: 56px;
+        line-height: 75px;
+    }
+
+    .typeDesc {
+        background-color: black;
+        padding: 10px;
+        font-family: galmuri-bold, serif;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        color: $brand-01;
+    }
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    background-color: $brand-01;
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 148px;
+        height: 69px;
+        background-color: black;
+        color: $brand-01;
+
+        p {
+            text-align: center;
+            font-family: galmuri-bold, serif;
+            font-size: 15px;
+        }
+    }
+}
