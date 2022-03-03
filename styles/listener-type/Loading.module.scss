@@ -15,11 +15,13 @@
   transform: translate(-50%, -50%);
 
   .image {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     width: 156px;
     height: 156px;
-    background-color: #dddddd;
+    background-color: #000;
   }
 
   .text {
