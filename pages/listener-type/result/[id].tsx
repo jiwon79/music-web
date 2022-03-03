@@ -34,10 +34,13 @@ export default function ResultPage({ listenerType }: props) {
           descList={listenerType.listenMusic}
         />
         <Description
-          title={"나는 이럴 때 음악을 찾는다!"}
+          title={"내가 음악을 찾을 때,"}
           descList={listenerType.findMusic}
         />
-
+        <Description
+          title={"좋아하는 음악을 즐길 때,"}
+          descList={listenerType.enjoyMusic}
+        />
 
         <div className={styles.action}>
           <Link href={"/listener-type/"}>
