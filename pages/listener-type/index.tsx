@@ -21,7 +21,7 @@ export default function ListenerType() {
             <a className={styles.startButton}>
               <div>
                 <Image
-                  src={"/icons/musicIcon.png"}
+                  src={"/icons/musicalnote-light.png"}
                   alt={"start button"}
                   width={76}
                   height={76}
