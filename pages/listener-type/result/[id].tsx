@@ -8,6 +8,7 @@ import styles from "../../../styles/listener-type/Result.module.scss"
 import {listenerTypeList} from "../../../utils/constant";
 import {listenerType} from "../../../utils/types";
 import Description from "../../../components/listener-type/Description";
+import Album from "../../../components/listener-type/Album";
 
 interface props {
   listenerType: listenerType
@@ -31,15 +32,11 @@ export default function ResultPage({ listenerType }: props) {
 
         <p className={styles.title}>음악과 함께할 때, KEYWORD!</p>
         <div className={styles.keywords}>
-          <Border innerWidth={12} outerWidth={84}>
-            <p>{listenerType.keywords[0]}</p>
-          </Border>
-          <Border innerWidth={12} outerWidth={84}>
-            <p>{listenerType.keywords[1]}</p>
-          </Border>
-          <Border innerWidth={12} outerWidth={84}>
-            <p>{listenerType.keywords[2]}</p>
-          </Border>
+          {listenerType.keywords.map(keyword =>
+            <Border innerWidth={12} outerWidth={84} key={keyword}>
+              <p>{keyword}</p>
+            </Border>
+          )}
         </div>
       </div>
 
@@ -59,7 +56,12 @@ export default function ResultPage({ listenerType }: props) {
 
       <div className={styles.recommend}>
         <p className={styles.title}>이런 음악과 잘 맞으실 거에요!</p>
-
+        {listenerType.recommend.map((music) =>
+          <Album
+            key={JSON.stringify(music)}
+            music={music}
+          />
+        )}
       </div>
 
       <div className={styles.action}>

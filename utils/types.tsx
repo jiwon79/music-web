@@ -13,7 +13,8 @@ export interface listenerType {
   recommend: Array<Music>
 }
 
-interface Music {
+export interface Music {
   title: string,
   artist: string,
+  youtube: string,
 }

@@ -74,10 +74,23 @@
     }
 }
 
+.recommend {
+    margin-top: 32px;
+
+    .title {
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: galmuri-bold, serif;
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
 .action {
     display: flex;
     justify-content: space-between;
     background-color: $brand-01;
+    margin-top: 16px;
 
     .button {
         display: flex;
