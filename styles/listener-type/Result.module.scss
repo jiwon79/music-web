@@ -6,10 +6,6 @@
     justify-content: space-between;
     background-color: $brand-01;
     min-height: 100vh;
-}
-
-.content {
-    min-height: 100%;
     padding: 24px 32px 28px 32px;
 }
 
@@ -35,7 +31,7 @@
 }
 
 .listenerType {
-    margin: 22px 0 32px 0;
+    margin: 22px 0 0 0;
     padding: 22px 0 40px 0;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -47,6 +43,7 @@
     }
 
     .typeDesc {
+        margin-top: 16px;
         background-color: black;
         padding: 10px;
         font-family: galmuri-bold, serif;
@@ -54,6 +51,26 @@
         line-height: 20px;
         text-align: center;
         color: $brand-01;
+    }
+
+    .title {
+        margin: 32px 0 24px 0;
+        text-align: center;
+        font-family: galmuri-bold, serif;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .keywords {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            color: $brand-01;
+            font-family: galmuri-bold, serif;
+            font-size: 20px;
+            height: 27px;
+        }
     }
 }
 
