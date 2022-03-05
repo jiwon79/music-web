@@ -48,18 +48,15 @@ export default function Loading() {
 
   return (
     <div className={styles.container}>
-      <Header title={""} />
-      <div className={styles.content}>
-        <div className={styles.image}>
-          <Image
-            src="/icons/hotbeverage-light.png"
-            alt="loading icon"
-            width={76}
-            height={76}
-          />
-        </div>
-        <p className={styles.text}>{loadingText}</p>
+      <div className={styles.image}>
+        <Image
+          src="/icons/hotbeverage-light.png"
+          alt="loading icon"
+          width={76}
+          height={76}
+        />
       </div>
+      <p className={styles.text}>{loadingText}</p>
     </div>
   )
 }
