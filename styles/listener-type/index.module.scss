@@ -3,8 +3,8 @@
 .container {
     display: flex;
     flex-direction: column;
+    min-height: calc(100vh - 60px);
     //justify-content: space-between;
-    min-height: 100vh;
     padding: 24px 32px 32px 32px;
     background-color: $brand-01;
 }
@@ -28,7 +28,6 @@
     }
 
     .content__desc {
-
         font-size: 12px;
         line-height: 16px;
     }
@@ -42,7 +41,7 @@
     align-items: center;
     width: 156px;
     height: 156px;
-    margin: 0 0 8px 8px;
+    margin: 0 0 0 8px;
     background-color: #000;
 
     p {

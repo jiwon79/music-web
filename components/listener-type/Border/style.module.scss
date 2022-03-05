@@ -1,0 +1,17 @@
+@import "../../common/styleGuide.module";
+
+.container {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.innerBox {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background-color: $brand-01;
+}

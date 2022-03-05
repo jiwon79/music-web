@@ -83,14 +83,22 @@ export const listenerTypeList: Array<listenerType> = [
       {
         title: '그대와 영원히',
         artist: '이문세',
+        youtube: 'https://www.youtube.com/watch?v=YY54m0w0aYY',
       },
       {
         title: '네가 사랑한 것들을 기억할게',
-        artist: '알레프'
+        artist: '알레프',
+        youtube: 'https://www.youtube.com/watch?v=gwtC4Ovh7bM',
       },
       {
         title: 'Catching Feelings',
-        artist: 'Justin Bieber'
+        artist: 'Justin Bieber',
+        youtube: 'https://www.youtube.com/watch?v=axyfEusEuho',
+      },
+      {
+        title: 'Bad Day',
+        artist: 'Daniel Powter',
+        youtube: 'https://www.youtube.com/watch?v=gH476CxJxfg',
       }
     ]
   }

@@ -3,23 +3,23 @@
 .container {
   padding: 24px 32px 24px 32px;
   background-color: $brand-01;
-  height: 100vh;
-}
 
-.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-content: center;
-  position: absolute;
+
+  height: 100vh;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
   .image {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     width: 156px;
     height: 156px;
-    background-color: #dddddd;
+    background-color: #000;
   }
 
   .text {

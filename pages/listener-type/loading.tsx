@@ -2,6 +2,7 @@ import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
 import {useRouter} from "next/router";
+import Image from "next/image";
 
 export default function Loading() {
   const router = useRouter();
@@ -47,12 +48,15 @@ export default function Loading() {
 
   return (
     <div className={styles.container}>
-      <Header title={""} />
-      <div className={styles.content}>
-        <div className={styles.image}>
-        </div>
-        <p className={styles.text}>{loadingText}</p>
+      <div className={styles.image}>
+        <Image
+          src="/icons/hotbeverage-light.png"
+          alt="loading icon"
+          width={76}
+          height={76}
+        />
       </div>
+      <p className={styles.text}>{loadingText}</p>
     </div>
   )
 }
