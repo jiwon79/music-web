@@ -1,6 +1,12 @@
 import { useEffect } from 'react';
 import Head from "next/head";
 
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
+
 export default function KakaoShare() {
   useEffect(() => {
     return () => {
@@ -10,7 +16,6 @@ export default function KakaoShare() {
 
   const initKakao = () => {
     if (window.Kakao) {
-      console.log(1)
       const kakao = window.Kakao;
       if (!kakao.isInitialized()) {
         kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
