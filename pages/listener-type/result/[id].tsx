@@ -9,6 +9,7 @@ import {listenerTypeList} from "../../../utils/constant";
 import {listenerType} from "../../../utils/types";
 import Description from "../../../components/listener-type/Description";
 import Album from "../../../components/listener-type/Album";
+import KakaoShare from "../../../components/listener-type/KakaoShare";
 
 interface props {
   listenerType: listenerType
@@ -80,6 +81,7 @@ export default function ResultPage({ listenerType }: props) {
           </a>
         </Link>
       </div>
+      <KakaoShare />
     </div>
   )
 }
