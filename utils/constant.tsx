@@ -101,5 +101,51 @@ export const listenerTypeList: Array<listenerType> = [
         youtube: 'https://www.youtube.com/watch?v=gH476CxJxfg',
       }
     ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
   }
 ]
