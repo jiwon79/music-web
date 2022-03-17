@@ -27,7 +27,6 @@ export default function KakaoShare() {
   const shareKakao = () => {
     const url = window.location.href;
     initKakao();
-    console.log(window.Kakao.Link);
 
     window.Kakao.Link.sendDefault({
       objectType: "feed",
@@ -55,7 +54,6 @@ export default function KakaoShare() {
   return (
     <div className="Kakao">
       <Head>
-        {/*<script async src="https://developers.kakao.com/sdk/js/kakao.js"></script>*/}
         <script async src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         <title>리스너 타입</title>
       </Head>
