@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from 'next/image'
+import Head from 'next/head'
 
 import styles from "../../styles/listener-type/index.module.scss"
 import Header from "./../../components/listener-type/Header/"
@@ -9,6 +10,14 @@ import MusicBar from "../../components/listener-type/MusicBar";
 export default function ListenerType() {
   return (
     <div>
+      <Head>
+        <title>Listener Type</title>
+        <meta property="og:type" content="game" />
+        <meta property="og:title" content="Listener-type Test title" />
+        <meta property="og:description" content="listener type test description" />
+        <meta property="og:image" content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" />
+      </Head>
+
       <div className={styles.container}>
         <Header title={"What's your listener type?"}/>
         <MusicBar />
