@@ -16,10 +16,11 @@ export default function UrlCopy({ url }) {
         type="text"
         ref={copyLinkRef}
         value={url}
+        onChange={(e) => {return e}}
         className={styles.input}
       />
       <button onClick={() => copyTextUrl()}>
-        링크
+        링크 복사
       </button>
     </div>
   )
