@@ -1,28 +1,16 @@
-import Link from "next/link";
+import {useState} from "react";
+import SideBar from "./sidebar";
 
 export default function MainLayout({ children, title }) {
+  const [sidebar, setSidebar] = useState(false);
+
   return (
     <div>
       <div>
         {title}
+        <SideBar />
       </div>
-      <ul>
-        <li>
-          <Link href={"/past"}>
-            <a>과거</a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/current"}>
-            <a>현재</a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/game"}>
-            <a>게임/테스트</a>
-          </Link>
-        </li>
-      </ul>
+
       {children}
     </div>
   )
