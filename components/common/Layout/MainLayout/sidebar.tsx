@@ -1,10 +1,19 @@
 import Link from "next/link";
 import styles from "./sidebar.module.scss"
 
-export default function SideBar({isOpen}) {
+export default function SideBar({isOpen, handleIsOpen}) {
   return (
-    <div className={`${isOpen ? styles.open : styles.close} ${styles.overlay}`}>
-      <div className={styles.menu}>
+    <div
+      className={`${isOpen ? styles.open : styles.close} ${styles.overlay}`}
+      onClick={() => handleIsOpen()}
+    >
+      <div
+        className={styles.menu}
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button onClick={() => handleIsOpen()}>
+          X
+        </button>
         <ul>
           <li>
             <Link href={"/"}>

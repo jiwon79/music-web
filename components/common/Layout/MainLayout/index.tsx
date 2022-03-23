@@ -5,13 +5,15 @@ import styles from "./style.module.scss"
 
 export default function MainLayout({ children, title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const handleIsSidebarOpen = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
 
   return (
     <div>
       <div className={styles.header}>
         <button
-          onClick={() =>
-            setIsSidebarOpen(!isSidebarOpen)}
+          onClick={() => handleIsSidebarOpen()}
         >
           토글
         </button>
@@ -19,7 +21,10 @@ export default function MainLayout({ children, title }) {
           {title}
         </p>
       </div>
-      <SideBar isOpen={isSidebarOpen} />
+      <SideBar
+        isOpen={isSidebarOpen}
+        handleIsOpen={handleIsSidebarOpen}
+      />
 
       {children}
     </div>
