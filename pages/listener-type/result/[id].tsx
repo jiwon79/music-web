@@ -10,6 +10,8 @@ import {listenerType} from "../../../utils/types";
 import Description from "../../../components/listener-type/Description";
 import Album from "../../../components/listener-type/Album";
 import KakaoShare from "../../../components/listener-type/KakaoShare";
+import TwitterShare from "../../../components/listener-type/TwitterShare";
+import FacebookShare from "../../../components/listener-type/FacebookShare";
 import UrlCopy from "../../../components/listener-type/UrlCopy";
 
 interface props {
@@ -84,7 +86,9 @@ export default function ResultPage({ listenerType }: props) {
       </div>
 
       <KakaoShare />
-      <UrlCopy url={"https://google.com"}/>
+      <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
+      <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
+      <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
     </div>
   )
 }
