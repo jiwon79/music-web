@@ -1,0 +1,19 @@
+.menu {
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  //top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &.open {
+    background-color: rgba(10, 10, 10, 0.3);
+  }
+}
+
+.close .menu {
+  transform: translate(-100%, 0);
+}
