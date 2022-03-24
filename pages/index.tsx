@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import {useRouter} from "next/router";
 
 import MainLayout from "../components/common/Layout/MainLayout";
@@ -10,7 +9,6 @@ export default function Home() {
 
   return (
     <MainLayout title={"ILLUSION"}>
-
       <div className={styles.container}>
         <Head>
           <title>0 Corporation</title>
@@ -21,9 +19,7 @@ export default function Home() {
         <main className={styles.main}>
           <h1 className={styles.title}>
             <span>Welcome to </span>
-            <Link href="./listener-type">
-              <a>0 Corporation</a>
-            </Link>
+            <span>0 Corporation</span>
           </h1>
 
           <p className={styles.description}>
