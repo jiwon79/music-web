@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styles from "./sidebar.module.scss"
 
-export default function SideBar({isOpen, handleIsOpen}) {
+export default function SideBar({isOpen, handleSideOption}) {
   return (
     <div className={`${isOpen ? styles.open : styles.close} ${styles.menu}`}>
-      <button onClick={() => handleIsOpen()}>
+      <button onClick={() => handleSideOption('NULL')}>
         X
       </button>
       <ul>
