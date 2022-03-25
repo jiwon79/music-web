@@ -33,7 +33,7 @@ export default function MainLayout({ children, title }) {
         handleSideOption={handleSideOption}
       />
       <SearchBar
-        sideOption={sideOption}
+        isOpen={sideOption == 'SEARCH'}
         handleSideOption={handleSideOption}
       />
 
