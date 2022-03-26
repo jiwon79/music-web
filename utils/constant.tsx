@@ -1,5 +1,6 @@
 import {listenerType, questionType} from "./types";
 import {ListenerTypeName} from "./enum";
+import {Channel} from "diagnostics_channel";
 
 export const questionList: Array<questionType> = [
   {
@@ -176,6 +177,327 @@ export const questionList: Array<questionType> = [
   }
 ];
 
+export const listenerTypeMap = {
+  'cherish': {
+    name: '체리쉬',
+    description: '음악이 지닌 소중한 가치를 깨우치는 유형',
+    keywords: ['편안', '따뜻', '소확행'],
+    listenMusic: [
+      '감동을 주는 표현들을 마음에 간직해요.',
+      '귀에 익은 선율이 주는 안정된 느낌을 선호해요.',
+      '시간이 흐를수록 그 음악이 지닌 가치가 견고해짐을 느껴요.',
+    ],
+    findMusic: [
+      '기분 좋은 날씨에 적당한 바람이 살랑일 때',
+      '익숙함에 가려진 소중함을 느끼고 싶을 때',
+      '불안한 기운이 엄습해 안정을 되찾고 싶을 때',
+    ],
+    enjoyMusic: [
+      'CD, LP 등을 차곡차곡 수집해요.',
+      '대놓고 드러내진 않더라도 진심을 다해 아티스트를 응원해요.',
+      '비슷한 느낌을 주는 또 다른 노래가 있나 찾아보기도 해요.',
+    ],
+    recommend: [
+      {
+        title: '그대와 영원히',
+        artist: '이문세',
+        youtube: 'https://www.youtube.com/watch?v=YY54m0w0aYY',
+      },
+      {
+        title: '네가 사랑한 것들을 기억할게',
+        artist: '알레프',
+        youtube: 'https://www.youtube.com/watch?v=gwtC4Ovh7bM',
+      },
+      {
+        title: 'Catching Feelings',
+        artist: 'Justin Bieber',
+        youtube: 'https://www.youtube.com/watch?v=axyfEusEuho',
+      },
+      {
+        title: 'Bad Day',
+        artist: 'Daniel Powter',
+        youtube: 'https://www.youtube.com/watch?v=gH476CxJxfg',
+      }
+    ]
+  },
+  'innocent': {
+    name: '이노센트',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  'antique': {
+    name: '앤티큐어',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  'bizarre': {
+    name: '비자르',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  'spontaneous': {
+    name: '스폰태니어',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  'puzzling': {
+    name: '퍼즐링',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  'candid': {
+    name: '캔디드',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+}
+
 export const listenerTypeList: Array<listenerType> = [
   {
     name: '체리쉬',
@@ -220,7 +542,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '이노센트',
     description: '',
     keywords: [
       '',
@@ -266,7 +588,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '앤티큐어',
     description: '',
     keywords: [
       '',
@@ -312,7 +634,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '비자르',
     description: '',
     keywords: [
       '',
@@ -358,7 +680,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '텐더',
     description: '',
     keywords: [
       '',
@@ -404,7 +726,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '스폰태니어',
     description: '',
     keywords: [
       '',
@@ -450,7 +772,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '퍼즐링',
     description: '',
     keywords: [
       '',
@@ -496,7 +818,7 @@ export const listenerTypeList: Array<listenerType> = [
     ]
   },
   {
-    name: '',
+    name: '캔디드',
     description: '',
     keywords: [
       '',
@@ -540,5 +862,5 @@ export const listenerTypeList: Array<listenerType> = [
         youtube: '',
       },
     ]
-  }
+  },
 ]

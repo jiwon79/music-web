@@ -1,4 +1,3 @@
-import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
 import {useRouter} from "next/router";
@@ -11,13 +10,39 @@ export default function Loading() {
   const [isLoading, setIsLoading] = useState(true);
   const [repeat, setRepeat] = useState();
   const delay = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
+  console.log(router.query)
+  let typeNum = 0;
+  let type = router.query.result;
+  console.log(type);
+  if (type == 'cherish') {
+    typeNum = 0;
+  } else if (type == 'innocent') {
+    typeNum = 1;
+  } else if (type == 'antique') {
+    typeNum = 2;
+  } else if (type == 'bizarre') {
+    typeNum = 3
+  } else if (type == 'tender') {
+    typeNum = 4
+  } else if (type == 'spontaneous') {
+    typeNum = 5
+  } else if (type == 'puzzling') {
+    typeNum = 6
+  } else {
+    typeNum = 7
+  }
+  console.log(typeNum)
 
   useEffect(() => {
     async function wait() {
       await delay(4000);
       setIsLoading(false);
+      const resultType = router.query.result;
+      console.log(typeof(resultType));
+      console.log(resultType);
+
       await router.push({
-        pathname: '/listener-type/result/0'
+        pathname: '/listener-type/result/' + String(typeNum)
       });
     }
     wait();
