@@ -1,6 +1,9 @@
+import {ListenerTypeName} from "./enum";
+
 export interface questionType {
   question: string,
-  answers: Array<string>
+  answers: Array<string>,
+  result: Array<Array<ListenerTypeName>>
 }
 
 export interface listenerType {

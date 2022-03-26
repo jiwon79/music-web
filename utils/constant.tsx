@@ -1,4 +1,5 @@
-import {questionType, listenerType} from "./types";
+import {listenerType, questionType} from "./types";
+import {ListenerTypeName} from "./enum";
 
 export const questionList: Array<questionType> = [
   {
@@ -6,6 +7,24 @@ export const questionList: Array<questionType> = [
     answers: [
       '자연스럽게 어제 듣던 플레이리스트를 재생한다.',
       '최신 음악, TOP100에서 골라 듣는다.'
+    ],
+    result: [
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE,
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ],
+      [
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID,
+      ]
     ]
   },
   {
@@ -13,6 +32,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '마음을 울리는 음악',
       '생각을 일깨워주는 음악',
+    ],
+    result: [
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS
+      ],
+      [
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.BIZARRE,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ]
     ]
   },
   {
@@ -20,6 +53,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '장르, 음색, 분위기',
       '감동, 가사, 울림',
+    ],
+    result: [
+      [
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING
+      ],
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.TENDER,
+        ListenerTypeName.CANDID
+      ]
     ]
   },
   {
@@ -27,6 +74,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '다양해서 어떤 곡을 말해야 할지 망설여진다.',
       '곧바로 어느 아티스트의 어떤 곡인지 대답할 수 있다.',
+    ],
+    result: [
+      [
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ],
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE
+      ]
     ]
   },
   {
@@ -34,6 +95,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '예상치 못한 상황에서 우연히(영화나 드라마의 OST, 길거리에서 흘러나오는 노래, 친구가 듣고 있었던 노래 등)',
       '내 취향의 음악들을 파도타기 하다가 발견. 유레카!',
+    ],
+    result: [
+      [
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ],
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE
+      ]
     ]
   },
   {
@@ -41,6 +116,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '무대의 프로페셔널하고 빛나는 모습',
       '무대 뒤 인간적이고 솔직한 모습',
+    ],
+    result: [
+      [
+        ListenerTypeName.CANDID,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING
+      ],
+      [
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.BIZARRE,
+        ListenerTypeName.TENDER,
+        ListenerTypeName.CANDID
+      ]
     ]
   },
   {
@@ -48,6 +137,20 @@ export const questionList: Array<questionType> = [
     answers: [
       'CD, LP 등을 수집하거나 비하인드를 찾아보는 등 혼자 즐겨도 충분하다.',
       '리뷰창이나 유튜브 댓글창에서 같은 취향을 가진 사람들과 생각을 공유하며 더욱 즐겁다.',
+    ],
+    result: [
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE
+      ],
+      [
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ]
     ]
   },
   {
@@ -55,6 +158,20 @@ export const questionList: Array<questionType> = [
     answers: [
       '이미 나와 있는 음악들로도 즐기기엔 충분하다.',
       '앞으로 새로 나올 음악들이 기대된다.',
+    ],
+    result: [
+      [
+        ListenerTypeName.CHERISH,
+        ListenerTypeName.INNOCENT,
+        ListenerTypeName.ANTIQUE,
+        ListenerTypeName.BIZARRE
+      ],
+      [
+        ListenerTypeName.TENDER,
+        ListenerTypeName.SPONTANEOUS,
+        ListenerTypeName.PUZZLING,
+        ListenerTypeName.CANDID
+      ]
     ]
   }
 ];
@@ -100,6 +217,282 @@ export const listenerTypeList: Array<listenerType> = [
         artist: 'Daniel Powter',
         youtube: 'https://www.youtube.com/watch?v=gH476CxJxfg',
       }
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+    ]
+  },
+  {
+    name: '',
+    description: '',
+    keywords: [
+      '',
+      '',
+      '',
+    ],
+    listenMusic: [
+      '',
+      '',
+      '',
+    ],
+    findMusic: [
+      '',
+      '',
+      '',
+    ],
+    enjoyMusic: [
+      '',
+      '',
+      '',
+    ],
+    recommend: [
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
+      {
+        title: '',
+        artist: '',
+        youtube: '',
+      },
     ]
   },
   {
