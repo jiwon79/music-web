@@ -60,10 +60,11 @@ export default function ResultPage({ listenerType }: props) {
 
       <div className={styles.recommend}>
         <p className={styles.title}>이런 음악과 잘 맞으실 거에요!</p>
-        {listenerType.recommend.map((music) =>
+        {listenerType.recommend.map((music, index) =>
           <Album
             key={JSON.stringify(music)}
             music={music}
+            index={index}
           />
         )}
       </div>
