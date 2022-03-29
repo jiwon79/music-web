@@ -1,4 +1,3 @@
-import Header from "../../components/listener-type/Header";
 import styles from "../../styles/listener-type/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
 import {useRouter} from "next/router";
@@ -17,7 +16,7 @@ export default function Loading() {
       await delay(4000);
       setIsLoading(false);
       await router.push({
-        pathname: '/listener-type/result/0'
+        pathname: '/listener-type/result/' + router.query.result
       });
     }
     wait();
@@ -44,7 +43,6 @@ export default function Loading() {
       clearInterval(repeat);
     }
   }, [isLoading]);
-
 
   return (
     <div className={styles.container}>

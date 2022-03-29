@@ -12,15 +12,16 @@ export default function ListenerType() {
     <div>
       <Head>
         <title>Listener Type</title>
-        <meta property="og:type" content="game" />
-        <meta property="og:title" content="Listener-type Test title" />
-        <meta property="og:description" content="listener type test description" />
-        <meta property="og:image" content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" />
+        <meta property="og:type" content="game"/>
+        <meta property="og:title" content="Listener-type Test title"/>
+        <meta property="og:description" content="listener type test description"/>
+        <meta property="og:image"
+              content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"/>
       </Head>
 
       <div className={styles.container}>
         <Header title={"What's your listener type?"}/>
-        <MusicBar />
+        <MusicBar/>
         <div className={styles.title}>
           L.istener<br/>
           T.ype<br/>
@@ -45,7 +46,11 @@ export default function ListenerType() {
             Hello, World!
           </p>
           <p className={styles.content__desc}>
-            Music is the art of arranging sounds in time through the elements of melody, harmony, rhythm, and timbre. It is one of the universal cultural aspects of all human societies. General definitions of music include common elements such as pitch rhythm (and its associated concepts tempo, meter, and articulation), dynamics, and the sonic qualities of timbre and texture. Different styles or types of music may emphasize, de-emphasize or omit some of these elements
+            Music is the art of arranging sounds in time through the elements of melody, harmony, rhythm, and timbre. It
+            is one of the universal cultural aspects of all human societies. General definitions of music include common
+            elements such as pitch rhythm (and its associated concepts tempo, meter, and articulation), dynamics, and
+            the sonic qualities of timbre and texture. Different styles or types of music may emphasize, de-emphasize or
+            omit some of these elements
           </p>
         </div>
       </div>
