@@ -1,12 +1,12 @@
 import Link from "next/link";
 
+import styles from "../../../styles/listener-type/Result.module.scss"
+import {listenerTypeMap} from "../../../utils/constant";
+import {listenerType} from "../../../utils/types";
+
 import Header from "../../../components/listener-type/Header/";
 import MusicBar from "../../../components/listener-type/MusicBar/";
 import Border from "../../../components/listener-type/Border/";
-
-import styles from "../../../styles/listener-type/Result.module.scss"
-import {listenerTypeList} from "../../../utils/constant";
-import {listenerType} from "../../../utils/types";
 import Description from "../../../components/listener-type/Description";
 import Album from "../../../components/listener-type/Album";
 import KakaoShare from "../../../components/listener-type/KakaoShare";
@@ -96,7 +96,7 @@ export default function ResultPage({ listenerType }: props) {
 export function getStaticProps({ params }) {
   return {
     props: {
-      listenerType: listenerTypeList[params.id]
+      listenerType: listenerTypeMap[params.type]
     }
   }
 }
@@ -105,14 +105,14 @@ export function getStaticProps({ params }) {
 export async function getStaticPaths() {
   return  {
     paths: [
-      { params: { id: '0' }},
-      { params: { id: '1' }},
-      { params: { id: '2' }},
-      { params: { id: '3' }},
-      { params: { id: '4' }},
-      { params: { id: '5' }},
-      { params: { id: '6' }},
-      { params: { id: '7' }},
+      { params: { type: 'cherish' }},
+      { params: { type: 'innocent' }},
+      { params: { type: 'antique' }},
+      { params: { type: 'bizarre' }},
+      { params: { type: 'tender' }},
+      { params: { type: 'spontaneous' }},
+      { params: { type: 'puzzling' }},
+      { params: { type: 'candid' }},
     ],
     fallback: false
   }
