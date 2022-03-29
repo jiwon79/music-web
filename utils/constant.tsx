@@ -295,12 +295,12 @@ export const listenerTypeMap = {
         youtube: 'https://youtu.be/YybPNmPJwrw',
       },
       {
-        title: 'In Too Deep(feat. Kiana Ledé)',
+        title: 'In Too Deep (feat. Kiana Ledé)',
         artist: 'Jacob Collier',
         youtube: 'https://youtu.be/e1kqcM2ywNM',
       },
       {
-        title: 'Better Than I Imagined(feat. H.E.R., Meshell Ndegeocello)',
+        title: 'Better Than I Imagined (feat. H.E.R., Meshell Ndegeocello)',
         artist: 'Robert Glasper',
         youtube: 'https://youtu.be/8yQE8v-5GTU',
       },
@@ -482,7 +482,7 @@ export const listenerTypeMap = {
     type: 'candid',
     name: '캔디드',
     description: '음악과 함께 진솔해질 수 있는 유형',
-    keywords: ['배부름', '생각 정리', '안정'],
+    keywords: ['배부름', '생각정리', '안정'],
     listenMusic: [
       '담백하면서도 귀감이 되는 가사를 좋아해요.',
       '가공되지 않은 원석의 느낌을 선호해요.',
