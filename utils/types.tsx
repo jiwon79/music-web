@@ -7,6 +7,7 @@ export interface questionType {
 }
 
 export interface listenerType {
+  type: string,
   name: string,
   description: string,
   keywords: Array<string>,
