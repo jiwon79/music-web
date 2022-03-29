@@ -63,6 +63,7 @@ export default function ResultPage({ listenerType }: props) {
         {listenerType.recommend.map((music, index) =>
           <Album
             key={JSON.stringify(music)}
+            type={listenerType.type}
             music={music}
             index={index}
           />

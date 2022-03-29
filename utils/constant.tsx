@@ -1,6 +1,5 @@
-import {listenerType, questionType} from "./types";
+import {questionType} from "./types";
 import {ListenerTypeName} from "./enum";
-import {Channel} from "diagnostics_channel";
 
 export const questionList: Array<questionType> = [
   {
@@ -179,6 +178,7 @@ export const questionList: Array<questionType> = [
 
 export const listenerTypeMap = {
   'cherish': {
+    type: 'cherish',
     name: '체리쉬',
     description: '음악이 지닌 소중한 가치를 깨우치는 유형',
     keywords: ['편안', '따뜻', '소확행'],
@@ -221,6 +221,7 @@ export const listenerTypeMap = {
     ]
   },
   'innocent': {
+    type: 'innocent',
     name: '이노센트',
     description: '음악을 통찰하며 성장하는 유형',
     keywords: ['위안', '재발견', '상상의 나래'],
@@ -263,6 +264,7 @@ export const listenerTypeMap = {
     ]
   },
   'antique': {
+    type: 'antique',
     name: '앤티큐어',
     description: '음악을 활용한 분위기 형성을 즐기는 유형',
     keywords: ['낭만', '조화', '만족'],
@@ -305,6 +307,7 @@ export const listenerTypeMap = {
     ]
   },
   'bizarre': {
+    type: 'bizarre',
     name: '비자르',
     description: '전시 작품을 감상하듯 음악을 대하는 유형',
     keywords: ['여운', '동경', '회고'],
@@ -347,6 +350,7 @@ export const listenerTypeMap = {
     ]
   },
   'tender': {
+    type: 'tender',
     name: '텐더',
     description: '음악을 통해 에너지를 충전하는 유형',
     keywords: ['공감', '설렘', '친근'],
@@ -389,6 +393,7 @@ export const listenerTypeMap = {
     ]
   },
   'spontaneous': {
+    type: 'spontaneous',
     name: '스폰태니어',
     description: '음악이 주는 원초적인 기쁨을 만끽하는 유형',
     keywords: ['기쁨', '환상', '자극'],
@@ -431,6 +436,7 @@ export const listenerTypeMap = {
     ]
   },
   'puzzling': {
+    type: 'puzzling',
     name: '퍼즐링',
     description: '음악 트렌드 습득에 뛰어난 감각적인 유형',
     keywords: ['다채로움', '호기심', '감탄'],
@@ -473,6 +479,7 @@ export const listenerTypeMap = {
     ]
   },
   'candid': {
+    type: 'candid',
     name: '캔디드',
     description: '음악과 함께 진솔해질 수 있는 유형',
     keywords: ['배부름', '생각 정리', '안정'],

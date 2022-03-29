@@ -6,14 +6,16 @@ import { Music } from "../../../utils/types";
 
 interface props {
   music: Music
+  type: string
+  index: number
 }
 
-export default function Album({music}: props) {
+export default function Album({music, type, index}: props) {
   return (
     <div className={styles.container}>
       <Border innerWidth={10} outerWidth={140} className={styles.album}>
         <Image
-          src={"/albums/"+music.title+".png"}
+          src={"/albums/"+type+"_"+String(index)+".png"}
           alt={"album image"}
           width={120}
           height={120}
