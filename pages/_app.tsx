@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app';
 
 import * as ga from '../lib/ga';
 import '../styles/globals.css'
-
+import 'react-quill/dist/quill.snow.css'
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
