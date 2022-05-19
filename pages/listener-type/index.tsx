@@ -13,10 +13,10 @@ export default function ListenerType() {
       <Head>
         <title>Listener Type</title>
         <meta property="og:type" content="game"/>
-        <meta property="og:title" content="Listener-type Test title"/>
+        <meta property="og:title" content="Listener-type Test"/>
         <meta property="og:description" content="listener type test description"/>
         <meta property="og:image"
-              content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"/>
+              content="https://cdn.discordapp.com/attachments/734479328338903114/976769139509182514/music.png"/>
       </Head>
 
       <div className={styles.container}>

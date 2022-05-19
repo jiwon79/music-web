@@ -6,7 +6,7 @@ import MainLayout from "../components/common/Layout/MainLayout";
 
 export default function Home() {
   const router = useRouter();
-  
+
   return (
     <MainLayout title={"ILLUSION"}>
       <div className={styles.container}>
