@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from "./style.module.scss";
+import shareStyles from "../../common/ShareButton/shareButton.module.scss"
 
 export default function UrlCopy({ url }) {
   const copyLinkRef = useRef(null);
@@ -11,7 +12,7 @@ export default function UrlCopy({ url }) {
   }
 
   return (
-    <div>
+    <div className={shareStyles.shareButton}>
       <input
         type="text"
         ref={copyLinkRef}

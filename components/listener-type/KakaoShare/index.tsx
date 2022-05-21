@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Head from "next/head";
+import styles from "./../../common/ShareButton/shareButton.module.scss"
 
 declare global {
   interface Window {
@@ -52,7 +53,7 @@ export default function KakaoShare() {
   };
 
   return (
-    <div className="Kakao">
+    <div className={styles.shareButton}>
       <Head>
         <script async src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         <title>리스너 타입</title>
