@@ -78,19 +78,27 @@ export default function ResultPage({ listenerType }: props) {
             </div>
           </a>
         </Link>
-        <Link href={"/listener-type/"}>
-          <a>
-            <div className={styles.button}>
-              <p>Share!</p>
-            </div>
-          </a>
-        </Link>
+        <div className={styles.button}>
+          <p>Share!</p>
+        </div>
+        {/*<Link href={"/listener-type/"}>*/}
+        {/*  <a>*/}
+        {/*    <div className={styles.button}>*/}
+        {/*      <p>Share!</p>*/}
+        {/*    </div>*/}
+        {/*  </a>*/}
+        {/*</Link>*/}
+      </div>
+      
+      <p className={styles.shareTitle}>공유하기</p>
+
+      <div className={styles.shares}>
+        <KakaoShare />
+        <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
+        <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
+        <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
       </div>
 
-      <KakaoShare />
-      <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
-      <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
-      <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
     </div>
   )
 }
