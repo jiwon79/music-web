@@ -40,6 +40,10 @@ p {
   box-sizing: border-box;
 }
 
+.ql-insert {
+  background-color: aqua !important;
+}
+
 .ql-indent-1 {
   margin-left: 39px;
 }
