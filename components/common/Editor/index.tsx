@@ -4,12 +4,15 @@ import ReactQuill, { Quill } from "react-quill";
 
 import Highlight from "./Highlight";
 import Hr from "./Hr"
+import SoundCloud from "./SoundCloud";
 
 Quill.register('formats/em', Highlight);
 Quill.register('formats/hr', Hr)
+Quill.register('formats/soundCloud', SoundCloud)
 
 export default function Editor({setHtmlStr}) {
   const editorRef = useRef<ReactQuill>(null)
+  console.log(editorRef.current.getEditor().getContents())
 
   const insert = () => {
     const edi = editorRef.current.getEditor();
@@ -34,6 +37,15 @@ export default function Editor({setHtmlStr}) {
     }
   }
 
+  const handleSoundCloud = () => {
+    const editor = editorRef.current.getEditor();
+    const href = prompt('Enter the SoundCloud URL');
+    const range = editor.getSelection();
+    if (range) {
+      editor.insertEmbed(range.index, 'soundCloud', href);
+    }
+  }
+
   const modules = useMemo(() => ({
     toolbar: {
       container: [
@@ -52,7 +64,7 @@ export default function Editor({setHtmlStr}) {
           {indent: '-1'},
           {indent: '+1'},
         ],
-        ['link', 'image', 'video'],
+        ['link', 'image', 'video', 'soundCloud'],
         ['clean'],
         ['insert'],
         ['highlight'],
@@ -62,6 +74,7 @@ export default function Editor({setHtmlStr}) {
         insert: insert,
         highlight: handleHighlight,
         hr: handleHr,
+        soundCloud: handleSoundCloud,
         link: function(value) {
           if (value) {
             var href = prompt('Enter the URL');
@@ -79,16 +92,6 @@ export default function Editor({setHtmlStr}) {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          var range = editorRef.current.getEditor().getSelection();
-          if (range) {
-            editorRef.current.getEditor().format('highlight', true);
-          }
-        }}
-      >
-        aa
-      </button>
       <ReactQuill
         theme={'snow'}
         ref={editorRef}
