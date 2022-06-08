@@ -1,13 +1,17 @@
-import Editor from "../../components/common/Editor";
 import {useState} from "react";
+import dynamic from "next/dynamic";
+
+const DynamicEditor = dynamic(() => import ("../../components/common/Editor"),
+  { ssr: false }
+)
 
 export default function WritePage() {
   const [htmlStr, setHtmlStr] = useState<string>('');
-
+  // console.log('html', htmlStr.replaceAll('&lt;', '<').replaceAll('&gt;', '>'))
   return (
     <div>
       글쓰기 페이지
-      <Editor setHtmlStr={setHtmlStr}/>
+      <DynamicEditor setHtmlStr={setHtmlStr}/>
       <div dangerouslySetInnerHTML={{__html: htmlStr}}/>
     </div>
   )

@@ -1,11 +1,11 @@
 import {useMemo, useRef} from "react";
 import 'react-quill/dist/quill.snow.css';
-import ReactQuill from "react-quill";
+import ReactQuill, {Quill} from "react-quill";
 
 export default function Editor({setHtmlStr}) {
-  const QuillNoSSRWrapper = typeof window === 'object' ? require('react-quill') : () => false
   const editorRef = useRef<ReactQuill>(null)
-  console.log(editorRef.current ? editorRef.current.getEditor().getContents() : 'null')
+
+  const Inline = Quill.import('blots/inline');
 
   const insert = () => {
     const edi = editorRef.current.getEditor();
@@ -22,7 +22,8 @@ export default function Editor({setHtmlStr}) {
         [{align: []}],
         [
           {color: ['#000', '#fff', '#c8c8c8']},
-          {background: ['#00ff00']}
+          {background: ['#00ff00']},
+          // {highlight: ['#00ff00']}
         ],
         ['bold', 'italic', 'underline', 'strike', 'blockquote'],
         [
@@ -33,10 +34,29 @@ export default function Editor({setHtmlStr}) {
         ],
         ['link', 'image', 'video'],
         ['clean'],
-        ['insert']
+        ['insert'],
+        ['sound']
       ],
       handlers: {
-        insert: insert
+        insert: insert,
+        highlight: insert,
+        link: function(value) {
+          if (value) {
+            var href = prompt('Enter the URL');
+            this.quill.format('link', href);
+          } else {
+            this.quill.format('link', false);
+          }
+        },
+        sound: function(value) {
+          if (value) {
+            console.log(this.quill.format)
+            var href = prompt('Enter the URL');
+            this.quill.format('link', href);
+          } else {
+            this.quill.format('link', false);
+          }
+        }
       },
     },
     clipboard: {
@@ -44,25 +64,15 @@ export default function Editor({setHtmlStr}) {
     },
   }), []);
 
-  const format = [
-    "header", "font", "size",
-    "bold", "italic", "underline", "strike", "blockquote",
-    "align",
-    "list", "bullet",
-    "indent",
-    "background", "color",
-    "link", "image", "video",
-    "insert"
-  ]
-
   return (
-    <QuillNoSSRWrapper
-      theme={'snow'}
-      ref={editorRef}
-      placeholder={'설명을 입력해주세요'}
-      onChange={(value) => setHtmlStr(value)}
-      modules={modules}
-      format={format}
-    />
+    <div>
+      <ReactQuill
+        theme={'snow'}
+        ref={editorRef}
+        placeholder={'설명을 입력해주세요'}
+        onChange={(value) => setHtmlStr(value)}
+        modules={modules}
+      />
+    </div>
   )
 }
