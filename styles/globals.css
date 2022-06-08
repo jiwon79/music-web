@@ -48,6 +48,14 @@ p {
   content: 'highlihgt';
 }
 
+.ql-hr:before {
+  content: '구분선'
+}
+
+.ql-hr {
+  width: 60px !important;
+}
+
 .ql-highlight {
   width: 60px !important;
   background-color: #83ffb2 !important;

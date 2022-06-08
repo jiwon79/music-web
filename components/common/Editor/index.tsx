@@ -3,7 +3,10 @@ import 'react-quill/dist/quill.snow.css';
 import ReactQuill, { Quill } from "react-quill";
 
 import Highlight from "./Highlight";
+import Hr from "./Hr"
+
 Quill.register('formats/em', Highlight);
+Quill.register('formats/hr', Hr)
 
 export default function Editor({setHtmlStr}) {
   const editorRef = useRef<ReactQuill>(null)
@@ -15,11 +18,19 @@ export default function Editor({setHtmlStr}) {
     edi.insertText(position, 'Hello, World! ')
   }
 
-  const highlight = () => {
+  const handleHighlight = () => {
     const editor = editorRef.current.getEditor();
     const range = editor.getSelection();
     if (range) {
       editor.format('highlight', true);
+    }
+  }
+
+  const handleHr = () => {
+    const editor = editorRef.current.getEditor();
+    const range = editor.getSelection()
+    if (range) {
+      editor.insertEmbed(range.index, "hr", "null")
     }
   }
 
@@ -32,7 +43,7 @@ export default function Editor({setHtmlStr}) {
         [
           {color: ['#000', '#fff', '#c8c8c8']},
           {background: ['#00ff00']},
-          // {highlight: ['#00ff00']}
+          // {handleHighlight: ['#00ff00']}
         ],
         ['bold', 'italic', 'underline', 'strike', 'blockquote'],
         [
@@ -44,11 +55,13 @@ export default function Editor({setHtmlStr}) {
         ['link', 'image', 'video'],
         ['clean'],
         ['insert'],
-        ['highlight']
+        ['highlight'],
+        ['hr']
       ],
       handlers: {
         insert: insert,
-        highlight: highlight,
+        highlight: handleHighlight,
+        hr: handleHr,
         link: function(value) {
           if (value) {
             var href = prompt('Enter the URL');
