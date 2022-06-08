@@ -44,6 +44,15 @@ p {
   background-color: aqua !important;
 }
 
+.ql-highlight:before {
+  content: 'highlihgt';
+}
+
+.ql-highlight {
+  width: 60px !important;
+  background-color: #83ffb2 !important;
+}
+
 .ql-indent-1 {
   margin-left: 39px;
 }
@@ -74,3 +83,7 @@ p {
 .ql-indent-8 {
   margin-left: 312px;
 }
+
+/*.ql-editor span {*/
+/*  background: linear-gradient(to top, #f5fa10 50%, transparent 50%) !important;*/
+/*}*/

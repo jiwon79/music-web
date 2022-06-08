@@ -1,17 +1,26 @@
 import {useMemo, useRef} from "react";
 import 'react-quill/dist/quill.snow.css';
-import ReactQuill, {Quill} from "react-quill";
+import ReactQuill, { Quill } from "react-quill";
+
+import Highlight from "./Highlight";
+Quill.register('formats/em', Highlight);
 
 export default function Editor({setHtmlStr}) {
   const editorRef = useRef<ReactQuill>(null)
-
-  const Inline = Quill.import('blots/inline');
 
   const insert = () => {
     const edi = editorRef.current.getEditor();
     const range = edi.getSelection();
     const position = range ? range.index : 0;
     edi.insertText(position, 'Hello, World! ')
+  }
+
+  const highlight = () => {
+    const editor = editorRef.current.getEditor();
+    const range = editor.getSelection();
+    if (range) {
+      editor.format('highlight', true);
+    }
   }
 
   const modules = useMemo(() => ({
@@ -35,11 +44,11 @@ export default function Editor({setHtmlStr}) {
         ['link', 'image', 'video'],
         ['clean'],
         ['insert'],
-        ['sound']
+        ['highlight']
       ],
       handlers: {
         insert: insert,
-        highlight: insert,
+        highlight: highlight,
         link: function(value) {
           if (value) {
             var href = prompt('Enter the URL');
@@ -48,15 +57,6 @@ export default function Editor({setHtmlStr}) {
             this.quill.format('link', false);
           }
         },
-        sound: function(value) {
-          if (value) {
-            console.log(this.quill.format)
-            var href = prompt('Enter the URL');
-            this.quill.format('link', href);
-          } else {
-            this.quill.format('link', false);
-          }
-        }
       },
     },
     clipboard: {
@@ -66,6 +66,16 @@ export default function Editor({setHtmlStr}) {
 
   return (
     <div>
+      <button
+        onClick={() => {
+          var range = editorRef.current.getEditor().getSelection();
+          if (range) {
+            editorRef.current.getEditor().format('highlight', true);
+          }
+        }}
+      >
+        aa
+      </button>
       <ReactQuill
         theme={'snow'}
         ref={editorRef}

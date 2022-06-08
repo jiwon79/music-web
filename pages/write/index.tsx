@@ -7,7 +7,7 @@ const DynamicEditor = dynamic(() => import ("../../components/common/Editor"),
 
 export default function WritePage() {
   const [htmlStr, setHtmlStr] = useState<string>('');
-  // console.log('html', htmlStr.replaceAll('&lt;', '<').replaceAll('&gt;', '>'))
+
   return (
     <div>
       글쓰기 페이지
