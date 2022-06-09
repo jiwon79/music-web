@@ -1,61 +1,103 @@
-import dynamic from 'next/dynamic'
-import {useState} from "react";
+import {useMemo, useRef} from "react";
+import 'react-quill/dist/quill.snow.css';
+import ReactQuill, { Quill } from "react-quill";
 
-const QuillNoSSRWrapper = dynamic(import('react-quill'), {
-  ssr: false,
-  loading: () => <p>Loading ...</p>,
-})
+import Highlight from "./Highlight";
+import Hr from "./Hr"
+import SoundCloud from "./SoundCloud";
+import Instagram from "./Instagram";
 
-const modules = {
-  toolbar: [
-    [{ 'header': ['1', '2', '3', '4', '5', '6', false]}],
-    [{ header: '1' }, { header: '2' }, {header: '3'}, { font: [] }],
-    [{ align: []}],
-    [{ size: [] }],
-    [{ color: ['#000', '#fff', '#c8c8c8']}],
-    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-    [
-      { list: 'ordered' },
-      { list: 'bullet' },
-      { indent: '-1' },
-      { indent: '+1' },
-    ],
-    ['link', 'image', 'video'],
-    ['clean'],
-  ],
-  clipboard: {
-    // toggle to add extra line breaks when pasting HTML:
-    matchVisual: false,
-  },
-}
+Quill.register('formats/em', Highlight);
+Quill.register('formats/hr', Hr)
+Quill.register('formats/soundCloud', SoundCloud)
+Quill.register('formats/instagram', Instagram)
 
-const formats = [
-  'header',
-  'font',
-  'size',
-  'bold',
-  'italic',
-  'underline',
-  'strike',
-  'blockquote',
-  'list',
-  'bullet',
-  'indent',
-  'link',
-  'image',
-  'video',
-]
+export default function Editor({setHtmlStr}) {
+  const editorRef = useRef<ReactQuill>(null)
 
-export default function Editor() {
-  const [text, setText] = useState('');
-  console.log(text);
+  const handleHighlight = () => {
+    const editor = editorRef.current.getEditor();
+    const range = editor.getSelection();
+    if (range) {
+      editor.format('highlight', true);
+    }
+  }
 
-  return <QuillNoSSRWrapper
-    theme={'snow'}
-    id={'description'}
-    placeholder={'설명을 입력해주세요'}
-    onChange={(value) => setText(value)}
-    modules={modules}
-    formats={formats}
-  />
+  const handleHr = () => {
+    const editor = editorRef.current.getEditor();
+    const range = editor.getSelection()
+    if (range) {
+      editor.insertEmbed(range.index, "hr", "null")
+    }
+  }
+
+  const handleSoundCloud = () => {
+    const editor = editorRef.current.getEditor();
+    const href = prompt('Enter the SoundCloud URL');
+    const range = editor.getSelection();
+    if (range) {
+      editor.insertEmbed(range.index, 'soundCloud', href);
+    }
+  }
+
+  const handleInstagram = () => {
+    const editor = editorRef.current.getEditor()
+    const href = prompt('Enter Instagram Share URL');
+    const range = editor.getSelection();
+    if (range) {
+      editor.insertEmbed(range.index, 'instagram', href);
+    }
+  }
+
+  const modules = useMemo(() => ({
+    toolbar: {
+      container: [
+        [{header: ['1', '2', '3', '4', '5', '6', false]}],
+        [{size: []}],
+        [{align: []}],
+        [
+          {color: ['#000', '#fff', '#c8c8c8']},
+          {background: ['#00ff00']},
+          // {handleHighlight: ['#00ff00']}
+        ],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote', 'highlight'],
+        [
+          {list: 'ordered'},
+          {list: 'bullet'},
+          {indent: '-1'},
+          {indent: '+1'},
+        ],
+        ['link', 'image', 'video', 'soundCloud', 'instagram'],
+        ['hr'],
+        ['clean'],
+      ],
+      handlers: {
+        highlight: handleHighlight,
+        hr: handleHr,
+        soundCloud: handleSoundCloud,
+        instagram: handleInstagram,
+        link: function(value) {
+          if (value) {
+            var href = prompt('Enter the URL');
+            this.quill.format('link', href);
+          } else {
+            this.quill.format('link', false);
+          }
+        },
+      },
+    },
+    clipboard: {
+      matchVisual: false
+    },
+  }), []);
+
+  return (
+    <ReactQuill
+      theme={'snow'}
+      ref={editorRef}
+      placeholder={'설명을 입력해주세요'}
+      onChange={(value) => setHtmlStr(value)}
+      modules={modules}
+    />
+  )
 }

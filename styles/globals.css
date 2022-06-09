@@ -16,7 +16,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-
 }
 
 body {
@@ -41,6 +40,74 @@ p {
   box-sizing: border-box;
 }
 
-.ql-heart {
-  background-color: #f5fa10 !important;
+.ql-insert {
+  background-color: aqua !important;
 }
+
+.ql-highlight:before {
+  content: 'highlihgt';
+}
+
+.ql-soundCloud:before {
+  content: 'music'
+}
+
+.ql-soundCloud {
+  width: 45px !important;
+}
+
+.ql-instagram:before {
+  content: 'insta'
+}
+
+.ql-instagram {
+  width: 45px !important;
+}
+
+.ql-hr:before {
+  content: '구분선'
+}
+
+.ql-hr {
+  width: 50px !important;
+}
+
+.ql-highlight {
+  width: 60px !important;
+  background-color: #83ffb2 !important;
+}
+
+.ql-indent-1 {
+  margin-left: 39px;
+}
+
+.ql-indent-2 {
+  margin-left: 78px;
+}
+
+.ql-indent-3 {
+  margin-left: 117px;
+}
+
+.ql-indent-4 {
+  margin-left: 154px;
+}
+.ql-indent-5 {
+  margin-left: 195px;
+}
+
+.ql-indent-6 {
+  margin-left: 234px;
+}
+
+.ql-indent-7 {
+  margin-left: 273px;
+}
+
+.ql-indent-8 {
+  margin-left: 312px;
+}
+
+/*.ql-editor span {*/
+/*  background: linear-gradient(to top, #f5fa10 50%, transparent 50%) !important;*/
+/*}*/
