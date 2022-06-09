@@ -5,21 +5,15 @@ import ReactQuill, { Quill } from "react-quill";
 import Highlight from "./Highlight";
 import Hr from "./Hr"
 import SoundCloud from "./SoundCloud";
+import Instagram from "./Instagram";
 
 Quill.register('formats/em', Highlight);
 Quill.register('formats/hr', Hr)
 Quill.register('formats/soundCloud', SoundCloud)
+Quill.register('formats/instagram', Instagram)
 
 export default function Editor({setHtmlStr}) {
   const editorRef = useRef<ReactQuill>(null)
-  console.log(editorRef.current.getEditor().getContents())
-
-  const insert = () => {
-    const edi = editorRef.current.getEditor();
-    const range = edi.getSelection();
-    const position = range ? range.index : 0;
-    edi.insertText(position, 'Hello, World! ')
-  }
 
   const handleHighlight = () => {
     const editor = editorRef.current.getEditor();
@@ -46,6 +40,15 @@ export default function Editor({setHtmlStr}) {
     }
   }
 
+  const handleInstagram = () => {
+    const editor = editorRef.current.getEditor()
+    const href = prompt('Enter Instagram Share URL');
+    const range = editor.getSelection();
+    if (range) {
+      editor.insertEmbed(range.index, 'instagram', href);
+    }
+  }
+
   const modules = useMemo(() => ({
     toolbar: {
       container: [
@@ -66,15 +69,15 @@ export default function Editor({setHtmlStr}) {
         ],
         ['link', 'image', 'video', 'soundCloud'],
         ['clean'],
-        ['insert'],
         ['highlight'],
-        ['hr']
+        ['hr'],
+        ['instagram']
       ],
       handlers: {
-        insert: insert,
         highlight: handleHighlight,
         hr: handleHr,
         soundCloud: handleSoundCloud,
+        instagram: handleInstagram,
         link: function(value) {
           if (value) {
             var href = prompt('Enter the URL');
@@ -91,14 +94,12 @@ export default function Editor({setHtmlStr}) {
   }), []);
 
   return (
-    <div>
-      <ReactQuill
-        theme={'snow'}
-        ref={editorRef}
-        placeholder={'설명을 입력해주세요'}
-        onChange={(value) => setHtmlStr(value)}
-        modules={modules}
-      />
-    </div>
+    <ReactQuill
+      theme={'snow'}
+      ref={editorRef}
+      placeholder={'설명을 입력해주세요'}
+      onChange={(value) => setHtmlStr(value)}
+      modules={modules}
+    />
   )
 }

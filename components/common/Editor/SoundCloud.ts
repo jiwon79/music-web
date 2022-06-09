@@ -1,5 +1,4 @@
 import { Quill } from "react-quill";
-import InstagramFeed from "./InstagramFeed";
 
 const Embed = Quill.import('blots/block/embed');
 class SoundCloud extends Embed {

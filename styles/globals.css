@@ -48,6 +48,10 @@ p {
   content: 'highlihgt';
 }
 
+.ql-soundCloud:before {
+  content: 'music'
+}
+
 .ql-hr:before {
   content: '구분선'
 }
