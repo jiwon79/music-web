@@ -60,18 +60,16 @@ export default function Editor({setHtmlStr}) {
           {background: ['#00ff00']},
           // {handleHighlight: ['#00ff00']}
         ],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote', 'highlight'],
         [
           {list: 'ordered'},
           {list: 'bullet'},
           {indent: '-1'},
           {indent: '+1'},
         ],
-        ['link', 'image', 'video', 'soundCloud'],
-        ['clean'],
-        ['highlight'],
+        ['link', 'image', 'video', 'soundCloud', 'instagram'],
         ['hr'],
-        ['instagram']
+        ['clean'],
       ],
       handlers: {
         highlight: handleHighlight,

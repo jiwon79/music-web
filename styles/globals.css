@@ -52,12 +52,24 @@ p {
   content: 'music'
 }
 
+.ql-soundCloud {
+  width: 45px !important;
+}
+
+.ql-instagram:before {
+  content: 'insta'
+}
+
+.ql-instagram {
+  width: 45px !important;
+}
+
 .ql-hr:before {
   content: '구분선'
 }
 
 .ql-hr {
-  width: 60px !important;
+  width: 50px !important;
 }
 
 .ql-highlight {
