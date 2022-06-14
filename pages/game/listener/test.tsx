@@ -4,7 +4,7 @@ import {useRouter} from "next/router"
 import {ListenerTypeName} from "../../../utils/enum";
 import {questionList} from "../../../utils/constant";
 import Header from "../../../components/listener-type/Header";
-import styles from "../../../styles/listener-type/Test.module.scss"
+import styles from "../../../styles/game/listener/Test.module.scss"
 import Menu from "../../../components/listener-type/Menu";
 import MusicBar from "../../../components/listener-type/MusicBar";
 

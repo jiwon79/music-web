@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "../../../../styles/listener-type/Result.module.scss"
+import styles from "../../../../styles/game/listener/Result.module.scss"
 import {listenerTypeMap} from "../../../../utils/constant";
 import {listenerType} from "../../../../utils/types";
 

@@ -1,4 +1,4 @@
-import styles from "../../../styles/listener-type/Loading.module.scss";
+import styles from "../../../styles/game/listener/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
 import {useRouter} from "next/router";
 import Image from "next/image";
