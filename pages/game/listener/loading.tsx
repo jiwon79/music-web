@@ -1,4 +1,4 @@
-import styles from "../../styles/listener-type/Loading.module.scss";
+import styles from "../../../styles/listener-type/Loading.module.scss";
 import {useEffect, useRef, useState} from "react";
 import {useRouter} from "next/router";
 import Image from "next/image";
@@ -16,7 +16,7 @@ export default function Loading() {
       await delay(4000);
       setIsLoading(false);
       await router.push({
-        pathname: '/listener-type/result/' + router.query.result
+        pathname: '/game/listener/result/' + router.query.result
       });
     }
     wait();

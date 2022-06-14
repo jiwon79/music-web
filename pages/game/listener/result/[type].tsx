@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-import styles from "../../../styles/listener-type/Result.module.scss"
-import {listenerTypeMap} from "../../../utils/constant";
-import {listenerType} from "../../../utils/types";
+import styles from "../../../../styles/listener-type/Result.module.scss"
+import {listenerTypeMap} from "../../../../utils/constant";
+import {listenerType} from "../../../../utils/types";
 
-import Header from "../../../components/listener-type/Header/";
-import MusicBar from "../../../components/listener-type/MusicBar/";
-import Border from "../../../components/listener-type/Border/";
-import Description from "../../../components/listener-type/Description";
-import Album from "../../../components/listener-type/Album";
-import KakaoShare from "../../../components/listener-type/KakaoShare";
-import TwitterShare from "../../../components/listener-type/TwitterShare";
-import FacebookShare from "../../../components/listener-type/FacebookShare";
-import UrlCopy from "../../../components/listener-type/UrlCopy";
+import Header from "../../../../components/listener-type/Header";
+import MusicBar from "../../../../components/listener-type/MusicBar";
+import Border from "../../../../components/listener-type/Border";
+import Description from "../../../../components/listener-type/Description";
+import Album from "../../../../components/listener-type/Album";
+import KakaoShare from "../../../../components/listener-type/KakaoShare";
+import TwitterShare from "../../../../components/listener-type/TwitterShare";
+import FacebookShare from "../../../../components/listener-type/FacebookShare";
+import UrlCopy from "../../../../components/listener-type/UrlCopy";
 
 interface props {
   listenerType: listenerType
