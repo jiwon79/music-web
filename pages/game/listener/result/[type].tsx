@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 import styles from "../../../../styles/game/listener/Result.module.scss"
-import {listenerTypeMap} from "../../../../utils/constant";
-import {listenerType} from "../../../../utils/types";
+import {listenerTypeMap} from "../../../../utils/game/listener/constant";
+import {listenerType} from "../../../../utils/game/listener/types";
 
 import Header from "../../../../components/listener-type/Header";
 import MusicBar from "../../../../components/listener-type/MusicBar";

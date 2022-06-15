@@ -1,8 +1,8 @@
 import {useState} from "react"
 import {useRouter} from "next/router"
 
-import {ListenerTypeName} from "../../../utils/enum";
-import {questionList} from "../../../utils/constant";
+import {ListenerTypeName} from "../../../utils/game/listener/enum";
+import {questionList} from "../../../utils/game/listener/constant";
 import Header from "../../../components/listener-type/Header";
 import styles from "../../../styles/game/listener/Test.module.scss"
 import Menu from "../../../components/listener-type/Menu";
@@ -24,7 +24,6 @@ export default function TestPage() {
   const [currentNum, setCurrentNum] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<Array<number>>([]);
   const [resultDict, setResultDict] = useState(defaultResultDict);
-  console.log(resultDict);
   const question = questionList[currentNum];
   const progress = ((currentNum+1)*100/questionList.length).toString();
 

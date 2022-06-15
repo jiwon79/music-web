@@ -29,10 +29,17 @@ export default function Home() {
           <p>랜딩 페이이이이지이이이이</p>
           <button
             onClick={() => {
-              router.push('/listener-type').then(r => r);
+              router.push('/game').then(r => r);
             }}
           >
-            리스너 테스트 하러가기
+            게임 모음
+          </button>
+          <button
+            onClick={() => {
+              router.push('/write').then(r => r);
+            }}
+          >
+            텍스트 에디터
           </button>
         </main>
       </div>

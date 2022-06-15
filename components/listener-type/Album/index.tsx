@@ -2,7 +2,7 @@ import Border from "../Border";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./style.module.scss";
-import { Music } from "../../../utils/types";
+import { Music } from "../../../utils/game/listener/types";
 
 interface props {
   music: Music
