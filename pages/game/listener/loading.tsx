@@ -15,7 +15,7 @@ export default function Loading() {
     async function wait() {
       await delay(4000);
       setIsLoading(false);
-      await router.push({
+      await router.replace({
         pathname: '/game/listener/result/' + router.query.result
       });
     }

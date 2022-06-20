@@ -71,7 +71,7 @@ export default function ResultPage({ listenerType }: props) {
       </div>
 
       <div className={styles.action}>
-        <Link href={"/listener-type/"}>
+        <Link href={"/game/listener"}>
           <a>
             <div className={styles.button}>
               <p>Retry?</p>
