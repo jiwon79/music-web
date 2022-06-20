@@ -1,4 +1,4 @@
-import {questionType} from "./type";
+import {questionType} from "./types";
 import {ResultStandard} from "./enums";
 
 export const questionList: Array<questionType> = [
