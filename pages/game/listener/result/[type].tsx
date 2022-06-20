@@ -81,13 +81,6 @@ export default function ResultPage({ listenerType }: props) {
         <div className={styles.button}>
           <p>Share!</p>
         </div>
-        {/*<Link href={"/listener-type/"}>*/}
-        {/*  <a>*/}
-        {/*    <div className={styles.button}>*/}
-        {/*      <p>Share!</p>*/}
-        {/*    </div>*/}
-        {/*  </a>*/}
-        {/*</Link>*/}
       </div>
       
       <p className={styles.shareTitle}>공유하기</p>
