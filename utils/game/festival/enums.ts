@@ -1,4 +1,4 @@
-export enum FestivalTypeCategory {
+export enum ResultStandard {
   LIVELY = 'lively',
   CALM = 'calm',
   PLAN = 'plan',
