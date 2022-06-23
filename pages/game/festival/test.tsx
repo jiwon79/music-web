@@ -4,7 +4,6 @@ import useGame from "../../../utils/hooks/useGame";
 export default function TestPage() {
   const { question, nextQuestion } = useGame(questionList);
 
-
   const answerComponents = question.answers.map((answer, index) =>
     <button
       key={index}
@@ -14,7 +13,6 @@ export default function TestPage() {
     </button>
   );
 
-  console.log(question);
   return (
     <div>
       <div>
