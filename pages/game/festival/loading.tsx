@@ -10,25 +10,22 @@ export default function LoadingPage() {
   useEffect(() => {
     if (!router.isReady)  return null;
     const resultType = getFestivalType(JSON.parse(router.query.resultDict as string))
-    console.log(resultType)
+    const load = async () => {
+      await loadAction();
+      await router.replace({
+        pathname: '/game/festival/result/' + String(resultType)
+      });
+    }
+    load();
   }, [router.isReady]);
 
   const getFestivalType = (resultDict: Record<string, number>) => {
-    var typeNum = 0;
+    let typeNum = 0;
     if (resultDict[ResultStandard.LIVELY] > resultDict[ResultStandard.CALM])  typeNum += 4;
     if (resultDict[ResultStandard.PLAN] > resultDict[ResultStandard.FREE])  typeNum += 2;
     if (resultDict[ResultStandard.OTAKU] > resultDict[ResultStandard.MOOD]) typeNum += 1;
     return typeNum;
   }
-
-  useEffect(() => {
-    const load = async () => {
-      await loadAction();
-      // const festivalType = getFestivalType(resultDict);
-      // console.log(festivalType);
-    }
-    load();
-  }, []);
   
   return (
     <div>
