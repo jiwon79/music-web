@@ -1,13 +1,16 @@
 import {useRouter} from "next/router";
 import {useState} from "react";
-import {defaultResultDict, resultDictType} from "../game/festival/types";
 import {questionType} from "../game/types";
 
-export default function useGame(questionList: Array<questionType>) {
+export default function useGame<T extends string[]>(questionList: Array<questionType>, resultSet: T) {
+  const defaultResultDict: Record<string, number> = resultSet.reduce((accumulator, value) => {
+    return {...accumulator, [value]: 0};
+  }, {});
+
   const router = useRouter();
-  const [currentNum, setCurrentNum] = useState(0);
-  const [answerList, setAnswerList] = useState<Array<number>>([]);
-  const [resultDict, setResultDict] = useState<resultDictType>(defaultResultDict);
+  const [currentNum, setCurrentNum] = useState<number>(0);
+  const [answerList, setAnswerList] = useState<number[]>([]);
+  const [resultDict, setResultDict] = useState(defaultResultDict);
   const question = questionList[currentNum];
 
   const nextQuestion = (answer) => {
@@ -33,5 +36,5 @@ export default function useGame(questionList: Array<questionType>) {
     }
   }
 
-  return {question: question, nextQuestion: nextQuestion}
+  return {question, nextQuestion}
 }

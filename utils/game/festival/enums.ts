@@ -6,3 +6,5 @@ export enum ResultStandard {
   OTAKU = 'otaku',
   MOOD = 'mood',
 }
+
+export const resultSet = Object.values(ResultStandard);
