@@ -11,7 +11,6 @@ import Description from "../../../../components/listener-type/Description";
 import Album from "../../../../components/listener-type/Album";
 
 import ShareButton from "../../../../components/common/ShareButtons";
-import TwitterShare from "../../../../components/listener-type/TwitterShare";
 import FacebookShare from "../../../../components/listener-type/FacebookShare";
 import UrlCopy from "../../../../components/listener-type/UrlCopy";
 
@@ -20,15 +19,6 @@ interface props {
 }
 
 export default function ResultPage({ listenerType }: props) {
-  const KaKaoContent = {
-    title: '리스너 타입',
-    description: "내용!",
-    imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
-    link: {
-      mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type,
-    }
-  }
-
   return (
     <div className={styles.container}>
       <Header title={"Hello, CLASSIC!"}/>
@@ -97,12 +87,25 @@ export default function ResultPage({ listenerType }: props) {
 
       <div className={styles.shares}>
         <ShareButton.KaKao
-          content={KaKaoContent}
+          content={{
+            title: '리스너 타입',
+            description: "내용!",
+            imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            link: {
+              mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type,
+            }
+          }}
           className={styles.shareButton}
         >
           <p>KaKao</p>
         </ShareButton.KaKao>
-        <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
+        <ShareButton.Twitter
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          text={"twitter share text"}
+          className={styles.shareButton}
+        >
+          <p>Twitter</p>
+        </ShareButton.Twitter>
         <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
         <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
       </div>
