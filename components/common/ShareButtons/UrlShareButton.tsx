@@ -1,7 +1,12 @@
-import { useRef } from "react";
-import styles from "./style.module.scss";
+import React, {useRef} from "react";
 
-export default function UrlCopy({ url }) {
+export interface UrlProps {
+  url: string,
+  className?: string,
+  children: JSX.Element,
+}
+
+const UrlShareButton: React.FC<UrlProps> = ({ url, className, children }) => {
   const copyLinkRef = useRef(null);
   const copyTextUrl = () => {
     copyLinkRef.current.focus();
@@ -17,11 +22,13 @@ export default function UrlCopy({ url }) {
         ref={copyLinkRef}
         value={url}
         onChange={(e) => {return e}}
-        className={styles.input}
+        style={{display: 'none'}}
       />
-      <button onClick={() => copyTextUrl()}>
-        링크 복사
+      <button onClick={() => copyTextUrl()} className={className}>
+        {children}
       </button>
     </>
   )
 }
+
+export default UrlShareButton

@@ -9,9 +9,7 @@ import MusicBar from "../../../../components/listener-type/MusicBar";
 import Border from "../../../../components/listener-type/Border";
 import Description from "../../../../components/listener-type/Description";
 import Album from "../../../../components/listener-type/Album";
-
 import ShareButton from "../../../../components/common/ShareButtons";
-import UrlCopy from "../../../../components/listener-type/UrlCopy";
 
 interface props {
   listenerType: listenerType
@@ -111,7 +109,12 @@ export default function ResultPage({ listenerType }: props) {
         >
           <p>Facebook</p>
         </ShareButton.Facebook>
-        <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
+        <ShareButton.Url
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          className={styles.shareButton}
+        >
+          <p>링크 복사</p>
+        </ShareButton.Url>
       </div>
 
     </div>
