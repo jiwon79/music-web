@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import Head from "next/head";
 import styles from "./../../common/ShareButton/shareButton.module.scss"
 
@@ -8,43 +8,36 @@ declare global {
   }
 }
 
-export default function KakaoShare() {
+interface Props {
+  content: {
+    title: string,
+    description: string,
+    imageUrl: string,
+    link: {
+      mobileWebUrl: string,
+    }
+  },
+  children: JSX.Element,
+  className: string,
+}
+
+export default function KakaoShare({ content, children, className }: Props) {
   useEffect(() => {
-    return () => {
-      initKakao();
-    };
+    const kakao = window.Kakao;
+    if (!kakao.isInitialized()) {
+      kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
+    }
   }, []);
 
-  const initKakao = () => {
-    if (window.Kakao) {
-      const kakao = window.Kakao;
-      if (!kakao.isInitialized()) {
-        kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
-      }
-    }
-  }
-
-
   const shareKakao = () => {
-    const url = window.location.href;
-    initKakao();
-
     window.Kakao.Link.sendDefault({
       objectType: "feed",
-      content: {
-        title: 'title',
-        description: "내용!",
-        imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
-        link: {
-          mobileWebUrl: url,
-          androidExecParams: "test",
-        },
-      },
+      content: content,
       buttons: [
         {
           title: "웹으로 이동",
           link: {
-            mobileWebUrl: url,
+            mobileWebUrl: content.link.mobileWebUrl,
           },
         },
       ],
@@ -56,11 +49,10 @@ export default function KakaoShare() {
     <div className={styles.shareButton}>
       <Head>
         <script async src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <title>리스너 타입</title>
+        <title>{content.title}</title>
       </Head>
-
-      <button id="kakao-link-btn" onClick={shareKakao}>
-        <p>kakao</p>
+      <button onClick={shareKakao} className={className}>
+        {children}
       </button>
     </div>
   );

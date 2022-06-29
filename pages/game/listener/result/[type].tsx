@@ -86,7 +86,19 @@ export default function ResultPage({ listenerType }: props) {
       <p className={styles.shareTitle}>공유하기</p>
 
       <div className={styles.shares}>
-        <KakaoShare />
+        <KakaoShare
+          content={{
+            title: '리스너 타입',
+            description: "내용!",
+            imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            link: {
+              mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type,
+            }
+          }}
+          className={styles.shareButton}
+        >
+          <p>KaKao</p>
+        </KakaoShare>
         <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
         <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
         <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
