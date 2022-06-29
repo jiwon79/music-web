@@ -36,5 +36,5 @@ export default function useGame<T extends string[]>(questionList: Array<question
     }
   }
 
-  return {question, nextQuestion}
+  return {currentNum, question, nextQuestion}
 }

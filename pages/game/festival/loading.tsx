@@ -24,7 +24,7 @@ export default function LoadingPage() {
     if (resultDict[ResultStandard.LIVELY] > resultDict[ResultStandard.CALM])  typeNum += 4;
     if (resultDict[ResultStandard.PLAN] > resultDict[ResultStandard.FREE])  typeNum += 2;
     if (resultDict[ResultStandard.OTAKU] > resultDict[ResultStandard.MOOD]) typeNum += 1;
-    return typeNum;
+    return typeNum === 0 ? 1 : typeNum;
   }
   
   return (

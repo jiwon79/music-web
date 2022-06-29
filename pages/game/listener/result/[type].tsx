@@ -9,10 +9,7 @@ import MusicBar from "../../../../components/listener-type/MusicBar";
 import Border from "../../../../components/listener-type/Border";
 import Description from "../../../../components/listener-type/Description";
 import Album from "../../../../components/listener-type/Album";
-import KakaoShare from "../../../../components/listener-type/KakaoShare";
-import TwitterShare from "../../../../components/listener-type/TwitterShare";
-import FacebookShare from "../../../../components/listener-type/FacebookShare";
-import UrlCopy from "../../../../components/listener-type/UrlCopy";
+import ShareButton from "../../../../components/common/ShareButtons";
 
 interface props {
   listenerType: listenerType
@@ -86,10 +83,38 @@ export default function ResultPage({ listenerType }: props) {
       <p className={styles.shareTitle}>공유하기</p>
 
       <div className={styles.shares}>
-        <KakaoShare />
-        <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
-        <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
-        <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
+        <ShareButton.KaKao
+          content={{
+            title: '리스너 타입',
+            description: "내용!",
+            imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            link: {
+              mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type,
+            }
+          }}
+          className={styles.shareButton}
+        >
+          <p>KaKao</p>
+        </ShareButton.KaKao>
+        <ShareButton.Twitter
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          text={"twitter share text"}
+          className={styles.shareButton}
+        >
+          <p>Twitter</p>
+        </ShareButton.Twitter>
+        <ShareButton.Facebook
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          className={styles.shareButton}
+        >
+          <p>Facebook</p>
+        </ShareButton.Facebook>
+        <ShareButton.Url
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          className={styles.shareButton}
+        >
+          <p>링크 복사</p>
+        </ShareButton.Url>
       </div>
 
     </div>
