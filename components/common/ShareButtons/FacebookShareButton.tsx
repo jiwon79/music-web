@@ -1,6 +1,6 @@
 export interface FacebookProps {
   url: string,
-  className: string,
+  className?: string,
   children: JSX.Element,
 }
 

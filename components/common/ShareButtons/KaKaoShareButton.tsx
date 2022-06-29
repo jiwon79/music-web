@@ -17,7 +17,7 @@ export interface KaKaoProps {
     }
   },
   children: JSX.Element,
-  className: string,
+  className?: string,
 }
 
 const KaKaoShareButton: React.FC<KaKaoProps> = ({ content, children, className }) => {
