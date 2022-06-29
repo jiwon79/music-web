@@ -18,9 +18,7 @@ export default function TestPage() {
   return (
     <div>
       <p>{koreanOrder[currentNum]}</p>
-      <div>
-        {question.question}
-      </div>
+      <p>{question.question}</p>
       <div>
         {answerComponents}
       </div>

@@ -9,7 +9,7 @@ import MusicBar from "../../../../components/listener-type/MusicBar";
 import Border from "../../../../components/listener-type/Border";
 import Description from "../../../../components/listener-type/Description";
 import Album from "../../../../components/listener-type/Album";
-import KakaoShare from "../../../../components/listener-type/KakaoShare";
+import KaKaoShare from "../../../../components/listener-type/KakaoShare";
 import TwitterShare from "../../../../components/listener-type/TwitterShare";
 import FacebookShare from "../../../../components/listener-type/FacebookShare";
 import UrlCopy from "../../../../components/listener-type/UrlCopy";
@@ -86,7 +86,7 @@ export default function ResultPage({ listenerType }: props) {
       <p className={styles.shareTitle}>공유하기</p>
 
       <div className={styles.shares}>
-        <KakaoShare
+        <KaKaoShare
           content={{
             title: '리스너 타입',
             description: "내용!",
@@ -98,7 +98,7 @@ export default function ResultPage({ listenerType }: props) {
           className={styles.shareButton}
         >
           <p>KaKao</p>
-        </KakaoShare>
+        </KaKaoShare>
         <TwitterShare url={"https://music-web-indol.vercel.app/listener-type"} text={"text는 뭐하지"}/>
         <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
         <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>

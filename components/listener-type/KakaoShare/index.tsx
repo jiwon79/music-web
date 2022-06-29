@@ -21,7 +21,7 @@ interface Props {
   className: string,
 }
 
-export default function KakaoShare({ content, children, className }: Props) {
+export default function KaKaoShare({ content, children, className }: Props) {
   useEffect(() => {
     const kakao = window.Kakao;
     if (!kakao.isInitialized()) {
@@ -42,11 +42,10 @@ export default function KakaoShare({ content, children, className }: Props) {
         },
       ],
     });
-
   };
 
   return (
-    <div className={styles.shareButton}>
+    <>
       <Head>
         <script async src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         <title>{content.title}</title>
@@ -54,6 +53,6 @@ export default function KakaoShare({ content, children, className }: Props) {
       <button onClick={shareKakao} className={className}>
         {children}
       </button>
-    </div>
+    </>
   );
 }

@@ -1,5 +1,3 @@
-import styles from "../../common/ShareButton/shareButton.module.scss"
-
 export default function FacebookShare({ url }) {
   const onClickFacebook = () => {
     const shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
@@ -7,10 +5,8 @@ export default function FacebookShare({ url }) {
   }
 
   return (
-    <div className={styles.shareButton}>
-      <button onClick={onClickFacebook}>
-        Facebook
-      </button>
-    </div>
+    <button onClick={onClickFacebook}>
+      Facebook
+    </button>
   )
 }
