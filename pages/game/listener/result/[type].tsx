@@ -11,7 +11,6 @@ import Description from "../../../../components/listener-type/Description";
 import Album from "../../../../components/listener-type/Album";
 
 import ShareButton from "../../../../components/common/ShareButtons";
-import FacebookShare from "../../../../components/listener-type/FacebookShare";
 import UrlCopy from "../../../../components/listener-type/UrlCopy";
 
 interface props {
@@ -106,7 +105,12 @@ export default function ResultPage({ listenerType }: props) {
         >
           <p>Twitter</p>
         </ShareButton.Twitter>
-        <FacebookShare url={"https://music-web-indol.vercel.app/listener-type"}/>
+        <ShareButton.Facebook
+          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          className={styles.shareButton}
+        >
+          <p>Facebook</p>
+        </ShareButton.Facebook>
         <UrlCopy url={"https://music-web-indol.vercel.app/listener-type"}/>
       </div>
 
