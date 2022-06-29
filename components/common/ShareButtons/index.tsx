@@ -1,4 +1,4 @@
-import * as React from "React"
+import React from "react";
 import KaKaoShareButton, { KaKaoProps } from "./KaKaoShareButton";
 import TwitterShare, { TwitterProps } from "./TwitterShareButton";
 import FacebookShareButton, { FacebookProps } from "./FacebookShareButton";

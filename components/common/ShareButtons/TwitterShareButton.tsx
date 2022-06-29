@@ -1,4 +1,4 @@
-import * as React from "React";
+import React from "react";
 
 export interface TwitterProps {
   url: string,
