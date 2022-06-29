@@ -1,6 +1,5 @@
 import {useEffect} from 'react';
 import Head from "next/head";
-import styles from "./../../common/ShareButton/shareButton.module.scss"
 
 declare global {
   interface Window {
@@ -8,7 +7,7 @@ declare global {
   }
 }
 
-interface Props {
+export interface KaKaoProps {
   content: {
     title: string,
     description: string,
@@ -21,7 +20,7 @@ interface Props {
   className: string,
 }
 
-export default function KaKaoShare({ content, children, className }: Props) {
+const KaKaoShareButton: React.FC<KaKaoProps> = ({ content, children, className }) => {
   useEffect(() => {
     const kakao = window.Kakao;
     if (!kakao.isInitialized()) {
@@ -56,3 +55,5 @@ export default function KaKaoShare({ content, children, className }: Props) {
     </>
   );
 }
+
+export default KaKaoShareButton
