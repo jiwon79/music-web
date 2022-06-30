@@ -1,7 +1,7 @@
+import Link from "next/link";
+import ShareButton from "../../../../components/common/ShareButtons";
 import {festivalTypeMap} from "../../../../utils/game/festival/constant";
 import {FestivalType} from "../../../../utils/game/festival/type";
-import ShareButton from "../../../../components/common/ShareButtons";
-import {useRouter} from "next/router";
 
 interface ResultPageProps {
   festivalType: FestivalType
@@ -9,9 +9,6 @@ interface ResultPageProps {
 
 export default function ResultPage({ festivalType }: ResultPageProps) {
   const shareUrl: string = "https://music-web-indol.vercel.app/game/festival/result/" + festivalType.id;
-  console.log(festivalType);
-  const router = useRouter();
-  console.log(router.asPath);
 
   return (
     <div>
@@ -43,6 +40,7 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
       <ShareButton.Url url={shareUrl}>
         <p>링크 복사</p>
       </ShareButton.Url>
+      <Link href={"../"}>테스트 다시하기</Link>
     </div>
   )
 }
