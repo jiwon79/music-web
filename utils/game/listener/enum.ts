@@ -8,3 +8,5 @@ export enum ListenerTypeName {
   PUZZLING = 'puzzling',
   CANDID = 'candid',
 }
+
+export const resultSet = Object.values(ListenerTypeName);
