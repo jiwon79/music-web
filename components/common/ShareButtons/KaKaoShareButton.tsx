@@ -1,5 +1,4 @@
-import {useEffect} from 'react';
-import Head from "next/head";
+import React, { useEffect } from "react";
 
 declare global {
   interface Window {
@@ -28,7 +27,7 @@ const KaKaoShareButton: React.FC<KaKaoProps> = ({ content, children, className }
     }
   }, []);
 
-  const shareKakao = () => {
+  const shareKaKao = () => {
     window.Kakao.Link.sendDefault({
       objectType: "feed",
       content: content,
@@ -44,15 +43,9 @@ const KaKaoShareButton: React.FC<KaKaoProps> = ({ content, children, className }
   };
 
   return (
-    <>
-      <Head>
-        <script async src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-        <title>{content.title}</title>
-      </Head>
-      <button onClick={shareKakao} className={className}>
-        {children}
-      </button>
-    </>
+    <button onClick={shareKaKao} className={className}>
+      {children}
+    </button>
   );
 }
 
