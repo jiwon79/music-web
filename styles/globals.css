@@ -16,13 +16,13 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #eee;
 }
 
 body {
   max-width: 480px;
   min-height: 100vh;
   margin: 0 auto;
-  border: 1px #000 solid;
   background-color: #fff;
 }
 
