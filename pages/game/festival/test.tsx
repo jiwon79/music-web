@@ -13,6 +13,7 @@ export default function TestPage() {
     <button
       key={index}
       onClick={() => nextQuestion(index)}
+      className={styles.button__answer}
     >
       {answer}
     </button>
@@ -20,8 +21,8 @@ export default function TestPage() {
 
   return (
     <div className={styles.container}>
-      <p>{koreanOrder[currentNum]}</p>
-      <p>{question.question}</p>
+      <p className={styles.text__order}>{koreanOrder[currentNum]} 질문</p>
+      <p className={styles.text__question}>{question.question}</p>
       <div>
         {answerComponents}
       </div>
