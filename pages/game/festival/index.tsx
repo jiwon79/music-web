@@ -22,7 +22,7 @@ export default function FestivalType() {
       </Head>
       <div className={styles.background}>
         <Image
-          src={"/game/festival/background_image.png"}
+          src={"/game/festival/background.png"}
           alt={"background"}
           layout="fill"
           objectFit="cover"
