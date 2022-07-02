@@ -1,9 +1,18 @@
 @import "../../../components/common/styleGuide.module";
 
 .container {
-  position: absolute;
+  position: relative;
+}
+
+.background {
   height: 100vh;
-  width: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   padding: 24px 32px 32px 32px;
   display: flex;
   flex-direction: column;

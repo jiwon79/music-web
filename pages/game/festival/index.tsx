@@ -11,7 +11,7 @@ export default function FestivalType() {
   const router = useRouter();
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Festival Type</title>
         <meta property="og:type" content="game"/>
@@ -20,15 +20,16 @@ export default function FestivalType() {
         <meta property="og:image"
               content="https://cdn.discordapp.com/attachments/734479328338903114/976769139509182514/music.png"/>
       </Head>
-
-      <Image
-        src={"/game/festival/background.png"}
-        alt={"background"}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
-      <div className={styles.container}>
+      <div className={styles.background}>
+        <Image
+          src={"/game/festival/background_image.png"}
+          alt={"background"}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className={styles.overlay}>
         <p className={styles.title}>당신이<br/>페스티벌을<br/>즐기는 방법.</p>
         <div className={styles.button__wrap}>
           <Link href={"/game/festival/test"} passHref>
@@ -41,6 +42,6 @@ export default function FestivalType() {
           </ShareButton.Url>
         </div>
       </div>
-    </>
+    </div>
   )
 }
