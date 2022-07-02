@@ -1,7 +1,66 @@
 @import "../../../components/common/styleGuide.module";
 
 .container {
+  position: relative;
+}
+
+.background {
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 24px 32px 32px 32px;
   display: flex;
   flex-direction: column;
-  padding: 24px 32px 32px 32px;
+}
+
+.title {
+  margin-top: 88px;
+  font-size: 40px;
+  font-family: cafe24-ssurround, serif;
+  background: linear-gradient(180deg, #DFDFDF 0%, #757199 113.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button__wrap {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin: 8px 0 8px 0;
+    width: 248px;
+    height: 48px;
+    border-radius: 24px;
+    cursor: pointer;
+
+    p {
+      font-size: 18px;
+      font-family: cafe24-ssurround, serif;
+    }
+  }
+
+  .start {
+    background-color: #8B85CD;
+    border: none;
+    p {
+      color: #fff;
+    }
+  }
+
+  .share {
+    background-color: transparent;
+    border: #DAD8F2 1px solid;
+    p {
+      color: #DAD8F2;
+    }
+  }
 }

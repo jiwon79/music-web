@@ -1,11 +1,17 @@
 import Link from "next/link"
 import Head from 'next/head'
+import Image from "next/image";
 
+import ShareButton from "../../../components/common/ShareButtons";
 import styles from "../../../styles/game/festival/index.module.scss"
+import {useRouter} from "next/router";
+import {BASE_URL} from "../../../utils/constants";
 
 export default function FestivalType() {
+  const router = useRouter();
+
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Festival Type</title>
         <meta property="og:type" content="game"/>
@@ -14,10 +20,27 @@ export default function FestivalType() {
         <meta property="og:image"
               content="https://cdn.discordapp.com/attachments/734479328338903114/976769139509182514/music.png"/>
       </Head>
-
-      <div className={styles.container}>
-        <p>당신의 페스티벌 타입은?</p>
-        <Link href={"/game/festival/test"}><p>테스트 시작하기</p></Link>
+      <div className={styles.background}>
+        <Image
+          src={"/game/festival/background.png"}
+          alt={"background"}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className={styles.overlay}>
+        <p className={styles.title}>당신이<br/>페스티벌을<br/>즐기는 방법.</p>
+        <div className={styles.button__wrap}>
+          <Link href={"/game/festival/test"} passHref>
+            <button className={styles.start}>
+              <p>테스트 시작하기</p>
+            </button>
+          </Link>
+          <ShareButton.Url className={styles.share} url={BASE_URL+router.pathname}>
+            <p>공유하기</p>
+          </ShareButton.Url>
+        </div>
       </div>
     </div>
   )

@@ -118,6 +118,7 @@ export const questionList: Array<questionType> = [
 
 export const festivalTypeMap: Record<string, FestivalType> = {
   '1': {
+    id: 1,
     name: '헤벌쭉캐',
     standards: ['차분', '자유로움', '분위기'],
     descriptions: [
@@ -128,6 +129,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   },
   '2': {
+    id: 2,
     name: '둥가둥가 엄마캐',
     standards: ['차분', '계획', '분위기'],
     descriptions: [
@@ -138,6 +140,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ],
   },
   '3': {
+    id: 3,
     name: '내가수 호위무사캐',
     standards: ['차분', '계획', '덕심'],
     descriptions: [
@@ -148,6 +151,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   },
   '4': {
+    id: 4,
     name: '엥뿌삐캐',
     standards: ['활발', '자유로움', '분위기'],
     descriptions: [
@@ -159,6 +163,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   },
   '5': {
+    id: 5,
     name: '실속만 챙기는 덕후캐',
     standards: ['활발', '자유로움', '덕심'],
     descriptions: [
@@ -169,6 +174,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   },
   '6': {
+    id: 6,
     name: '좋아요캐',
     standards: ['활발', '계획', '분위기'],
     descriptions: [
@@ -179,6 +185,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   },
   '7': {
+    id: 7,
     name: '찐광기캐',
     standards: ['활발', '계획', '덕심'],
     descriptions: [

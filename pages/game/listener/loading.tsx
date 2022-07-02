@@ -1,48 +1,35 @@
-import styles from "../../../styles/game/listener/Loading.module.scss";
-import {useEffect, useRef, useState} from "react";
+import {useEffect} from "react";
 import {useRouter} from "next/router";
 import Image from "next/image";
+import useLoad from "../../../utils/hooks/useLoad";
+import styles from "../../../styles/game/listener/Loading.module.scss";
 
 export default function Loading() {
+  const { loadText, loadAction } = useLoad(4);
   const router = useRouter();
-  const loading = useRef<string>('결과 분석 중.');
-  const [loadingText, setLoadingText] = useState('결과 분석 중.');
-  const [isLoading, setIsLoading] = useState(true);
-  const [repeat, setRepeat] = useState();
-  const delay = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
   useEffect(() => {
-    async function wait() {
-      await delay(4000);
-      setIsLoading(false);
+    if (!router.isReady)  return null;
+    const resultType = getListenerType(JSON.parse(router.query.resultDict as string))
+    const load = async () => {
+      await loadAction();
       await router.replace({
-        pathname: '/game/listener/result/' + router.query.result
+        pathname: '/game/listener/result/' + resultType
       });
     }
-    wait();
-  }, [])
+    load();
+  }, [router.isReady]);
 
-  useEffect(() => {
-    let interval;
-    if (isLoading) {
-      interval = setInterval(function () {
-        console.log(loading.current);
-        if (loading.current === '결과 분석 중.') {
-          loading.current = '결과 분석 중..';
-          setLoadingText('결과 분석 중..');
-        } else if (loading.current === '결과 분석 중..') {
-          loading.current = '결과 분석 중...';
-          setLoadingText('결과 분석 중...');
-        } else {
-          loading.current = '결과 분석 중.';
-          setLoadingText('결과 분석 중.');
-        }
-      }, 1000);
-      setRepeat(interval)
-    } else {
-      clearInterval(repeat);
-    }
-  }, [isLoading]);
+  const getListenerType = (resultDict: Record<string, number>): string => {
+    let userType;
+    let maxValue = 0;
+    const items = Object.keys(resultDict);
+    items.forEach((key) => {
+      userType = maxValue < resultDict[key] ? key : userType;
+      maxValue = maxValue < resultDict[key] ? resultDict[key] : maxValue;
+    })
+    return userType;
+  }
 
   return (
     <div className={styles.container}>
@@ -54,7 +41,7 @@ export default function Loading() {
           height={76}
         />
       </div>
-      <p className={styles.text}>{loadingText}</p>
+      <p className={styles.text}>{loadText}</p>
     </div>
   )
 }

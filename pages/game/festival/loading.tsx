@@ -2,6 +2,7 @@ import useLoad from "../../../utils/hooks/useLoad";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
 import {ResultStandard} from "../../../utils/game/festival/enums";
+import styles from "../../../styles/game/festival/Loading.module.scss"
 
 export default function LoadingPage() {
   const router = useRouter();
@@ -28,9 +29,9 @@ export default function LoadingPage() {
   }
   
   return (
-    <div>
-      <p>loading page</p>
-      <p>{loadText}</p>
+    <div className={styles.container}>
+      <p className={styles.text__load}>{loadText}</p>
+      <p className={styles.text__desc}>당신의 캐릭터를 찾는 중</p>
     </div>
   )
 }

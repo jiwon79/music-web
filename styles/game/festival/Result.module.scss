@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.title {
+  font-family: cafe24-ssurround, serif;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  color: #565096;
+}
+
+.illus {
+  width: 217px;
+  height: 217px;
+  background: #F9F9FD;
+  border-radius: 50%;
+  margin: 21px auto 40px auto;
+}
+
+.desc__wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9FD;
+  padding: 24px 30px 32px 30px;
+}
+
+.desc {
+  font-family: Pretendard, serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3A3570;
+
+  li {
+    margin-bottom: 16px;
+    word-break: keep-all;
+  }
+}
+
+.buttons__wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.button__share {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 0 16px 0 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.retry {
+  width: 248px;
+  height: 48px;
+  margin: 0 auto 0 auto;
+  background: #8B85CD;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  font-family: cafe24-ssurround, serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
