@@ -1,7 +1,7 @@
 import {useRef, useState} from "react";
 
 const useLoad = (timeToLoad: number) => {
-  const loadTextList: string[] = ['loading.', 'loading..', 'loading...'];
+  const loadTextList: string[] = ['Loading.', 'Loading..', 'Loading...'];
   const delay = () => new Promise((resolve) => setTimeout(resolve, 1000))
   const [currentNum, setCurrentNum] = useState<number>(0);
   const currentNumRef = useRef<number>(0);
