@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 
 export interface UrlProps {
   url: string,
@@ -7,27 +7,19 @@ export interface UrlProps {
 }
 
 const UrlShareButton: React.FC<UrlProps> = ({ url, className, children }) => {
-  const copyLinkRef = useRef(null);
-  const copyTextUrl = () => {
-    copyLinkRef.current.focus();
-    copyLinkRef.current.select();
-    document.execCommand('copy');
-    alert('복사되었습니다.');
+  const copyText = async () => {
+    try {
+      await navigator.clipboard.writeText(url);
+      alert('복사되었습니다.')
+    } catch {
+      alert('복사 실패')
+    }
   }
 
   return (
-    <>
-      <input
-        type="text"
-        ref={copyLinkRef}
-        value={url}
-        onChange={(e) => {return e}}
-        style={{display: 'none'}}
-      />
-      <button onClick={() => copyTextUrl()} className={className}>
-        {children}
-      </button>
-    </>
+    <button onClick={() => copyText()} className={className}>
+      {children}
+    </button>
   )
 }
 
