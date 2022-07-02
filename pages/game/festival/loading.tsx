@@ -30,8 +30,8 @@ export default function LoadingPage() {
   
   return (
     <div className={styles.container}>
-      <p>{loadText}</p>
-      <p>당신의 캐릭터를 찾는 중</p>
+      <p className={styles.text__load}>{loadText}</p>
+      <p className={styles.text__desc}>당신의 캐릭터를 찾는 중</p>
     </div>
   )
 }
