@@ -12,6 +12,11 @@
   src: url('/fonts/Galmuri11-Bold.ttf');
 }
 
+@font-face {
+  font-family: "cafe24-ssurround";
+  src: url('/fonts/Cafe24Ssurround.ttf');
+}
+
 html,
 body {
   padding: 0;
