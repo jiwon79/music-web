@@ -20,18 +20,19 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
   const shareUrl: string = BASE_URL + router.asPath;
 
   return (
-    <div>
-      <p>{festivalType.name}</p>
-      <div></div>
-      <div>
-        <ul>
+    <div className={styles.container}>
+      <p className={styles.title}>{festivalType.name}</p>
+      <div className={styles.illus}></div>
+      <div className={styles.desc__wrap}>
+        <ul className={styles.desc}>
           {festivalType.descriptions.map((desc, idx) =>
             <li key={idx}>{desc}</li>
           )}
         </ul>
 
-        <div>
+        <div className={styles.buttons__wrap}>
           <ShareButton.KaKao
+            className={styles.button__share}
             content={{
               title: "Festival Type 게임",
               description: "내용!",
@@ -43,19 +44,19 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
           >
             <KaKaoIcon width={24} height={24}/>
           </ShareButton.KaKao>
-          <ShareButton.Facebook url={shareUrl}>
+          <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
             <FacebookIcon width={24} height={24}/>
           </ShareButton.Facebook>
-          <ShareButton.Twitter url={shareUrl} text={"Festival Type Game"}>
+          <ShareButton.Twitter url={shareUrl} text={"Festival Type Game"} className={styles.button__share}>
             <p>Twitter</p>
           </ShareButton.Twitter>
-          <ShareButton.Url url={shareUrl}>
+          <ShareButton.Url url={shareUrl} className={styles.button__share}>
             <UrlIcon width={24} height={24}/>
           </ShareButton.Url>
         </div>
 
-        <Link href={"../"} passHref>
-          <button>테스트 다시하기</button>
+        <Link href={"/game/festival"} passHref>
+          <button className={styles.retry}>테스트 다시하기</button>
         </Link>
       </div>
     </div>
