@@ -10,7 +10,7 @@ import {BASE_URL} from "../../../utils/constants";
 export default function FestivalType() {
   const router = useRouter();
 
-  return (
+    return (
     <div className={styles.container}>
       <Head>
         <title>Festival Type</title>
