@@ -14,9 +14,9 @@ export default function LoadingPage() {
     const resultType = getFestivalType(JSON.parse(router.query.resultDict as string))
     const load = async () => {
       await loadAction();
-      // await router.replace({
-      //   pathname: '/game/festival/result/' + String(resultType)
-      // });
+      await router.replace({
+        pathname: '/game/festival/result/' + String(resultType)
+      });
     }
     load();
   }, [router.isReady]);
