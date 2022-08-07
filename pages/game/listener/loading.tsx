@@ -5,7 +5,7 @@ import useLoad from "../../../utils/hooks/useLoad";
 import styles from "../../../styles/game/listener/Loading.module.scss";
 
 export default function Loading() {
-  const { loadText, loadAction } = useLoad(4);
+  const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
   const router = useRouter();
 
   useEffect(() => {

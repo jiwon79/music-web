@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useLoad from "../../../utils/hooks/useLoad";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
@@ -6,16 +7,16 @@ import styles from "../../../styles/game/festival/Loading.module.scss"
 
 export default function LoadingPage() {
   const router = useRouter();
-  const {loadText, loadAction} = useLoad(4);
+  const {loadText, loadAction} = useLoad({ timeToLoad: 4 });
 
   useEffect(() => {
     if (!router.isReady)  return null;
     const resultType = getFestivalType(JSON.parse(router.query.resultDict as string))
     const load = async () => {
       await loadAction();
-      await router.replace({
-        pathname: '/game/festival/result/' + String(resultType)
-      });
+      // await router.replace({
+      //   pathname: '/game/festival/result/' + String(resultType)
+      // });
     }
     load();
   }, [router.isReady]);
@@ -30,8 +31,16 @@ export default function LoadingPage() {
   
   return (
     <div className={styles.container}>
-      <p className={styles.text__load}>{loadText}</p>
-      <p className={styles.text__desc}>당신의 캐릭터를 찾는 중</p>
+      <Image
+          src="/game/festival/balloon.svg"
+          alt="balloon image"
+          className={styles.image}
+          width={105}
+          height={178}/>
+      <p className={styles.text__load}>
+        당신의 캐릭터를<br />
+        찾고 있어요{loadText}
+      </p>
     </div>
   )
 }
