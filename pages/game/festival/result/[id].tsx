@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import classNames from "classnames";
 
@@ -8,7 +9,7 @@ import KaKaoIcon from "/public/game/festival/kakao_icon.svg";
 import TwitterIcon from "/public/game/festival/twitter_icon.svg";
 import UrlIcon from "/public/game/festival/url_icon.svg";
 
-import { festivalTypeMap } from "utils/game/festival/constant";
+import {festivalTypeMap, recommendFestivalList} from "utils/game/festival/constant";
 import { BASE_URL } from "utils/constants";
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
@@ -34,26 +35,24 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
         {festivalType.descriptions.map((desc, idx) =>
           <div
             key={idx}
-            className={classNames(styles.desc, {[styles.underline]: idx !== lastIdx})}
+            className={classNames(styles.desc, {[styles.desc__underline]: idx !== lastIdx})}
           >
             {replaceLineBreak(desc)}
           </div>
         )}
 
-          <p>2022 페스티벌 소개</p>
+          <p className={styles.festival__wrap__title}>2022 페스티벌 소개</p>
           <div className={styles.festival__wrap}>
-            <div className={styles.festival}>
-              <div className={styles.festival__img}></div>
-              <p className={styles.festival__title}>title</p>
-              <p className={styles.festival__desc}>desc</p>
-              <p className={styles.festival__time}>time</p>
-            </div>
-            <div className={styles.festival}>
-              <div className={styles.festival__img}></div>
-              <p className={styles.festival__title}>title</p>
-              <p className={styles.festival__desc}>desc</p>
-              <p className={styles.festival__time}>time</p>
-            </div>
+            {recommendFestivalList.map((festival) =>
+                <div className={styles.festival} key={festival.title}>
+                  <div className={styles.festival__img}>
+                    <Image src={festival.image_url} width={280} height={280} />
+                  </div>
+                  <p className={styles.festival__title}>{festival.title}</p>
+                  <p className={styles.festival__desc}>{festival.desc}</p>
+                  <p className={styles.festival__time}>{festival.time}</p>
+                </div>
+            )}
           </div>
 
           <div className={styles.buttons__wrap}>

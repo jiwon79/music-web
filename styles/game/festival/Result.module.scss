@@ -50,6 +50,9 @@
   font-size: 16px;
   line-height: 24px;
   color: #3A3570;
+}
+
+.desc__underline {
   background-image: linear-gradient(to right, #DFDCFC 50%,
           rgba(255,255,255,0) 0%);
   background-position: bottom;
@@ -57,14 +60,29 @@
   background-repeat: repeat-x;
 }
 
+.festival__wrap__title {
+  margin: 32px 0 16px 0;
+  color: #6964A3;
+  font-family: cafe24-ssurround, serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .festival__wrap {
   display: flex;
   overflow-x: scroll;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .festival {
   margin-right: 24px;
+}
+
+.festival__img {
+  width: 280px;
+  height: 280px;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .festival__title {
@@ -81,6 +99,7 @@
   font-family: LeeSeoyun, serif;
   font-size: 16px;
   line-height: 24px;
+  word-break: keep-all;
   color: #3A3570;
 }
 
@@ -89,12 +108,6 @@
   font-size: 12px;
   line-height: 24px;
   color: #9D99BA;
-}
-
-.festival__img {
-  width: 280px;
-  height: 280px;
-  border: 1px solid black;
 }
 
 .buttons__wrap {

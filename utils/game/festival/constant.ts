@@ -200,7 +200,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
 export const recommendFestivalList: IRecommendFestivalType[] = [
   {
     image_url: "/game/festival/festival_1.png",
-    title: "2022 RESFFECT FESTIVAL 리스펙 페스티벌",
+    title: "2022 RESFFECT FESTIVAL",
     desc: "Real Sound Effect, RESFFECT!",
     time: "2022.08.27.(토) ~ 2022.08.28.(일)",
   },
