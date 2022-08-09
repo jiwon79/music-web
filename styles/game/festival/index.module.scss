@@ -1,37 +1,59 @@
 @import "../../../components/common/styleGuide.module";
 
 .container {
-  position: relative;
-}
-
-.background {
   height: 100vh;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  padding: 24px 32px 32px 32px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .title {
   margin-top: 88px;
   font-size: 40px;
   font-family: cafe24-ssurround, serif;
-  background: linear-gradient(180deg, #DFDFDF 0%, #757199 113.1%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #6964A3;
+
+  span {
+    color: #E78ABD;
+  }
+}
+
+.illus_wrap_top {
+  display: flex;
+  margin-top: 20px;
+
+  .illus_item:nth-child(1),
+  .illus_item:nth-child(3) {
+    opacity: 0.7;
+  }
+}
+
+.illus_wrap_bottom {
+  display: flex;
+  width: calc(100vw + 100px);
+  margin-bottom: 20px;
+
+  .illus_item:nth-child(1),
+  .illus_item:nth-child(4){
+    opacity: 0.5;
+  }
+}
+
+.illus_item {
+  border: 2px solid #F5F0FC;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 10px 0 10px;
 }
 
 .button__wrap {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
 
