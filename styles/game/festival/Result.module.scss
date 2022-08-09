@@ -1,17 +1,25 @@
+@import "components/common/styleGuide.module";
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding-top: 60px;
+}
+
+.title__wrap {
+  padding-top: 86px;
+  background-color: $game-festival-2;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 
 .title {
   font-family: cafe24-ssurround, serif;
-  font-size: 40px;
-  line-height: 47px;
+  font-size: 36px;
+  line-height: 42px;
   text-align: center;
-  color: #565096;
+  color: $game-festival-1;
 }
 
 .illus {
@@ -19,22 +27,34 @@
   height: 217px;
   background: #F9F9FD;
   border-radius: 50%;
-  margin: 21px auto 40px auto;
+  margin: 32px auto 32px auto;
 }
 
 .desc__wrap {
   display: flex;
   flex-direction: column;
-  background-color: #F9F9FD;
-  padding: 24px 30px 32px 30px;
+  padding: 32px;
+}
+
+.desc__title {
+  font-family: cafe24-ssurround, serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: $game-festival-1;
 }
 
 .desc {
-  font-family: Pretendard, serif;
-  font-weight: 600;
+  font-family: LeeSeoyun, serif;
+  padding: 16px 0 16px 0;
+  word-break: keep-all;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 24px;
   color: #3A3570;
+  background-image: linear-gradient(to right, #DFDCFC 50%,
+          rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
 
   li {
     margin-bottom: 16px;

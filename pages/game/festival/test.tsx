@@ -7,7 +7,7 @@ import styles from "../../../styles/game/festival/Test.module.scss";
 
 export default function TestPage() {
   const { currentNum, question, nextQuestion } = useGame(questionList, resultSet);
-  const progress = ((currentNum+1)*100/questionList.length).toString();
+  const progress = ((currentNum + 1) * 100 / questionList.length).toString();
 
   const answerComponents = question.answers.map((answer, index) =>
     <button

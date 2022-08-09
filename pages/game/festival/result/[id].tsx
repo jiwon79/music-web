@@ -1,15 +1,17 @@
 import Link from "next/link";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import classNames from "classnames";
 
-import ShareButton from "../../../../components/common/ShareButtons";
+import ShareButton from "components/common/ShareButtons";
 import FacebookIcon from "/public/game/festival/facebook_icon.svg"
 import KaKaoIcon from "/public/game/festival/kakao_icon.svg"
 import UrlIcon from "/public/game/festival/url_icon.svg"
 
-import {festivalTypeMap} from "../../../../utils/game/festival/constant";
-import {FestivalType} from "../../../../utils/game/festival/type";
-import {BASE_URL} from "../../../../utils/constants";
-import styles from "../../../../styles/game/festival/Result.module.scss"
+import { festivalTypeMap } from "utils/game/festival/constant";
+import { BASE_URL } from "utils/constants";
+import { FestivalType } from "utils/game/festival/type";
+import replaceLineBreak from "lib/utils/function";
+import styles from "styles/game/festival/Result.module.scss"
 
 interface ResultPageProps {
   festivalType: FestivalType
@@ -18,17 +20,24 @@ interface ResultPageProps {
 export default function ResultPage({ festivalType }: ResultPageProps) {
   const router = useRouter();
   const shareUrl: string = BASE_URL + router.asPath;
+  const lastIdx = festivalType.descriptions.length - 1;
 
   return (
     <div className={styles.container}>
-      <p className={styles.title}>{festivalType.name}</p>
-      <div className={styles.illus}></div>
+      <div className={styles.title__wrap}>
+        <p className={styles.title}>{festivalType.name}</p>
+        <div className={styles.illus}></div>
+      </div>
       <div className={styles.desc__wrap}>
-        <ul className={styles.desc}>
-          {festivalType.descriptions.map((desc, idx) =>
-            <li key={idx}>{desc}</li>
-          )}
-        </ul>
+        <p className={styles.desc__title}>캐릭터 알아보기</p>
+        {festivalType.descriptions.map((desc, idx) =>
+          <div
+            key={idx}
+            className={classNames(styles.desc, {[styles.underline]: idx !== lastIdx})}
+          >
+            {replaceLineBreak(desc)}
+          </div>
+        )}
 
         <div className={styles.buttons__wrap}>
           <ShareButton.KaKao

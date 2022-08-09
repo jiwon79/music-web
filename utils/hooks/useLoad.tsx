@@ -16,7 +16,6 @@ const useLoad = ({
     for await (const i of Array(timeToLoad).fill(0)) {
       await delay();
       currentNumRef.current = currentNumRef.current + 1;
-      console.log(currentNumRef.current);
       setCurrentNum(currentNumRef.current)
     }
   }
