@@ -3,9 +3,10 @@ import { useRouter } from "next/router";
 import classNames from "classnames";
 
 import ShareButton from "components/common/ShareButtons";
-import FacebookIcon from "/public/game/festival/facebook_icon.svg"
-import KaKaoIcon from "/public/game/festival/kakao_icon.svg"
-import UrlIcon from "/public/game/festival/url_icon.svg"
+import FacebookIcon from "/public/game/festival/facebook_icon.svg";
+import KaKaoIcon from "/public/game/festival/kakao_icon.svg";
+import TwitterIcon from "/public/game/festival/twitter_icon.svg";
+import UrlIcon from "/public/game/festival/url_icon.svg";
 
 import { festivalTypeMap } from "utils/game/festival/constant";
 import { BASE_URL } from "utils/constants";
@@ -39,34 +40,50 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
           </div>
         )}
 
-        <div className={styles.buttons__wrap}>
-          <ShareButton.KaKao
-            className={styles.button__share}
-            content={{
-              title: "Festival Type 게임",
-              description: "내용!",
-              imageUrl: "https://www.esn.org/blog/sites/default/files/imce/576364502a3f379b77617193680e21ff.jpg",
-              link: {
-                mobileWebUrl: shareUrl,
-              }
-            }}
-          >
-            <KaKaoIcon width={24} height={24}/>
-          </ShareButton.KaKao>
-          <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
-            <FacebookIcon width={24} height={24}/>
-          </ShareButton.Facebook>
-          <ShareButton.Twitter url={shareUrl} text={"Festival Type Game"} className={styles.button__share}>
-            <p>Twitter</p>
-          </ShareButton.Twitter>
-          <ShareButton.Url url={shareUrl} className={styles.button__share}>
-            <UrlIcon width={24} height={24}/>
-          </ShareButton.Url>
-        </div>
+          <p>2022 페스티벌 소개</p>
+          <div className={styles.festival__wrap}>
+            <div className={styles.festival}>
+              <div className={styles.festival__img}></div>
+              <p className={styles.festival__title}>title</p>
+              <p className={styles.festival__desc}>desc</p>
+              <p className={styles.festival__time}>time</p>
+            </div>
+            <div className={styles.festival}>
+              <div className={styles.festival__img}></div>
+              <p className={styles.festival__title}>title</p>
+              <p className={styles.festival__desc}>desc</p>
+              <p className={styles.festival__time}>time</p>
+            </div>
+          </div>
 
-        <Link href={"/game/festival"} passHref>
-          <button className={styles.retry}>테스트 다시하기</button>
-        </Link>
+          <div className={styles.buttons__wrap}>
+            <ShareButton.KaKao
+              className={styles.button__share}
+              content={{
+                title: "Festival Type 게임",
+                description: "내용!",
+                imageUrl: "https://www.esn.org/blog/sites/default/files/imce/576364502a3f379b77617193680e21ff.jpg",
+                link: {
+                  mobileWebUrl: shareUrl,
+                }
+              }}
+            >
+              <KaKaoIcon width={24} height={24} />
+            </ShareButton.KaKao>
+            <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
+              <FacebookIcon width={24} height={24} />
+            </ShareButton.Facebook>
+            <ShareButton.Twitter url={shareUrl} text={"Festival Type Game"} className={styles.button__share}>
+              <TwitterIcon width={24} height={24} />
+            </ShareButton.Twitter>
+            <ShareButton.Url url={shareUrl} className={styles.button__share}>
+              <UrlIcon width={24} height={24} />
+            </ShareButton.Url>
+          </div>
+
+          <Link href={"/game/festival"} passHref>
+            <button className={styles.retry}>테스트 다시하기</button>
+          </Link>
       </div>
     </div>
   )

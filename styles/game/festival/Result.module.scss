@@ -55,11 +55,46 @@
   background-position: bottom;
   background-size: 12px 1px;
   background-repeat: repeat-x;
+}
 
-  li {
-    margin-bottom: 16px;
-    word-break: keep-all;
-  }
+.festival__wrap {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 80px;
+}
+
+.festival {
+  margin-right: 24px;
+}
+
+.festival__title {
+  margin-top: 16px;
+  font-family: cafe24-ssurround, serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #3A3570;
+}
+
+.festival__desc {
+  margin-top: 2px;
+  font-family: LeeSeoyun, serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3A3570;
+}
+
+.festival__time {
+  font-family: LeeSeoyun, serif;
+  font-size: 12px;
+  line-height: 24px;
+  color: #9D99BA;
+}
+
+.festival__img {
+  width: 280px;
+  height: 280px;
+  border: 1px solid black;
 }
 
 .buttons__wrap {
@@ -69,12 +104,15 @@
 }
 
 .button__share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border: none;
   margin: 0 16px 0 16px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #E3E2F7;
   cursor: pointer;
 }
 
