@@ -28,7 +28,9 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
     <div className={styles.container}>
       <div className={styles.title__wrap}>
         <p className={styles.title}>{festivalType.name}</p>
-        <div className={styles.illus}></div>
+        <div className={styles.illus}>
+          <Image src={`/game/festival/${festivalType.id}_illus.png`} width={180} height={180} />
+        </div>
       </div>
       <div className={styles.desc__wrap}>
         <p className={styles.desc__title}>캐릭터 알아보기</p>

@@ -23,9 +23,13 @@
 }
 
 .illus {
-  width: 217px;
-  height: 217px;
-  background: #F9F9FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  background: white;
   border-radius: 50%;
   margin: 32px auto 32px auto;
 }
