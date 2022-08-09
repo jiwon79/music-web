@@ -1,6 +1,6 @@
 import {questionType} from "../types";
 import {ResultStandard} from "./enums";
-import {FestivalType} from "./type";
+import {FestivalType, IRecommendFestivalType} from "./type";
 
 export const questionList: Array<questionType> = [
   {
@@ -196,3 +196,43 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     ]
   }
 }
+
+export const recommendFestivalList: IRecommendFestivalType[] = [
+  {
+    image_url: "/public/game/festival/festival_1.png",
+    title: "2022 RESFFECT FESTIVAL 리스펙 페스티벌",
+    desc: "Real Sound Effect, RESFFECT!",
+    time: "2022.08.27.(토) ~ 2022.08.28.(일)",
+  },
+  {
+    image_url: "/public/game/festival/festival_2.png",
+    title: "RAPBEAT 2022",
+    desc: "토,일 양일간 국내 최다 라인업이 출연하는 힙합 페스티벌 ‘랩비트’!",
+    time: "2022.09.03.(토) ~ 2022.09.04.(일)",
+  },
+  {
+    image_url: "/public/game/festival/festival_3.png",
+    title: "HIPHOPPLAYA FESTIVAL 2022",
+    desc: "한국을 대표하는 최대 규모의 야외 힙합 페스티벌 ‘힙플페'!",
+    time: "2022.09.17.(토) ~ 2022.09.18.(일)",
+  },
+  {
+    image_url: "/public/game/festival/festival_4.png",
+    title: "레인보우 뮤직&캠핑 페스티벌 2022",
+    desc: "아름다운 자라섬에 감성이 물들어가는 9월. 달콤한 음악과 낭만, 캠핑이 함께하는 ‘레인보우 페스티벌 2022’이 찾아옵니다.",
+    time: "2022.09.17.(토) ~ 2022.09.18.(일)",
+  },
+  {
+    image_url: "/public/game/festival/festival_5.png",
+    title: "2022 부산국제록페스티벌",
+    desc: "2022년 제23회를 맞는 국내 최장수 록페스티벌, ‘부산국제록페스티벌'!",
+    time: "2022.10.01.(토) ~ 2022.10.02.(일)",
+  },
+  {
+    image_url: "/public/game/festival/festival_6.png",
+    title: "19회 자라섬재즈페스티벌 - 가평",
+    desc: "자라가 바라보는 섬, 세계지도 위에 한국의 재즈를 그리다, ‘자라섬재즈페스티벌'!",
+    time: "2022.10.01.(토) ~ 2022.10.03.(월)",
+  },
+
+]

@@ -4,3 +4,10 @@ export interface FestivalType {
   standards: string[],
   descriptions: string[],
 }
+
+export interface IRecommendFestivalType {
+  image_url: string,
+  title: string,
+  desc: string,
+  time: string,
+}
