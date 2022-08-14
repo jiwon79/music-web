@@ -2,6 +2,7 @@
 
 .container {
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +28,7 @@
 
 .illus_wrap_top {
   display: flex;
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
 
   .illus_item:nth-child(1),
   .illus_item:nth-child(3) {
@@ -37,7 +38,8 @@
 
 .illus_wrap_bottom {
   display: flex;
-  width: calc(100vw + 100px);
+  justify-content: space-between;
+  min-width: 480px;
   margin-bottom: 20px;
 
   .illus_item:nth-child(1),
