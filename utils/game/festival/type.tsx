@@ -2,6 +2,7 @@ export interface FestivalType {
   id: number,
   name: string,
   enName: string,
+  public_image_url: string,
   standards: string[],
   descriptions: string[],
 }

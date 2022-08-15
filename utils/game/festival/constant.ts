@@ -120,6 +120,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 1,
     name: '헤벌쭉캐',
     enName: 'free',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646785-ef75797b-78e8-4cd4-beb5-e28211b47fcb.png",
     standards: ['차분', '자유로움', '분위기'],
     descriptions: [
       '제대로 된 여유를 즐길 줄 아는 당신!\n페스티벌에서 ‘헤벌쭉캐’를 맡고 있습니다.',
@@ -132,6 +133,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 2,
     name: '둥가둥가 엄마캐',
     enName: 'mom',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646797-ace47673-2014-4fd5-8522-85ddcdbb07b0.png",
     standards: ['차분', '계획', '분위기'],
     descriptions: [
       '친구들이 의지하게 되는 엄마 같은 당신! 페스티벌에서 ‘둥가둥가 엄마포지션캐’를 맡고 있습니다.',
@@ -144,6 +146,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 3,
     name: '내가수 호위무사캐',
     enName: 'escort',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646800-0adb2a03-4f34-4c55-80dd-aaf9e9026b3b.png",
     standards: ['차분', '계획', '덕심'],
     descriptions: [
       '차분하지만 치밀하게 덕질하는 당신! 페스티벌에서 ‘내가수 호위무사캐\'를 맡고 있습니다.',
@@ -156,6 +159,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 4,
     name: '엥뿌삐캐',
     enName: 'enfp',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646809-2d3a30b5-31df-4e71-8d16-0bf171b28c49.png",
     standards: ['활발', '자유로움', '분위기'],
     descriptions: [
       '친구따라 갔지만 막상 가면 제일 신나게 노는 당신! 페스티벌에서 ‘엥뿌삐식 덕질캐\'를 맡고 있습니다.',
@@ -169,6 +173,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 5,
     name: '실속만 챙기는 덕후캐',
     enName: 'performance',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646813-9ad50f2d-9d64-4397-8d8f-1a3c21f799d7.png",
     standards: ['활발', '자유로움', '덕심'],
     descriptions: [
       '활발하고 자유로우며 덕심도 있는 당신! 페스티벌에서 ‘실속만 챙기는 덕후캐\'를 맡고 있습니다.',
@@ -181,6 +186,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 6,
     name: '좋아요캐',
     enName: 'like',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646817-7ba7289f-440b-4dda-84c3-bb835c10ff86.png",
     standards: ['활발', '계획', '분위기'],
     descriptions: [
       '페스티벌에 입장하는 순간 셔터부터 누르는 당신! 페스티벌에서 ‘좋아요캐\'를 맡고 있습니다.',
@@ -193,6 +199,7 @@ export const festivalTypeMap: Record<string, FestivalType> = {
     id: 7,
     name: '찐광기캐',
     enName: 'madness',
+    public_image_url: "https://user-images.githubusercontent.com/59159410/184646820-2abf4646-41f0-4335-89ba-969993c8c610.png",
     standards: ['활발', '계획', '덕심'],
     descriptions: [
       '활발하고 계획적이며 덕질에 진심인 당신! 페스티벌에서 ‘찐광기캐\'를 맡고 있습니다.',
