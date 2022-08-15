@@ -16,10 +16,10 @@ export default function FestivalType() {
       <Head>
         <title>Festival Type</title>
         <meta property="og:type" content="game"/>
-        <meta property="og:title" content="Festival-type Test"/>
-        <meta property="og:description" content="Festival type test description"/>
+        <meta property="og:title" content="당신이 페스티벌을 즐기는 방법"/>
+        <meta property="og:description" content="뮤직 페스티벌 즐기는 유형 알아보기"/>
         <meta property="og:image"
-              content="https://cdn.discordapp.com/attachments/734479328338903114/976769139509182514/music.png"/>
+              content="https://user-images.githubusercontent.com/59159410/184649819-2552f0ad-8410-41d5-bbdb-095cae625403.png"/>
       </Head>
       <Firework className={styles.firework} />
       <p className={styles.title}>

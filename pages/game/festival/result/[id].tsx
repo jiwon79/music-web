@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { useRouter } from "next/router";
+import {useEffect} from "react";
 import classNames from "classnames";
 
 import ShareButton from "components/common/ShareButtons";
@@ -9,8 +11,9 @@ import KaKaoIcon from "/public/game/festival/kakao_icon.svg";
 import TwitterIcon from "/public/game/festival/twitter_icon.svg";
 import UrlIcon from "/public/game/festival/url_icon.svg";
 
-import {festivalTypeMap, recommendFestivalList} from "utils/game/festival/constant";
+import festivalGameAPI from "lib/api/game/festival";
 import { BASE_URL } from "utils/constants";
+import {festivalTypeMap, recommendFestivalList} from "utils/game/festival/constant";
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
 import styles from "styles/game/festival/Result.module.scss"
@@ -23,9 +26,20 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
   const router = useRouter();
   const shareUrl: string = BASE_URL + router.asPath;
   const lastIdx = festivalType.descriptions.length - 1;
+  useEffect(() => {
+    festivalGameAPI.postResult(festivalType.enName);
+  }, []);
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title></title>
+        <meta property="og:type" content="game" />
+        <meta property="og:title" content={festivalType.name} />
+        <meta property="og:description" content="뮤직 페스티벌을 즐기는 유형" />
+        <meta property="og:image" content={festivalType.public_image_url} />
+      </Head>
+
       <div className={styles.title__wrap}>
         <p className={styles.title}>{festivalType.name}</p>
         <div className={styles.illus}>
@@ -61,9 +75,9 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
             <ShareButton.KaKao
               className={styles.button__share}
               content={{
-                title: "Festival Type 게임",
-                description: "내용!",
-                imageUrl: "https://www.esn.org/blog/sites/default/files/imce/576364502a3f379b77617193680e21ff.jpg",
+                title: "당신이 페스티벌을 즐기는 방법",
+                description: festivalType.name,
+                imageUrl: festivalType.public_image_url,
                 link: {
                   mobileWebUrl: shareUrl,
                 }
@@ -74,7 +88,11 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
             <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
               <FacebookIcon width={24} height={24} />
             </ShareButton.Facebook>
-            <ShareButton.Twitter url={shareUrl} text={"Festival Type Game"} className={styles.button__share}>
+            <ShareButton.Twitter
+                url={shareUrl}
+                className={styles.button__share}
+                text={"당신이 페스티벌을 즐기는 방법 - " + festivalType.name}
+            >
               <TwitterIcon width={24} height={24} />
             </ShareButton.Twitter>
             <ShareButton.Url url={shareUrl} className={styles.button__share}>
