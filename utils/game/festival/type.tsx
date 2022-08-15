@@ -1,6 +1,7 @@
 export interface FestivalType {
   id: number,
   name: string,
+  enName: string,
   standards: string[],
   descriptions: string[],
 }
