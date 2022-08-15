@@ -1,9 +1,10 @@
-import Image from "next/image";
-import useLoad from "../../../utils/hooks/useLoad";
 import {useEffect} from "react";
+import Image from "next/image";
 import {useRouter} from "next/router";
-import {ResultStandard} from "../../../utils/game/festival/enums";
-import styles from "../../../styles/game/festival/Loading.module.scss"
+
+import useLoad from "utils/hooks/useLoad";
+import {ResultStandard} from "utils/game/festival/enums";
+import styles from "styles/game/festival/Loading.module.scss"
 
 export default function LoadingPage() {
   const router = useRouter();
@@ -32,7 +33,7 @@ export default function LoadingPage() {
   return (
     <div className={styles.container}>
       <Image
-          src="/game/festival/balloon.svg"
+          src="/game/festival/balloon.png"
           alt="balloon image"
           className={styles.image}
           width={105}
