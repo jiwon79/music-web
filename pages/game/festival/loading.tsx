@@ -33,7 +33,7 @@ export default function LoadingPage() {
   return (
     <div className={styles.container}>
       <Image
-          src="/game/festival/balloon.png"
+          src="/game/festival/Balloon.png"
           alt="balloon image"
           className={styles.image}
           width={105}
