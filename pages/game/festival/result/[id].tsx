@@ -45,6 +45,9 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
         <div className={styles.illus}>
           <Image src={`/game/festival/${festivalType.id}_illus.png`} width={180} height={180} />
         </div>
+        <a href="https://www.instagram.com/shop.boringboring/">
+          <p className={styles.illus_id}>@shop.boringboring</p>
+        </a>
       </div>
       <div className={styles.desc__wrap}>
         <p className={styles.desc__title}>캐릭터 알아보기</p>

@@ -8,6 +8,9 @@
 }
 
 .title__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 86px;
   background-color: $game-festival-2;
   border-bottom-left-radius: 32px;
@@ -31,7 +34,15 @@
   height: 180px;
   background: white;
   border-radius: 50%;
-  margin: 32px auto 32px auto;
+  margin: 32px auto 16px auto;
+}
+
+.illus_id {
+  font-family: LeeSeoyun, serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $game-festival-1;
+  margin-bottom: 16px;
 }
 
 .desc__wrap {
