@@ -166,3 +166,25 @@
   line-height: 21px;
   color: #FFFFFF;
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  p {
+    font-family: LeeSeoyun, sans-serif;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  p:nth-child(2) {
+    margin-bottom: 14px;
+  }
+
+  a {
+    margin-bottom: 20px;
+  }
+}

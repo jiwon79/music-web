@@ -80,51 +80,62 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
         <p className={styles.festival__wrap__title__sub}>
           내년을 기약해도 좋은 웰메이드 페스티벌!
         </p>
-          <div className={styles.festival__wrap}>
-            {oldRecommendFestivalList.map((festival) =>
-              <div className={styles.festival} key={festival.title}>
-                <div className={styles.festival__img}>
-                  <Image src={festival.image_url} width={280} height={280} />
-                </div>
-                <p className={styles.festival__title}>{festival.title}</p>
-                <p className={styles.festival__desc}>{festival.desc}</p>
-                <p className={styles.festival__time}>{festival.time}</p>
+        <div className={styles.festival__wrap}>
+          {oldRecommendFestivalList.map((festival) =>
+            <div className={styles.festival} key={festival.title}>
+              <div className={styles.festival__img}>
+                <Image src={festival.image_url} width={280} height={280} />
               </div>
-            )}
-          </div>
+              <p className={styles.festival__title}>{festival.title}</p>
+              <p className={styles.festival__desc}>{festival.desc}</p>
+              <p className={styles.festival__time}>{festival.time}</p>
+            </div>
+          )}
+        </div>
 
-          <div className={styles.buttons__wrap}>
-            <ShareButton.KaKao
+        <div className={styles.buttons__wrap}>
+          <ShareButton.KaKao
+            className={styles.button__share}
+            content={{
+              title: "당신이 페스티벌을 즐기는 방법",
+              description: festivalType.name,
+              imageUrl: festivalType.public_image_url,
+              link: {
+                mobileWebUrl: shareUrl,
+              }
+            }}
+          >
+            <KaKaoIcon width={24} height={24} />
+          </ShareButton.KaKao>
+          <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
+            <FacebookIcon width={24} height={24} />
+          </ShareButton.Facebook>
+          <ShareButton.Twitter
+              url={shareUrl}
               className={styles.button__share}
-              content={{
-                title: "당신이 페스티벌을 즐기는 방법",
-                description: festivalType.name,
-                imageUrl: festivalType.public_image_url,
-                link: {
-                  mobileWebUrl: shareUrl,
-                }
-              }}
-            >
-              <KaKaoIcon width={24} height={24} />
-            </ShareButton.KaKao>
-            <ShareButton.Facebook url={shareUrl} className={styles.button__share}>
-              <FacebookIcon width={24} height={24} />
-            </ShareButton.Facebook>
-            <ShareButton.Twitter
-                url={shareUrl}
-                className={styles.button__share}
-                text={"당신이 페스티벌을 즐기는 방법 - " + festivalType.name}
-            >
-              <TwitterIcon width={24} height={24} />
-            </ShareButton.Twitter>
-            <ShareButton.Url url={shareUrl} className={styles.button__share}>
-              <UrlIcon width={24} height={24} />
-            </ShareButton.Url>
-          </div>
+              text={"당신이 페스티벌을 즐기는 방법 - " + festivalType.name}
+          >
+            <TwitterIcon width={24} height={24} />
+          </ShareButton.Twitter>
+          <ShareButton.Url url={shareUrl} className={styles.button__share}>
+            <UrlIcon width={24} height={24} />
+          </ShareButton.Url>
+        </div>
 
-          <Link href={"/game/festival"} passHref>
-            <button className={styles.retry}>테스트 다시하기</button>
-          </Link>
+        <Link href={"/game/festival"} passHref>
+          <button className={styles.retry}>테스트 다시하기</button>
+        </Link>
+
+        <div className={styles.footer}>
+          <p>광고 및 후원 문의</p>
+          <p>Advertising and Sponsorship Contact</p>
+          <a href="mailto:riina3333@naver.com">
+            <p>riina3333@naver.com</p>
+          </a>
+          <p>&copy;영코퍼레이션 All Rights Reserved. 2022.</p>
+        </div>
+
+
       </div>
     </div>
   )
