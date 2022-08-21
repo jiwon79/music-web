@@ -50,7 +50,7 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
         <p className={styles.desc__title}>캐릭터 알아보기</p>
         {festivalType.descriptions.map((desc, idx) =>
           <div
-            key={idx}
+            key={desc}
             className={classNames(styles.desc, {[styles.desc__underline]: idx !== lastIdx})}
           >
             {replaceLineBreak(desc)}
