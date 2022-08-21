@@ -19,7 +19,7 @@ export default function FestivalType() {
         <meta property="og:title" content="당신이 페스티벌을 즐기는 방법"/>
         <meta property="og:description" content="뮤직 페스티벌 즐기는 유형 알아보기"/>
         <meta property="og:image"
-              content="https://user-images.githubusercontent.com/59159410/184649819-2552f0ad-8410-41d5-bbdb-095cae625403.png"/>
+              content="https://user-images.githubusercontent.com/59159410/185781394-275715f5-6dc4-4e2d-bb1d-3849a347317d.png"/>
       </Head>
       <Firework className={styles.firework} />
       <p className={styles.title}>
