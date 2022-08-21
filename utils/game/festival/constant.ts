@@ -265,7 +265,7 @@ export const oldRecommendFestivalList: IRecommendFestivalType[] = [
   {
     image_url: "/game/festival/old_festival_3.png",
     title: "뷰티풀민트라이프 2022",
-    desc: "",
+    desc: "몇 년만에 찾아온 국내 최고의 야외 봄 페스티벌. 봄의 정점에서 각자의 일상을 복기할 수 있을 놀라운 순간을 함께 즐겨보아요!",
     time: "2022.05.13.(금)~2022.05.15.(일)",
   },
   {
