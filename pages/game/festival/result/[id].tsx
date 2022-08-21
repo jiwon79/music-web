@@ -13,7 +13,7 @@ import UrlIcon from "/public/game/festival/url_icon.svg";
 
 import festivalGameAPI from "lib/api/game/festival";
 import { BASE_URL } from "utils/constants";
-import {festivalTypeMap, recommendFestivalList} from "utils/game/festival/constant";
+import {festivalTypeMap, recommendFestivalList, oldRecommendFestivalList} from "utils/game/festival/constant";
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
 import styles from "styles/game/festival/Result.module.scss"
@@ -57,17 +57,36 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
           </div>
         )}
 
-          <p className={styles.festival__wrap__title}>2022 페스티벌 소개</p>
-          <div className={styles.festival__wrap}>
-            {recommendFestivalList.map((festival) =>
-                <div className={styles.festival} key={festival.title}>
-                  <div className={styles.festival__img}>
-                    <Image src={festival.image_url} width={280} height={280} />
-                  </div>
-                  <p className={styles.festival__title}>{festival.title}</p>
-                  <p className={styles.festival__desc}>{festival.desc}</p>
-                  <p className={styles.festival__time}>{festival.time}</p>
+        <p className={styles.festival__wrap__title}>2022 페스티벌 소개</p>
+        <p className={styles.festival__wrap__title__sub}>
+          곧 다가올, 여러분이 주인공이 될 페스티벌!
+        </p>
+        <div className={styles.festival__wrap}>
+          {recommendFestivalList.map((festival) =>
+              <div className={styles.festival} key={festival.title}>
+                <div className={styles.festival__img}>
+                  <Image src={festival.image_url} width={280} height={280} />
                 </div>
+                <p className={styles.festival__title}>{festival.title}</p>
+                <p className={styles.festival__desc}>{festival.desc}</p>
+                <p className={styles.festival__time}>{festival.time}</p>
+              </div>
+          )}
+        </div>
+
+        <p className={styles.festival__wrap__title__sub}>
+          내년을 기약해도 좋은 웰메이드 페스티벌!
+        </p>
+          <div className={styles.festival__wrap}>
+            {oldRecommendFestivalList.map((festival) =>
+              <div className={styles.festival} key={festival.title}>
+                <div className={styles.festival__img}>
+                  <Image src={festival.image_url} width={280} height={280} />
+                </div>
+                <p className={styles.festival__title}>{festival.title}</p>
+                <p className={styles.festival__desc}>{festival.desc}</p>
+                <p className={styles.festival__time}>{festival.time}</p>
+              </div>
             )}
           </div>
 

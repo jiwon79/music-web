@@ -247,4 +247,31 @@ export const recommendFestivalList: IRecommendFestivalType[] = [
     desc: "자라가 바라보는 섬, 세계지도 위에 한국의 재즈를 그리다, ‘자라섬재즈페스티벌'!",
     time: "2022.10.01.(토) ~ 2022.10.03.(월)",
   },
+];
+
+export const oldRecommendFestivalList: IRecommendFestivalType[] = [
+  {
+    image_url: "/game/festival/old_festival_1.png",
+    title: "서울재즈페스티벌 2022",
+    desc: "관객과 국내외 아티스트가 자유로운 분위기에서 즐기는 화려한 음악 축제, ‘제14회 서울재즈페스티벌 2022’",
+    time: "2022.05.27(금) ~ 2022.05.29(일)"
+  },
+  {
+    image_url: "/game/festival/old_festival_2.png",
+    title: "청춘페스티벌 2022",
+    desc: "청춘을 위한, 청춘의, 청춘에 의한 페스티벌",
+    time: "2022.06.10.(금)~2022.06.12.(일)",
+  },
+  {
+    image_url: "/game/festival/old_festival_3.png",
+    title: "뷰티풀민트라이프 2022",
+    desc: "",
+    time: "2022.05.13.(금)~2022.05.15.(일)",
+  },
+  {
+    image_url: "/game/festival/old_festival_4.png",
+    title: "2022 THE CRY ground",
+    desc: "대한민국 유일무이한 힙합 브랜드 THE CRY.  2년간 억눌렸던 시간을 깨고 드디어 돌아옵니다!",
+    time: "2022.05.21.(토)~2022.05.22.(일)",
+  }
 ]

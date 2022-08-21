@@ -51,8 +51,8 @@
   font-family: LeeSeoyun, serif;
   padding: 16px 0 16px 0;
   word-break: keep-all;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
   color: #3A3570;
 }
 
@@ -72,10 +72,18 @@
   line-height: 24px;
 }
 
+.festival__wrap__title__sub {
+  margin-bottom: 16px;
+  color: #6964A3;
+  font-family: cafe24-ssurround, serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .festival__wrap {
   display: flex;
   overflow-x: scroll;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .festival {
