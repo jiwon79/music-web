@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {useEffect} from "react";
-import classNames from "classnames";
+import classNames from "classnames/bind";
 
 import ShareButton from "components/common/ShareButtons";
 import FacebookIcon from "/public/game/festival/facebook_icon.svg";
@@ -17,6 +17,8 @@ import {festivalTypeMap, recommendFestivalList, oldRecommendFestivalList} from "
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
 import styles from "styles/game/festival/Result.module.scss"
+
+const cx = classNames.bind(styles);
 
 interface ResultPageProps {
   festivalType: FestivalType
@@ -83,7 +85,7 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
         <div className={styles.festival__wrap}>
           {oldRecommendFestivalList.map((festival) =>
             <div className={styles.festival} key={festival.title}>
-              <div className={styles.festival__img}>
+              <div className={cx('festival__img', 'img__cover')}>
                 <Image src={festival.image_url} width={280} height={280} />
               </div>
               <p className={styles.festival__title}>{festival.title}</p>

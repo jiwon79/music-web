@@ -108,6 +108,12 @@
   overflow: hidden;
 }
 
+.img__cover {
+  img {
+    object-fit: cover;
+  }
+}
+
 .festival__title {
   margin-top: 16px;
   font-family: cafe24-ssurround, serif;
