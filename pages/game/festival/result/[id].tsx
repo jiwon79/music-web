@@ -16,7 +16,7 @@ import { BASE_URL } from "utils/constants";
 import {festivalTypeMap, recommendFestivalList, oldRecommendFestivalList} from "utils/game/festival/constant";
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
-import styles from "styles/game/festival/Result.module.scss"
+import styles from "pages/game/festival/result/result.module.scss"
 
 const cx = classNames.bind(styles);
 

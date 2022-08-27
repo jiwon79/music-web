@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import ShareButton from "components/common/ShareButtons";
 import Firework from "/public/game/festival/firework.svg";
-import styles from "styles/game/festival/index.module.scss";
+import styles from "pages/game/festival/index.module.scss";
 import { BASE_URL } from "utils/constants";
 
 export default function FestivalType() {

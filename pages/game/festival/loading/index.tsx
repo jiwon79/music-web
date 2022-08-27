@@ -4,7 +4,7 @@ import {useRouter} from "next/router";
 
 import useLoad from "utils/hooks/useLoad";
 import {ResultStandard} from "utils/game/festival/enums";
-import styles from "styles/game/festival/Loading.module.scss"
+import styles from "pages/game/festival/loading/loading.module.scss"
 
 export default function LoadingPage() {
   const router = useRouter();
