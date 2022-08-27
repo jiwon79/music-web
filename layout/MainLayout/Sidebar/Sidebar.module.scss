@@ -1,15 +1,34 @@
 .sidebar {
   position: absolute;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
   height: 100vh;
-  background-color: #8D83D2;
+  background-color: #fff;
+  padding: 100px 0 0 32px;
+
+  .shadow {
+    box-shadow: 14px 0 60px rgba(98, 98, 98, 0.25);
+  }
 
   &:before {
     content: '';
     position: absolute;
-    left: -500px;
+    top: 0;
+    left: -499px;
     width: 500px;
     height: 100vh;
-    background-color: #83ffb2;
+    background-color: #fff;
   }
+}
+
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.link {
+  width: 100%;
+  border-top: 1px solid #c9c9c9;
+  padding: 16px 0 16px 0;
 }
