@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Link from "next/link";
 import { motion, PanInfo, useAnimation } from "framer-motion";
+import cx from "classnames";
 
 import Logo from "/public/images/logo.svg";
 import styles from './Sidebar.module.scss';
@@ -39,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSideOpen, handleSideOpen }) => {
 
   return (
     <motion.div
-      className={styles.sidebar}
+      className={cx(styles.sidebar, { [styles.shadow] : isSideOpen })}
       style={{ left: -width, width: width }}
       drag="x"
       dragElastic={0.1}
