@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from "framer-motion";
+import {motion, PanInfo, useAnimation} from "framer-motion";
 import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -16,34 +16,33 @@ const Sidebar: React.FC<SidebarProps> = ({ isSideOpen, handleSideOpen }) => {
   }, [isSideOpen, controls]);
 
   const sidekickBodyStyles = {
-    active: { x: 0 },
-    inactive: { x: -width }
+    active: { x: width },
+    inactive: { x: 0 }
   };
+
+  const onDragEnd = (_event: MouseEvent, info: PanInfo) => {
+    const isDraggingLeft = info.offset.x < 0;
+    const multiplier = isDraggingLeft ? 1 / 2 : 3 / 2;
+    const threshold = width * multiplier;
+
+    if (Math.abs(info.offset.x) > threshold && isSideOpen) {
+      handleSideOpen(false);
+    } else if (Math.abs(info.offset.x) < threshold && !isSideOpen) {
+      handleSideOpen(true);
+    } else {
+      controls.start(isSideOpen ? "active" : "inactive");
+    }
+  }
 
   return (
     <motion.div
       className={styles.sidebar}
+      style={{ left: -width, width: width }}
       drag="x"
       dragElastic={0.1}
-      dragConstraints={{
-        left: -width,
-        right: 0
-      }}
+      dragConstraints={{ left: 0, right: width }}
       dragMomentum={false}
-      onDragEnd={(_event, info) => {
-        console.log(info);
-        const isDraggingLeft = info.offset.x < 0;
-        const multiplier = isDraggingLeft ? 1 / 2 : 3 / 2;
-        const threshold = width * multiplier;
-
-        if (Math.abs(info.offset.x) > threshold && isSideOpen) {
-          handleSideOpen(false);
-        } else if (Math.abs(info.offset.x) < threshold && !isSideOpen) {
-          handleSideOpen(true);
-        } else {
-          controls.start(isSideOpen ? "active" : "inactive");
-        }
-      }}
+      onDragEnd={onDragEnd}
       animate={controls}
       variants={sidekickBodyStyles}
       transition={{ type: "spring", damping: 20, stiffness: 500 }}
