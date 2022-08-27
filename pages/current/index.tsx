@@ -1,4 +1,4 @@
-import MainLayout from "../../components/common/Layout/MainLayout";
+import MainLayout from "../../layout/MainLayout/MainLayout";
 
 export default function CurrentPage() {
   return (
