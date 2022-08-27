@@ -1,8 +1,10 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -26,7 +28,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   left: 0;
   top: 0;

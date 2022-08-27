@@ -1,42 +1,39 @@
 import { useState } from "react";
+import Sidebar from "./Sidebar/Sidebar";
 
 import styles from './MainLayout.module.scss';
 
 export default function MainLayout({ children, title }) {
-  const [sideOption, setSideOption] = useState<string>('NULL');
-  const handleSideOption = (sideBarOption) => {
-    setSideOption(sideBarOption);
+  const [isSideOpen, setIsSideOpen] = useState<boolean>(false);
+  const handleSideOpen = (isSideOpen) => {
+    setIsSideOpen(isSideOpen);
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <header className={styles.header}>
-        <button onClick={() => handleSideOption('MENU')}>
+        <button onClick={() => handleSideOpen(true)}>
           메뉴
         </button>
         <p>
           {title}
         </p>
-        <button onClick={() => handleSideOption('SEARCH')}>
+        <button>
           검색
         </button>
       </header>
       <div
-        className={sideOption == 'NULL' ? '' : styles.overlay}
-        onClick={() => handleSideOption('NULL')}
+        className={isSideOpen ? styles.overlay : ''}
+        onClick={() => handleSideOpen(false)}
       />
       <main className={styles.main}>
         {children}
       </main>
 
-      {/*<SideBar*/}
-      {/*  isOpen={sideOption == 'MENU'}*/}
-      {/*  handleSideOption={handleSideOption}*/}
-      {/*/>*/}
-      {/*<SearchBar*/}
-      {/*  isOpen={sideOption == 'SEARCH'}*/}
-      {/*  handleSideOption={handleSideOption}*/}
-      {/*/>*/}
+      <Sidebar
+        isSideOpen={isSideOpen}
+        handleSideOpen={handleSideOpen}
+      />
 
       <footer className={styles.footer}>
         <div className={styles.footer__item}>
