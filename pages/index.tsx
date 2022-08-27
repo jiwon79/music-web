@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <MainLayout title={"ILLUSION"}>
+    <MainLayout title={"illusion"}>
       <div className={styles.container}>
         <Head>
           <title>0 Corporation</title>

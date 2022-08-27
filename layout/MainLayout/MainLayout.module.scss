@@ -17,16 +17,6 @@
   flex: 1;
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.footer__item {
-  display: flex;
-  justify-content: center;
-}
-
 .overlay {
   position: fixed;
   z-index: 10;
