@@ -1,16 +1,29 @@
 .sidebar {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
   height: 100vh;
   background-color: #fff;
-  padding-left: 32px;
+  padding: 100px 0 0 32px;
 
   &:before {
     content: '';
     position: absolute;
+    top: 0;
     left: -499px;
     width: 500px;
     height: 100vh;
     background-color: #fff;
   }
+}
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.link {
+  width: 100%;
+  border-top: 1px solid #c9c9c9;
+  padding: 16px 0 16px 0;
 }

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import {motion, PanInfo, useAnimation} from "framer-motion";
-import styles from './Sidebar.module.scss';
+import Link from "next/link";
+import { motion, PanInfo, useAnimation } from "framer-motion";
+
 import Logo from "/public/images/logo.svg";
+import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
   isSideOpen: boolean;
@@ -48,7 +50,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isSideOpen, handleSideOpen }) => {
       variants={sidekickBodyStyles}
       transition={{ type: "spring", damping: 20, stiffness: 500 }}
     >
-      <Logo />
+      <Logo className={styles.logo} />
+      <Link href={"#"}>
+        <a className={styles.link}>설정</a>
+      </Link>
+      <Link href={"#"}>
+        <a className={styles.link}>만든이 소개</a>
+      </Link>
+      <div></div>
     </motion.div>
   )
 }
