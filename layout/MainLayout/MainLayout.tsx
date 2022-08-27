@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "./Sidebar/Sidebar";
 
 import styles from './MainLayout.module.scss';
+import MainHeader from "./MainHeader/MainHeader";
 
 export default function MainLayout({ children, title }) {
   const [isSideOpen, setIsSideOpen] = useState<boolean>(false);
@@ -11,17 +12,7 @@ export default function MainLayout({ children, title }) {
 
   return (
     <div className={styles.container} >
-      <header className={styles.header}>
-        <button onClick={() => handleSideOpen(true)}>
-          메뉴
-        </button>
-        <p>
-          {title}
-        </p>
-        <button>
-          검색
-        </button>
-      </header>
+      <MainHeader handleSideOpen={handleSideOpen} title={title} />
       <div
         className={isSideOpen ? styles.overlay : ''}
         onClick={() => handleSideOpen(false)}
