@@ -2,14 +2,15 @@
   position: absolute;
   z-index: 10;
   height: 100vh;
-  background-color: #8D83D2;
+  background-color: #fff;
+  padding-left: 32px;
 
   &:before {
     content: '';
     position: absolute;
-    left: -500px;
+    left: -499px;
     width: 500px;
     height: 100vh;
-    background-color: #83ffb2;
+    background-color: #fff;
   }
 }

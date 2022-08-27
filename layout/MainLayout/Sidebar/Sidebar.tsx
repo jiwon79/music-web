@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {motion, PanInfo, useAnimation} from "framer-motion";
 import styles from './Sidebar.module.scss';
+import Logo from "/public/images/logo.svg";
 
 interface SidebarProps {
   isSideOpen: boolean;
@@ -47,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSideOpen, handleSideOpen }) => {
       variants={sidekickBodyStyles}
       transition={{ type: "spring", damping: 20, stiffness: 500 }}
     >
-      sidebar
+      <Logo />
     </motion.div>
   )
 }
