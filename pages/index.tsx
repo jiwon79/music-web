@@ -1,42 +1,13 @@
 import Head from 'next/head'
 import { useRouter } from "next/router";
 
+import { homePlayListInfo, homeGameListInfo } from "lib/utils/constant";
 import MainLayout from "layout/MainLayout/MainLayout";
 import Title from "components/home/Title/Title";
 import HomeItemList from "components/home/HomeItemList/HomeItemList";
-import {HomeItemProps} from "../components/home/HomeItem/HomeItem";
 
 export default function Home() {
   const router = useRouter();
-
-  const playListInfo: HomeItemProps[] = [
-    {
-      title: '음악 제목 01',
-      url: '#001',
-      imageUrl: '',
-    },
-    {
-      title: '음악 제목 02',
-      url: '#002',
-      imageUrl: '',
-    },
-    {
-      title: '음악 제목 03',
-      url: '#003',
-      imageUrl: '',
-    },
-    {
-      title: '음악 제목 04',
-      url: '#004',
-      imageUrl: '',
-    },
-    {
-      title: '음악 제목 05',
-      url: '#005',
-      imageUrl: '',
-    },
-  ]
-
 
   return (
     <MainLayout title={"illusion"}>
@@ -49,10 +20,10 @@ export default function Home() {
       <Title title={'TIME X MUSIC'} direction={'left'} />
 
       <Title title={'PLAYLIST'} direction={'right'} />
-      <HomeItemList listInfo={playListInfo} />
+      <HomeItemList listInfo={homePlayListInfo} />
 
       <Title title={'GAME X TEST'} direction={'left'} />
-      <HomeItemList listInfo={playListInfo} borderRadius={50} />
+      <HomeItemList listInfo={homeGameListInfo} borderRadius={50} />
 
       <button
         onClick={() => {
