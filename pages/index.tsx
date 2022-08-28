@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import { useRouter } from "next/router";
 
-import { homePlayListInfo, homeGameListInfo } from "lib/utils/constant";
 import MainLayout from "layout/MainLayout/MainLayout";
 import Title from "components/home/Title/Title";
 import HomeItemList from "components/home/HomeItemList/HomeItemList";
+import { homePlayListInfo, homeGameListInfo } from "lib/utils/constant";
+import styles from './home.module.scss';
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -18,6 +20,32 @@ export default function Home() {
       </Head>
 
       <Title title={'TIME X MUSIC'} direction={'left'} />
+      <div className={styles.content__wrap}>
+        <Link href={'#co1'}>
+          <div className={styles.content}>
+            <div className={styles.content__image} />
+            <p>콘텐츠 제목 1</p>
+          </div>
+        </Link>
+        <Link href={'#co2'}>
+          <div className={styles.content}>
+            <div className={styles.content__image} />
+            <p>콘텐츠 제목 2</p>
+          </div>
+        </Link>
+        <Link href={'#co3'}>
+          <div className={styles.content}>
+            <div className={styles.content__image} />
+            <p>콘텐츠 제목 3</p>
+          </div>
+        </Link>
+        <Link href={'#co4'}>
+          <div className={styles.content}>
+            <div className={styles.content__image} />
+            <p>콘텐츠 제목 4</p>
+          </div>
+        </Link>
+      </div>
 
       <Title title={'PLAYLIST'} direction={'right'} />
       <HomeItemList listInfo={homePlayListInfo} />
