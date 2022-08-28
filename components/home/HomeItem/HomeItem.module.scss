@@ -1,0 +1,20 @@
+@import '/components/common/styleGuide.module';
+
+.item {
+  margin: 0 8px 0 8px;
+}
+
+.item__image {
+  width: 94px;
+  height: 94px;
+  background-color: $gray4;
+  margin-bottom: 4px;
+}
+
+.item__title {
+  font-family: Pretendard, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $black1;
+}

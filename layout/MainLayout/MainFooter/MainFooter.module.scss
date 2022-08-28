@@ -1,10 +1,38 @@
+@import "components/common/styleGuide.module";
+
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #fff;
 }
 
 .footer__item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
+  padding: 12px 0 10px 0;
+
+  .label {
+    margin-top: 5px;
+    color: $gray2;
+  }
+
+  svg {
+    fill: $gray2;
+  }
+
+  &.active {
+    .label {
+      color: $black2;
+    }
+
+    svg {
+      fill: $black2;
+    }
+  }
 }

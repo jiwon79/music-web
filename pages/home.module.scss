@@ -1,0 +1,22 @@
+@import 'components/common/styleGuide.module';
+
+.content__wrap {
+  width: 100%;
+  padding: 0 32px 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.content__image {
+  width: 120px;
+  height: 120px;
+  background-color: $gray4;
+  margin-bottom: 4px;
+}
