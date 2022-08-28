@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: 24px;
+  margin: 24px 0 8px 0;
 }
 
 .title {
-  color: $black1;
+  color: $black2;
   font-family: Pretendard, sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -20,7 +20,7 @@
   flex: 1;
 
   &.line {
-    border-bottom: 1px solid $black1;
+    border-bottom: 1px solid $black2;
   }
 }
 
