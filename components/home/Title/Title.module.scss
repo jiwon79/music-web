@@ -1,0 +1,26 @@
+@import '/components/common/styleGuide.module';
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.title {
+  color: $black1;
+  font-family: Pretendard, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 24px 0 24px;
+}
+
+.space {
+  flex: 1;
+
+  &.line {
+    border-bottom: 1px solid $black1;
+  }
+}
+
