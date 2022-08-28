@@ -1,6 +1,9 @@
 @import "components/common/styleGuide.module";
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #fff;
