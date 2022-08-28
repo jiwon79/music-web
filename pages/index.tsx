@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import MainLayout from "layout/MainLayout/MainLayout";
 import Title from "components/home/Title/Title";
-import Playlist from "components/home/HomeItemList/HomeItemList";
+import HomeItemList from "components/home/HomeItemList/HomeItemList";
 import {HomeItemProps} from "../components/home/HomeItem/HomeItem";
 
 export default function Home() {
@@ -42,9 +42,12 @@ export default function Home() {
       </Head>
 
       <Title title={'TIME X MUSIC'} direction={'left'} />
+
       <Title title={'PLAYLIST'} direction={'right'} />
-      <Playlist listInfo={playListInfo} />
+      <HomeItemList listInfo={playListInfo} />
+
       <Title title={'GAME X TEST'} direction={'left'} />
+      <HomeItemList listInfo={playListInfo} borderRadius={50} />
 
       <button
         onClick={() => {

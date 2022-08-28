@@ -8,9 +8,13 @@ interface HomeItemListProps {
 
 const HomeItemList = ({ listInfo, borderRadius }: HomeItemListProps) => {
   return (
-    <div className={styles.container} style={{ borderRadius: borderRadius }}>
+    <div className={styles.container} >
       {listInfo.map((item) =>
-        <HomeItem title={item.title} imageUrl={item.imageUrl} />
+        <HomeItem
+          title={item.title}
+          imageUrl={item.imageUrl}
+          borderRadius={borderRadius}
+        />
       )}
     </div>
   )
