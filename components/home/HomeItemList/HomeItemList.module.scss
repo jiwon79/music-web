@@ -1,0 +1,7 @@
+@import '/components/common/styleGuide.module';
+
+.container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 0 24px 0 24px;
+}
