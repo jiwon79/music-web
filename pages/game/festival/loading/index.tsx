@@ -5,15 +5,31 @@ import {useRouter} from "next/router";
 import useLoad from "utils/hooks/useLoad";
 import {ResultStandard} from "utils/game/festival/enums";
 import styles from "pages/game/festival/loading/loading.module.scss"
+import {festivalTypeMap} from "../../../../utils/game/festival/constant";
+import Head from "next/head";
 
 export default function LoadingPage() {
   const router = useRouter();
-  const {loadText, loadAction} = useLoad({ timeToLoad: 4 });
+  const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
 
   useEffect(() => {
     if (!router.isReady)  return null;
     const resultType = getFestivalType(JSON.parse(router.query.resultDict as string))
+    const answers = router.query.answers;
+    const data = {
+      answers: answers,
+      resultNum: resultType,
+      resultString: festivalTypeMap[resultType].name
+    };
+
     const load = async () => {
+      await fetch(process.env.BASE_FETCH_URL + '/api/sheet', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
       await loadAction();
       await router.replace({
         pathname: '/game/festival/result/' + String(resultType)
@@ -32,6 +48,9 @@ export default function LoadingPage() {
   
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Festival Type | Loading</title>
+      </Head>
       <Image
           src="/game/festival/Balloon.png"
           alt="balloon image"
