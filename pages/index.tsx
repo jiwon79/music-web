@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import MainLayout from "layout/MainLayout/MainLayout";
@@ -6,10 +7,22 @@ import Title from "components/home/Title/Title";
 import HomeItemList from "components/home/HomeItemList/HomeItemList";
 import { homePlayListInfo, homeGameListInfo } from "lib/utils/constant";
 import styles from './home.module.scss';
-import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
+  console.log(router);
+
+  (async function() {
+    const data = { name: 'name1', message: 'message' };
+    const response = await fetch(process.env.BASE_FETCH_URL + '/api/sheet', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((r) => r);
+    console.log(response);
+  }());
 
   return (
     <MainLayout title={"illusion"}>
