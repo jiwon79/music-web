@@ -9,8 +9,6 @@ export interface HomeItemProps {
 }
 
 const HomeItem = ({ title, url, imageUrl, borderRadius }: HomeItemProps) => {
-  console.log(borderRadius);
-
   return (
     <Link href={url}>
       <div className={styles.item}>

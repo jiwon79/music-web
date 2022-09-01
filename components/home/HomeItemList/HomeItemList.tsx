@@ -11,6 +11,7 @@ const HomeItemList = ({ listInfo, borderRadius }: HomeItemListProps) => {
     <div className={styles.container} >
       {listInfo.map((item) =>
         <HomeItem
+          key={item.url}
           title={item.title}
           url={item.url}
           imageUrl={item.imageUrl}
