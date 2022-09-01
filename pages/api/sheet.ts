@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { google } from 'googleapis';
+import 'lib/utils/prototype';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -23,12 +24,14 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       version: 'v4',
     });
 
+    const koreanDateLocalString = new Date().getKoreanDate().toLocaleString();
+
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
       range: 'festival!A2:M',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[new Date().toLocaleString(), ...answers, resultNum, resultString]],
+        values: [[koreanDateLocalString, ...answers, resultNum, resultString]],
       },
     });
     return res.status(201).json({message: 'It works!', response});
