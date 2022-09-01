@@ -30,7 +30,7 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
   return (
     <div className={styles.container}>
       <Head>
-        <title></title>
+        <title>Festival Type | Result</title>
         <meta property="og:type" content="game" />
         <meta property="og:title" content={festivalType.name} />
         <meta property="og:description" content="뮤직 페스티벌을 즐기는 유형" />

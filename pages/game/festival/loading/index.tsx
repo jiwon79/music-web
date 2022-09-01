@@ -6,6 +6,7 @@ import useLoad from "utils/hooks/useLoad";
 import {ResultStandard} from "utils/game/festival/enums";
 import styles from "pages/game/festival/loading/loading.module.scss"
 import {festivalTypeMap} from "../../../../utils/game/festival/constant";
+import Head from "next/head";
 
 export default function LoadingPage() {
   const router = useRouter();
@@ -47,6 +48,9 @@ export default function LoadingPage() {
   
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Festival Type | Loading</title>
+      </Head>
       <Image
           src="/game/festival/Balloon.png"
           alt="balloon image"
