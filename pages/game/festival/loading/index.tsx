@@ -23,8 +23,10 @@ export default function LoadingPage() {
     };
 
     const load = async () => {
-      const fetchUrl = process.env.BASE_FETCH_URL + '/api/sheet';
-      await fetch(fetchUrl, {
+      const server = process.env.NODE_ENV === 'production'
+        ? 'https://music-web-indol.vercel.app'
+        : 'http://localhost:3000';
+      await fetch(`${server}/api/sheet`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
