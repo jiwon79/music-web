@@ -3,7 +3,7 @@
 .footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: min(100%, 480px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #fff;
