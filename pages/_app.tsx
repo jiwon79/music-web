@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
+import 'lib/utils/prototype';
 
 import * as ga from '../lib/ga';
 import '../styles/globals.css'

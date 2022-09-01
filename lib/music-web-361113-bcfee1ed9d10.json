@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "music-web-361113",
+  "private_key_id": "bcfee1ed9d10857caa67e716c5fe5fa458bf2047",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCOmDyQx/RK0tWY\nGgWzfb+BBTeqdasXpqt6UlECW02d5toBTlCABndTUXOpZCAdiPtUVVbfjeY9t+4b\nNgSCBE9Z7DImC9V9HQo41se8synv8T7YI8ZLbYp0xfqHDZPvRrRXgwdQvHto2ERa\nS7pYT5sxuNbIZiH3LaHhvy5nNxaD0GdKQq9fY0DPQk0+8ZSACRLZCiiks2z5W0a0\nrmV6oJkn1cya1nmhTe3uU/y3Wc/Qc8ajAzMDjajwd+oMydhy7IVenLn5XCW4uRnQ\na0TQdt9bbs0sYm1/UfJ96c3gYt1393HGg4XwaUHcJTccpsQVUWsEVWQcdTH4Fef5\nKbSUc05DAgMBAAECggEAL0BpSXzJCgZlezqcSwdPb1ygPp8xa+vyBN3ENGi3Bq0Z\n7rbZ3CLIZdam4inoroDW7/I7kGcANdF+WIwE4GS3OtAXKh5fx07ZNU6O74vbSMSD\nk7H/Ir2Q1PNJ+njYXcDrP9iOkwVyS6Lmu5k+jccLYWWj3tJhTPxVGW513QQXNORa\nu+X0FOo7Ljvs/z8wr9yKlxN+dwXZfNwYBrXYjsJUnnBU1pqZJMfcizWA5RbUKYLl\nuybjnSHEMfFNTL+PvqyavL+LOAGTvfy+5AvBTG2EA4DttwouKguVscC/ndfRrJxi\nTjRMPcKWJZEb1hhuwRiesR5fAFqJlCqRglVo8uomwQKBgQDD12qOrDlNqL6DunJZ\nQu2dzlbsx6JFteiNXmZc8B2QiPz/0rWHP9XDMUHX642FlSgfc8m6hEEhHZjOhh4k\nnhkDi/Ja1TuB0CYQdRvEGJP4DG5xrwNJQ1yoeEly9dMBELeQneAIp5df1FOLRv5H\nzqrd465KufgkHjK3sfvnYTif4QKBgQC6ZZklChW7dV0MkNAxMdjWf2mBXAgnMjgR\nd2g8KlW6WdQm9fGJ1x0TxlLq5fJx2973ABzCBM4rz11XpO6hAM2YswLsafA94G9V\nBrxfakC1Dl5UKHC6EZ5eFMfRJ5tcJRItrfQsSdXtZHI1DmoIzmiYlqxnAAphmLi+\naz1Gn93CowKBgFB4hndjexRW/xl/lhbpclvCemNG0H3Wdl0IagVMQMmwEE1KFn8h\nksNmzQhc6MT3+gmaeUyjpWNnFu/dmisvr1WOvqHmNlJr5ggjJqqX8s0cxpD9+dqz\nzDIJYxzSt8YbSWIqDPFhc8jTpRR4smltGTadpHNeIQEuS2bBwqFbiHnhAoGAUYzb\n2PG1mmN5x2KgQ7W8WfQ6s8cRJhz5nOKyLwiSo0pj4HvgJl+AMEOnyW+7iAcbYNOi\nwVwa294Ix6y4XqacTP+c+tRKsLe93eRpjBFPqCdWK9nZn/7PW/gZiC+c8E6jymp+\nFtZjC07UDNR2nc24w3HAkfvZjuOjiGQg1gJhoqMCgYBHlkTt2Vy8qM6uyfxwKKOT\n/11JWBzocw8aOSyLFnAvRujfyLXuiJEQOlsecamrXYEVPX8ZeEHA+FMQtefDicCZ\ndAvYa1Kt9kn2yucpyMKxnbzXOOYFALB/IZ8NrVtnlvoI3RyscnhWun43zkkOJe+I\nGeQoU8L3NbyuZ+R0xVv0qQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "illusion@music-web-361113.iam.gserviceaccount.com",
+  "client_id": "105880562237752106773",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/illusion%40music-web-361113.iam.gserviceaccount.com"
+}
