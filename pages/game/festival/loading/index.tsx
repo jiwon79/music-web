@@ -23,7 +23,8 @@ export default function LoadingPage() {
     };
 
     const load = async () => {
-      await fetch(process.env.BASE_FETCH_URL + '/api/sheet', {
+      const fetchUrl = process.env.BASE_FETCH_URL + '/api/sheet';
+      await fetch(fetchUrl, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
