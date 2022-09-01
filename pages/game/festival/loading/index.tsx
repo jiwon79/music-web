@@ -23,7 +23,7 @@ export default function LoadingPage() {
     };
 
     const load = async () => {
-      await fetch(typeof window === 'undefined'
+      fetch(typeof window === 'undefined'
         ? process.env.BASE_FETCH_URL
         : '' + '/api/sheet',
         {
