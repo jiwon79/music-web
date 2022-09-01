@@ -3,8 +3,7 @@ import { google } from 'googleapis';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const {name, message} = req.body;
-    console.log(name, message);
+    const { answers, resultNum, resultString } = req.body;
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -26,10 +25,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
-      range: 'festival!A2:C',
+      range: 'festival!A2:M',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[name, message]],
+        values: [[new Date().toLocaleString(), ...answers, resultNum, resultString]],
       },
     });
     return res.status(201).json({message: 'It works!', response});

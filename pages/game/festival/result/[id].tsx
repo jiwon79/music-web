@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import {useEffect} from "react";
 import classNames from "classnames/bind";
 
 import ShareButton from "components/common/ShareButtons";
@@ -11,12 +10,11 @@ import KaKaoIcon from "/public/game/festival/kakao_icon.svg";
 import TwitterIcon from "/public/game/festival/twitter_icon.svg";
 import UrlIcon from "/public/game/festival/url_icon.svg";
 
-import festivalGameAPI from "lib/api/game/festival";
 import { BASE_URL } from "utils/constants";
-import {festivalTypeMap, recommendFestivalList, oldRecommendFestivalList} from "utils/game/festival/constant";
+import { festivalTypeMap, recommendFestivalList, oldRecommendFestivalList } from "utils/game/festival/constant";
 import { FestivalType } from "utils/game/festival/type";
 import replaceLineBreak from "lib/utils/function";
-import styles from "pages/game/festival/result/result.module.scss"
+import styles from "./result.module.scss";
 
 const cx = classNames.bind(styles);
 
@@ -28,9 +26,6 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
   const router = useRouter();
   const shareUrl: string = BASE_URL + router.asPath;
   const lastIdx = festivalType.descriptions.length - 1;
-  useEffect(() => {
-    festivalGameAPI.postResult(festivalType.enName);
-  }, []);
 
   return (
     <div className={styles.container}>
@@ -136,8 +131,6 @@ export default function ResultPage({ festivalType }: ResultPageProps) {
           </a>
           <p>&copy;영코퍼레이션 All Rights Reserved. 2022.</p>
         </div>
-
-
       </div>
     </div>
   )
