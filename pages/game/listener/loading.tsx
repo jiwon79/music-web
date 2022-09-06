@@ -1,8 +1,9 @@
-import {useEffect} from "react";
-import {useRouter} from "next/router";
 import Image from "next/image";
-import useLoad from "../../../utils/hooks/useLoad";
-import styles from "../../../styles/game/listener/Loading.module.scss";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+
+import useLoad from "utils/hooks/useLoad";
+import styles from "styles/game/listener/Loading.module.scss";
 
 export default function Loading() {
   const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
@@ -41,7 +42,7 @@ export default function Loading() {
           height={76}
         />
       </div>
-      <p className={styles.text}>{loadText}</p>
+      <p className={styles.text}>Loading{loadText}</p>
     </div>
   )
 }

@@ -4,7 +4,8 @@ import 'lib/utils/prototype';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { answers, resultNum, resultString } = req.body;
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const { sheetName, answers, resultNum, resultString } = req.body;
 
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -28,7 +29,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
-      range: 'festival!A2:M',
+      range: `${sheetName}!A2:M`,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[koreanDateLocalString, ...answers, resultNum, resultString]],

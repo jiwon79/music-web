@@ -1,12 +1,12 @@
-import {useEffect} from "react";
 import Image from "next/image";
-import {useRouter} from "next/router";
-
-import useLoad from "utils/hooks/useLoad";
-import {ResultStandard} from "utils/game/festival/enums";
-import styles from "pages/game/festival/loading/loading.module.scss"
-import {festivalTypeMap} from "../../../../utils/game/festival/constant";
 import Head from "next/head";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
+import { ResultStandard } from "utils/game/festival/enums";
+import { festivalTypeMap } from "utils/game/festival/constant";
+import useLoad from "utils/hooks/useLoad";
+import styles from "pages/game/festival/loading/loading.module.scss"
 
 export default function LoadingPage() {
   const router = useRouter();
@@ -17,6 +17,7 @@ export default function LoadingPage() {
     const resultType = getFestivalType(JSON.parse(router.query.resultDict as string))
     const answers = router.query.answers;
     const data = {
+      sheetName: 'festival',
       answers: answers,
       resultNum: resultType,
       resultString: festivalTypeMap[resultType].name
