@@ -1,5 +1,7 @@
 import { HomeItemProps } from "components/home/HomeItem/HomeItem";
 
+const BASE_URL: string = 'https://illusion-0.vercel.app';
+
 const homePlayListInfo: HomeItemProps[] = [
   {
     title: '음악 제목 01',
@@ -41,4 +43,4 @@ const homeGameListInfo: HomeItemProps[] = [
   },
 ];
 
-export { homePlayListInfo, homeGameListInfo }
+export { BASE_URL, homePlayListInfo, homeGameListInfo }

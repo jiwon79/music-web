@@ -2,11 +2,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-import useLoad from "utils/hooks/useLoad";
-import styles from "styles/game/listener/Loading.module.scss";
-import {listenerTypeMap} from "../../../utils/game/listener/constant";
+import useLoad from "lib/hooks/useLoad";
+import styles from "pages/game/listener/loading/loading.module.scss";
+import {listenerTypeMap} from "../../../../lib/game/listener/constant";
 
-export default function Loading() {
+export default function ListenerLoadingPage() {
   const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
   const router = useRouter();
 

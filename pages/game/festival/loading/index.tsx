@@ -3,9 +3,9 @@ import Head from "next/head";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { ResultStandard } from "utils/game/festival/enums";
-import { festivalTypeMap } from "utils/game/festival/constant";
-import useLoad from "utils/hooks/useLoad";
+import { ResultStandard } from "lib/game/festival/enums";
+import { festivalTypeMap } from "lib/game/festival/constant";
+import useLoad from "lib/hooks/useLoad";
 import styles from "pages/game/festival/loading/loading.module.scss"
 
 export default function LoadingPage() {

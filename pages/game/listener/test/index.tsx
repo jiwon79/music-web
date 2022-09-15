@@ -1,13 +1,13 @@
-import Header from "../../../components/listener-type/Header";
-import Menu from "../../../components/listener-type/Menu";
-import MusicBar from "../../../components/listener-type/MusicBar";
+import Header from "../../../../components/listener-type/Header";
+import Menu from "../../../../components/listener-type/Menu";
+import MusicBar from "../../../../components/listener-type/MusicBar";
 
-import useGame from "../../../utils/hooks/useGame";
-import {resultSet} from "../../../utils/game/listener/enum";
-import {questionList} from "../../../utils/game/listener/constant";
-import styles from "../../../styles/game/listener/Test.module.scss"
+import useGame from "../../../../lib/hooks/useGame";
+import {resultSet} from "../../../../lib/game/listener/enum";
+import {questionList} from "../../../../lib/game/listener/constant";
+import styles from "./test.module.scss"
 
-export default function TestPage() {
+export default function ListenerTestPage() {
   const { currentNum, question, nextQuestion } = useGame(questionList, resultSet)
   const progress = ((currentNum+1)*100/questionList.length).toString();
 
