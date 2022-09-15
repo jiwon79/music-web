@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import useLoad from "utils/hooks/useLoad";
 import styles from "styles/game/listener/Loading.module.scss";
+import {listenerTypeMap} from "../../../utils/game/listener/constant";
 
 export default function Loading() {
   const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
@@ -12,7 +13,25 @@ export default function Loading() {
   useEffect(() => {
     if (!router.isReady)  return null;
     const resultType = getListenerType(JSON.parse(router.query.resultDict as string))
+    const data = {
+      sheetName: 'listener',
+      answers: router.query.answers,
+      resultNum: resultType,
+      resultString: listenerTypeMap[resultType].name
+    };
+    console.log(data);
+
     const load = async () => {
+      fetch(typeof window === 'undefined'
+          ? process.env.BASE_FETCH_URL
+          : '' + '/api/sheet',
+        {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
       await loadAction();
       await router.replace({
         pathname: '/game/listener/result/' + resultType

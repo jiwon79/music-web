@@ -19,8 +19,8 @@ export default function LoadingPage() {
     const data = {
       sheetName: 'festival',
       answers: answers,
-      resultNum: resultType,
-      resultString: festivalTypeMap[resultType].name
+      resultNum: festivalTypeMap[resultType].id,
+      resultString: resultType
     };
 
     const load = async () => {
