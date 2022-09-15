@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import useLoad from "lib/hooks/useLoad";
 import styles from "pages/game/listener/loading/loading.module.scss";
-import {listenerTypeMap} from "../../../../lib/game/listener/constant";
+import { listenerTypeMap } from "lib/game/listener/constant";
 
 export default function ListenerLoadingPage() {
   const { loadText, loadAction } = useLoad({ timeToLoad: 4 });

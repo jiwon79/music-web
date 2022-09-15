@@ -1,10 +1,10 @@
-import Header from "../../../../components/listener-type/Header";
-import Menu from "../../../../components/listener-type/Menu";
-import MusicBar from "../../../../components/listener-type/MusicBar";
+import Header from "components/listener-type/Header";
+import Menu from "components/listener-type/Menu";
+import MusicBar from "components/listener-type/MusicBar";
 
-import useGame from "../../../../lib/hooks/useGame";
-import {resultSet} from "../../../../lib/game/listener/enum";
-import {questionList} from "../../../../lib/game/listener/constant";
+import useGame from "lib/hooks/useGame";
+import { resultSet } from "lib/game/listener/enum";
+import { questionList } from "lib/game/listener/constant";
 import styles from "./test.module.scss"
 
 export default function ListenerTestPage() {

@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-import styles from "./result.module.scss"
-import {listenerTypeMap} from "../../../../lib/game/listener/constant";
-import {listenerType} from "../../../../lib/game/listener/types";
+import Header from "components/listener-type/Header";
+import MusicBar from "components/listener-type/MusicBar";
+import Border from "components/listener-type/Border";
+import Description from "components/listener-type/Description";
+import Album from "components/listener-type/Album";
+import ShareButton from "components/common/ShareButtons";
 
-import Header from "../../../../components/listener-type/Header";
-import MusicBar from "../../../../components/listener-type/MusicBar";
-import Border from "../../../../components/listener-type/Border";
-import Description from "../../../../components/listener-type/Description";
-import Album from "../../../../components/listener-type/Album";
-import ShareButton from "../../../../components/common/ShareButtons";
+import styles from "./result.module.scss"
+import { listenerTypeMap } from "lib/game/listener/constant";
+import { listenerType } from "lib/game/listener/types";
 
 interface props {
   listenerType: listenerType
@@ -40,7 +40,6 @@ export default function ResultPage({ listenerType }: props) {
           )}
         </div>
       </div>
-
 
       <Description
         title={"나는 음악을 들을 때,"}
@@ -128,7 +127,6 @@ export function getStaticProps({ params }) {
     }
   }
 }
-
 
 export async function getStaticPaths() {
   return  {

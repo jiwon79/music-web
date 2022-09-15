@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Head from 'next/head'
 
 import styles from "./index.module.scss"
-import Header from "../../../components/listener-type/Header"
-import Menu from "../../../components/listener-type/Menu";
-import MusicBar from "../../../components/listener-type/MusicBar";
+import Header from "components/listener-type/Header"
+import Menu from "components/listener-type/Menu";
+import MusicBar from "components/listener-type/MusicBar";
 
 export default function ListenerType() {
   return (
