@@ -1,4 +1,4 @@
-@import "../../../components/common/styleGuide.module";
+@import "../../../../components/common/styleGuide.module";
 
 .container {
     display: flex;
@@ -112,7 +112,7 @@
 .shareTitle {
     font-size: 20px;
     margin-top: 18px;
-    font-family: galmuri-bold;
+    font-family: galmuri-bold, sans-serif;
 }
 
 .shares {

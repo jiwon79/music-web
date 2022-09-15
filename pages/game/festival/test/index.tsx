@@ -1,8 +1,8 @@
 import Head from "next/head";
-import useGame from "utils/hooks/useGame";
-import { questionList } from "utils/game/festival/constant";
-import { resultSet } from "utils/game/festival/enums";
-import { koreanOrder } from "utils/game/constant";
+import useGame from "lib/hooks/useGame";
+import { questionList } from "lib/game/festival/constant";
+import { resultSet } from "lib/game/festival/enums";
+import { koreanOrder } from "lib/game/constant";
 
 import styles from "./test.module.scss";
 

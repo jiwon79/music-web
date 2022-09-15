@@ -10,9 +10,9 @@ import KaKaoIcon from "/public/game/festival/kakao_icon.svg";
 import TwitterIcon from "/public/game/festival/twitter_icon.svg";
 import UrlIcon from "/public/game/festival/url_icon.svg";
 
-import { BASE_URL } from "utils/constants";
-import { festivalTypeMap, recommendFestivalList, oldRecommendFestivalList } from "utils/game/festival/constant";
-import { FestivalType } from "utils/game/festival/type";
+import { festivalTypeMap, recommendFestivalList, oldRecommendFestivalList } from "lib/game/festival/constant";
+import { FestivalType } from "lib/game/festival/type";
+import { BASE_URL } from "lib/utils/constant";
 import replaceLineBreak from "lib/utils/function";
 import styles from "./result.module.scss";
 
