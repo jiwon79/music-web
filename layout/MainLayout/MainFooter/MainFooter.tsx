@@ -10,7 +10,7 @@ import styles from './MainFooter.module.scss';
 const MainFooter = ({ title }) => {
   return (
     <footer className={styles.footer}>
-      <Link href={"#1"}>
+      <Link href={"/"}>
         <div className={cx(
           styles.footer__item, {[styles.active]: title === 'illusion' }
         )}>
@@ -18,7 +18,7 @@ const MainFooter = ({ title }) => {
           <p className={styles.label}>홈</p>
         </div>
       </Link>
-      <Link href={"#2"}>
+      <Link href={"time"}>
         <div className={cx(
           styles.footer__item, {[styles.active]: title === 'time' }
         )}>
