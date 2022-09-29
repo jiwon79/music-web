@@ -1,3 +1,5 @@
+@import "components/common/styleGuide.module";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,12 @@
   }
 }
 
+.title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black2;
+}
 
 .button {
   width: 24px;
