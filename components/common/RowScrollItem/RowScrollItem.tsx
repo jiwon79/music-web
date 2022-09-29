@@ -18,13 +18,13 @@ export interface ScrollItemStyle {
 const RowScrollItem = ({ title, url, imageUrl, style }: ScrollItemProps) => {
   return (
     <Link href={url}>
-      <div className={styles.item} style={{ alignItems: style.align }}>
+      <div className={styles.item} style={{ alignItems: style?.align }}>
         <div
           className={styles.item__image}
           style={{
-            borderRadius: style.borderRadius,
-            width: style.size,
-            height: style.size,
+            borderRadius: style?.borderRadius,
+            width: style?.size,
+            height: style?.size,
           }}
         />
         <p className={styles.item__title}>{title}</p>

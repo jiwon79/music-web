@@ -1,8 +1,32 @@
 import Link from "next/link";
 import MainLayout from "layout/MainLayout/MainLayout";
+import RowScroll from "components/common/RowScroll/RowScroll";
 import styles from "./time.module.scss";
 
 const TimePage = () => {
+  const maniaListInfo = [
+    {
+      title: "매니아 발굴기 1",
+      url: "/time/mania/1",
+      imageUrl: "",
+    },
+    {
+      title: "매니아 발굴기 2",
+      url: "/time/mania/2",
+      imageUrl: "",
+    },
+    {
+      title: "매니아 발굴기 3",
+      url: "/time/mania/3",
+      imageUrl: "",
+    },
+    {
+      title: "매니아 발굴기 4",
+      url: "/time/mania/4",
+      imageUrl: "",
+    },
+  ];
+
   return (
     <MainLayout title={'TIME X MUSIC'}>
       <div className={styles.title__wrap}>
@@ -11,6 +35,7 @@ const TimePage = () => {
           <p className={styles.link}>전체보기</p>
         </Link>
       </div>
+      <RowScroll listInfo={maniaListInfo} style={{ size: "148px" }} />
     </MainLayout>
   )
 }
