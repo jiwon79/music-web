@@ -42,3 +42,23 @@
   height: 72px;
   background: linear-gradient(180deg, #dddaef 0%, #fff 50%);
 }
+
+.caption {
+  color: $gray4;
+  text-align: center;
+  margin: 4px 0 4px 0;
+  font-size: 14px;
+}
+.content__ques {
+  padding: 32px 32px 0 32px;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.content__ans {
+  padding: 16px 32px 16px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  word-break: keep-all;
+}
