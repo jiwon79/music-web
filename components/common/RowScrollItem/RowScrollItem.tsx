@@ -1,4 +1,4 @@
-import styles from './HomeItem.module.scss';
+import styles from './RowScrollItem.module.scss';
 import Link from "next/link";
 
 export interface HomeItemProps {
@@ -8,7 +8,7 @@ export interface HomeItemProps {
   borderRadius?: number;
 }
 
-const HomeItem = ({ title, url, imageUrl, borderRadius }: HomeItemProps) => {
+const RowScrollItem = ({ title, url, imageUrl, borderRadius }: HomeItemProps) => {
   return (
     <Link href={url}>
       <div className={styles.item}>
@@ -22,4 +22,4 @@ const HomeItem = ({ title, url, imageUrl, borderRadius }: HomeItemProps) => {
   )
 }
 
-export default HomeItem;
+export default RowScrollItem;

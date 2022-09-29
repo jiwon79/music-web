@@ -1,4 +1,4 @@
-import { HomeItemProps } from "components/home/HomeItem/HomeItem";
+import { HomeItemProps } from "components/common/RowScrollItem/RowScrollItem";
 
 const BASE_URL: string = 'https://illusion-0.vercel.app';
 

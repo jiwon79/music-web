@@ -1,16 +1,16 @@
-import styles from './HomeItemList.module.scss';
-import HomeItem, {HomeItemProps} from "../HomeItem/HomeItem";
+import styles from './RowScroll.module.scss';
+import RowScrollItem, {HomeItemProps} from "../RowScrollItem/RowScrollItem";
 
 interface HomeItemListProps {
   listInfo: HomeItemProps[];
   borderRadius?: number;
 }
 
-const HomeItemList = ({ listInfo, borderRadius }: HomeItemListProps) => {
+const RowScroll = ({ listInfo, borderRadius }: HomeItemListProps) => {
   return (
     <div className={styles.container} >
       {listInfo.map((item) =>
-        <HomeItem
+        <RowScrollItem
           key={item.url}
           title={item.title}
           url={item.url}
@@ -22,4 +22,4 @@ const HomeItemList = ({ listInfo, borderRadius }: HomeItemListProps) => {
   )
 }
 
-export default HomeItemList;
+export default RowScroll;
