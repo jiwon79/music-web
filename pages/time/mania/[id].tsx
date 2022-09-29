@@ -15,6 +15,16 @@ const ManiaDetailPage = () => {
         <p className={styles.title}>좋아하는 것을 마음껏 좋아하기</p>
       </div>
       <div className={styles.content__wrap}>
+        <div className={styles.summary}>
+          <p>
+            <b>❤️‍🔥 “지금 내가 사랑하는 것들을 앞으로도 사랑해야겠다는 마음을 가지게 해줬어요.”</b><br /><br />
+            자신이 사랑하는 것들을 지키기 위해 노력하는 20대 대학생을 만나보았다.<br />
+            그는 10대 때부터 공연을 사랑해왔고, 지금은 자신이 가장 좋아하는 아티스트와 함께 일하는 삶을 살고 있다.<br />
+            그의 이야기는 미래를 위해 습관처럼 현재를 포기하며 살아왔던 우리 스스로에게 물음표를 던지게 한다.
+          </p>
+          <div className={styles.gradient} />
+
+        </div>
         <p>
           고동을 뭇 구하지 모래뿐일 예가 약동하다.
           동력은 따뜻한 청춘의 구하기 얼마나 타오르고

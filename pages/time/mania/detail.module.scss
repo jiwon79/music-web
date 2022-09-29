@@ -28,5 +28,17 @@
   display: block;
   z-index: 12;
   background-color: $white;
-  padding: 24px 32px 24px 32px;
+}
+
+.summary {
+  p {
+    padding: 72px 32px 32px 32px;
+  }
+
+  background-color: #dddaef;
+}
+
+.gradient {
+  height: 72px;
+  background: linear-gradient(180deg, #dddaef 0%, #fff 50%);
 }
