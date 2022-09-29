@@ -1,12 +1,12 @@
 import styles from './RowScroll.module.scss';
-import RowScrollItem, {HomeItemProps} from "../RowScrollItem/RowScrollItem";
+import RowScrollItem, { ScrollItemProps, ScrollItemStyle} from "../RowScrollItem/RowScrollItem";
 
-interface HomeItemListProps {
-  listInfo: HomeItemProps[];
-  borderRadius?: number;
+interface ScrollListProps {
+  listInfo: ScrollItemProps[];
+  style?: ScrollItemStyle;
 }
 
-const RowScroll = ({ listInfo, borderRadius }: HomeItemListProps) => {
+const RowScroll = ({ listInfo, style }: ScrollListProps) => {
   return (
     <div className={styles.container} >
       {listInfo.map((item) =>
@@ -15,7 +15,7 @@ const RowScroll = ({ listInfo, borderRadius }: HomeItemListProps) => {
           title={item.title}
           url={item.url}
           imageUrl={item.imageUrl}
-          borderRadius={borderRadius}
+          style={style}
         />
       )}
     </div>
