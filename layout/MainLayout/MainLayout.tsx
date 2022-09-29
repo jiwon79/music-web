@@ -1,4 +1,5 @@
 import { useState } from "react";
+import cx from 'classnames';
 import Sidebar from "./Sidebar/Sidebar";
 
 import styles from './MainLayout.module.scss';
@@ -14,7 +15,9 @@ export default function MainLayout({ children, title }) {
   return (
     <div className={styles.container} >
       <MainHeader handleSideOpen={handleSideOpen} title={title} />
-      <main className={styles.main}>{children}</main>
+      <main className={cx(styles.main, {[styles.sideOpen]: isSideOpen})}>
+        {children}
+      </main>
       <MainFooter />
 
       <Sidebar
