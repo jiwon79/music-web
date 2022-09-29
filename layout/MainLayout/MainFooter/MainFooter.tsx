@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import cx from 'classnames';
 import HomeIcon from '/public/icons/ic_home.svg';
 import TimeIcon from '/public/icons/ic_time.svg';
@@ -7,20 +8,23 @@ import GameIcon from '/public/icons/ic_game.svg';
 import Link from "next/link";
 import styles from './MainFooter.module.scss';
 
-const MainFooter = ({ title }) => {
+const MainFooter = () => {
+  const { pathname } = useRouter();
+  const type = pathname.split('/')[1];
+
   return (
     <footer className={styles.footer}>
       <Link href={"/"}>
         <div className={cx(
-          styles.footer__item, {[styles.active]: title === 'illusion' }
+          styles.footer__item, {[styles.active]: type === '' }
         )}>
           <HomeIcon />
           <p className={styles.label}>홈</p>
         </div>
       </Link>
-      <Link href={"time"}>
+      <Link href={"/time"}>
         <div className={cx(
-          styles.footer__item, {[styles.active]: title === 'time' }
+          styles.footer__item, {[styles.active]: type === 'time' }
         )}>
           <TimeIcon />
           <p className={styles.label}>타임X뮤직</p>
@@ -28,7 +32,7 @@ const MainFooter = ({ title }) => {
       </Link>
       <Link href={"#3"}>
         <div className={cx(
-          styles.footer__item, {[styles.active]: title === 'playlist' }
+          styles.footer__item, {[styles.active]: type === 'playlist' }
         )}>
           <PlayListIcon />
           <p className={styles.label}>플레이리스트</p>
@@ -36,7 +40,7 @@ const MainFooter = ({ title }) => {
       </Link>
       <Link href={"#4"}>
         <div className={cx(
-          styles.footer__item, {[styles.active]: title === 'game' }
+          styles.footer__item, {[styles.active]: type === 'game' }
         )}>
           <GameIcon />
           <p className={styles.label}>게임/테스트</p>

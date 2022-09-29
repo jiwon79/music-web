@@ -15,7 +15,7 @@ export default function MainLayout({ children, title }) {
     <div className={styles.container} >
       <MainHeader handleSideOpen={handleSideOpen} title={title} />
       <main className={styles.main}>{children}</main>
-      <MainFooter title={title} />
+      <MainFooter />
 
       <Sidebar
         isSideOpen={isSideOpen}
