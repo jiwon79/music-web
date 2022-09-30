@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  padding: 24px 32px 24px 32px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 24px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.last {
+  grid-column: 1 / 3;
+}
