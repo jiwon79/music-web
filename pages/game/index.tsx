@@ -1,5 +1,5 @@
-import MainLayout from "../../layout/MainLayout/MainLayout";
 import Link from "next/link"
+import MainLayout from "layout/MainLayout/MainLayout";
 
 export default function GamePage() {
   return (

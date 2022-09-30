@@ -1,14 +1,27 @@
+@import "components/common/styleGuide.module";
+
 .header {
   display: flex;
+  position: fixed;
+  top: 0;
+  width: min(100vw, 480px);
   justify-content: space-between;
   padding: 10px 32px 10px 32px;
   box-shadow: 0 14px 60px rgba(98, 98, 98, 0.25);
+  z-index: 21;
+  background-color: $white;
 
   button {
     cursor: pointer;
   }
 }
 
+.title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black2;
+}
 
 .button {
   width: 24px;

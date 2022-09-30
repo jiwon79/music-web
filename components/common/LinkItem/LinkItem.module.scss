@@ -1,10 +1,14 @@
 @import '/components/common/styleGuide.module';
 
 .item {
-  margin: 0 8px 0 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .item__image {
+  position: relative;
+  overflow: hidden;
   width: 94px;
   height: 94px;
   background-color: $gray4;

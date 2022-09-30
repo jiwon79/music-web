@@ -1,0 +1,80 @@
+@import "components/common/styleGuide.module";
+
+.title__wrap {
+  position: fixed;
+  width: min(100vw, 480px);
+  z-index: 0;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.thumbnail {
+  background-color: $gray2;
+}
+
+.content__wrap {
+  position: relative;
+  margin-top: min(100vw, 480px);
+  display: block;
+  z-index: 12;
+  background-color: $white;
+}
+
+.summary {
+  p {
+    padding: 72px 32px 32px 32px;
+  }
+
+  background-color: #dddaef;
+}
+
+.gradient {
+  height: 72px;
+  background: linear-gradient(180deg, #dddaef 0%, #fff 50%);
+}
+
+.caption {
+  color: $gray4;
+  text-align: center;
+  margin: 4px 0 4px 0;
+  font-size: 14px;
+}
+
+.content__ques {
+  padding: 32px 32px 0 32px;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.content__ans {
+  padding: 16px 32px 16px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  word-break: keep-all;
+}
+
+.video__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
