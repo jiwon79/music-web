@@ -30,7 +30,7 @@ const MainFooter = () => {
           <p className={styles.label}>타임X뮤직</p>
         </div>
       </Link>
-      <Link href={"#3"}>
+      <Link href={"/playlist"}>
         <div className={cx(
           styles.footer__item, {[styles.active]: type === 'playlist' }
         )}>
@@ -38,7 +38,7 @@ const MainFooter = () => {
           <p className={styles.label}>플레이리스트</p>
         </div>
       </Link>
-      <Link href={"#4"}>
+      <Link href={"/game"}>
         <div className={cx(
           styles.footer__item, {[styles.active]: type === 'game' }
         )}>

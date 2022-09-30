@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import MainLayout from "layout/MainLayout/MainLayout";
 import Title from "components/home/Title/Title";
@@ -10,8 +9,6 @@ import { homePlayListInfo, homeGameListInfo } from "lib/utils/constant";
 import styles from './home.module.scss';
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <MainLayout title={"illusion"}>
       <Head>
@@ -52,22 +49,10 @@ export default function Home() {
       <RowScroll listInfo={homePlayListInfo} />
 
       <Title title={'GAME X TEST'} direction={'left'} />
-      <RowScroll listInfo={homeGameListInfo} borderRadius={50} />
-
-      <button
-        onClick={() => {
-          router.push('/game');
-        }}
-      >
-        게임 모음
-      </button>
-      <button
-        onClick={() => {
-          router.push('/write');
-        }}
-      >
-        텍스트 에디터
-      </button>
+      <RowScroll
+        listInfo={homeGameListInfo}
+        style={{ borderRadius: 50, align: "center" }}
+      />
     </MainLayout>
   )
 }
