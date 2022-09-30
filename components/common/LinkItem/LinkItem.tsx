@@ -1,11 +1,14 @@
-import styles from './LinkItem.module.scss';
 import Link from "next/link";
-import { Property } from "csstype";
 import Image from "next/image";
+import cx from 'classnames';
+import { Property } from "csstype";
+
+import styles from './LinkItem.module.scss';
 
 export interface LinkItemProps {
   title: string;
   url: string;
+  className?: string;
   imageUrl?: string;
   style?: LinkItemStyle;
 }
@@ -17,10 +20,10 @@ export interface LinkItemStyle {
   height?: Property.Height<string | number>;
 }
 
-const LinkItem = ({ title, url, imageUrl, style }: LinkItemProps) => {
+const LinkItem = ({ title, url, className, imageUrl, style }: LinkItemProps) => {
   return (
     <Link href={url}>
-      <div className={styles.item} style={{ alignItems: style?.align }}>
+      <div className={cx(styles.item, className)} style={{ alignItems: style?.align }}>
         <div
           className={styles.item__image}
           style={{

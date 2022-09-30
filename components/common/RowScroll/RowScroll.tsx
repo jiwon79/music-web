@@ -15,6 +15,7 @@ const RowScroll = ({ listInfo, style }: ScrollListProps) => {
           title={item.title}
           url={item.url}
           imageUrl={item.imageUrl}
+          className={styles.item}
           style={style}
         />
       )}
