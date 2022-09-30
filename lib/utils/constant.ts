@@ -1,8 +1,8 @@
-import { ScrollItemProps } from "components/common/RowScrollItem/RowScrollItem";
+import { LinkItemProps } from "components/common/LinkItem/LinkItem";
 
 const BASE_URL: string = 'https://illusion-0.vercel.app';
 
-const homePlayListInfo: ScrollItemProps[] = [
+const homePlayListInfo: LinkItemProps[] = [
   {
     title: '음악 제목 01',
     url: '#001',
@@ -30,7 +30,7 @@ const homePlayListInfo: ScrollItemProps[] = [
   },
 ];
 
-const homeGameListInfo: ScrollItemProps[] = [
+const homeGameListInfo: LinkItemProps[] = [
   {
     title: '리스터 타입',
     url: '#001',

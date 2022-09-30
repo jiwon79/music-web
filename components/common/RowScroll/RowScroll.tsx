@@ -1,16 +1,16 @@
 import styles from './RowScroll.module.scss';
-import RowScrollItem, { ScrollItemProps, ScrollItemStyle} from "../RowScrollItem/RowScrollItem";
+import LinkItem, { LinkItemProps, LinkItemStyle} from "../LinkItem/LinkItem";
 
 interface ScrollListProps {
-  listInfo: ScrollItemProps[];
-  style?: ScrollItemStyle;
+  listInfo: LinkItemProps[];
+  style?: LinkItemStyle;
 }
 
 const RowScroll = ({ listInfo, style }: ScrollListProps) => {
   return (
     <div className={styles.container} >
       {listInfo.map((item) =>
-        <RowScrollItem
+        <LinkItem
           key={item.url}
           title={item.title}
           url={item.url}

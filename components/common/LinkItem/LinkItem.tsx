@@ -1,21 +1,21 @@
-import styles from './RowScrollItem.module.scss';
+import styles from './LinkItem.module.scss';
 import Link from "next/link";
 import { Property } from "csstype";
 
-export interface ScrollItemProps {
+export interface LinkItemProps {
   title: string;
   url: string;
   imageUrl: string;
-  style?: ScrollItemStyle;
+  style?: LinkItemStyle;
 }
 
-export interface ScrollItemStyle {
+export interface LinkItemStyle {
   align?: Property.AlignItems
   borderRadius?: Property.BorderRadius<string | number>;
   size?: Property.Width<string | number>;
 }
 
-const RowScrollItem = ({ title, url, imageUrl, style }: ScrollItemProps) => {
+const LinkItem = ({ title, url, imageUrl, style }: LinkItemProps) => {
   return (
     <Link href={url}>
       <div className={styles.item} style={{ alignItems: style?.align }}>
@@ -33,4 +33,4 @@ const RowScrollItem = ({ title, url, imageUrl, style }: ScrollItemProps) => {
   )
 }
 
-export default RowScrollItem;
+export default LinkItem;
