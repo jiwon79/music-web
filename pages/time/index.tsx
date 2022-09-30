@@ -35,7 +35,7 @@ const TimePage = () => {
           <p className={styles.link}>전체보기</p>
         </Link>
       </div>
-      <RowScroll listInfo={maniaListInfo} style={{ size: "148px" }} />
+      <RowScroll listInfo={maniaListInfo} style={{ width: "148px" }} />
     </MainLayout>
   )
 }
