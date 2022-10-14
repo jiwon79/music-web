@@ -50,10 +50,7 @@ const ManiaDetailPage = () => {
           <Image
             src={"/mania/mania_1_2.png"}
             alt={"당시 사용했던 CD 판매 계정"}
-            className={styles.autoImage}
             layout={"fill"}
-            // width={1000}
-            // height={100}
           />
         </div>
         <p className={styles.caption}>당시 사용했던 CD 판매 계정</p>
@@ -83,14 +80,13 @@ const ManiaDetailPage = () => {
           팬분들이 음악을 온전히 음미하는 데 방해될 수 있는 요인은 최대한 제거하려 했거든요.
         </p>
 
-        <Image
-          src={"/mania/mania_1_3.png"}
-          alt={"음감회 현장 사진"}
-          width={500}
-          layout={"responsive"}
-          height={378}
-          objectFit="cover"
-        />
+        <div className={styles.image}>
+          <Image
+            src={"/mania/mania_1_3.png"}
+            alt={"음감회 현장 사진"}
+            layout={"fill"}
+          />
+        </div>
         <p className={styles.caption}>음감회 현장사진</p>
 
         <div className={styles.video__container}>
@@ -143,14 +139,13 @@ const ManiaDetailPage = () => {
           이런 이유 때문인지, 팬과 아티스트를 떠나서 인간 대 인간으로서 많이 존경하게 되는 것 같아요.
         </p>
 
-        <Image
-          src={"/mania/mania_1_4.png"}
-          alt={"기획으로 참여했던 공연 현장사진"}
-          width={500}
-          layout={"responsive"}
-          height={378}
-          objectFit="cover"
-        />
+        <div className={styles.image}>
+          <Image
+            src={"/mania/mania_1_4.png"}
+            alt={"기획으로 참여했던 공연 현장사진"}
+            layout={"fill"}
+          />
+        </div>
         <p className={styles.caption}>기획으로 참여했던 공연 현장사진</p>
 
         <p className={styles.content__title}>그가 바라보는 한국사람</p>
