@@ -66,15 +66,16 @@
 
 .content__ques {
   padding: 32px 32px 0 32px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
   word-break: keep-all;
 }
 
 .content__ans {
-  padding: 16px 32px 16px 32px;
+  padding: 16px 32px 28px 32px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   word-break: keep-all;
 }
 
