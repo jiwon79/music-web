@@ -1,0 +1,16 @@
+@import "components/common/styleGuide.module";
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 150px;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  cursor: pointer;
+
+  p {
+    font-size: 20px;
+  }
+}

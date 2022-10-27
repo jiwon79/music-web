@@ -25,6 +25,7 @@
 .content__wrap {
   position: relative;
   margin-top: min(100vw, 480px);
+  padding-bottom: 128px;
   display: block;
   z-index: 12;
   background-color: $white;
@@ -33,6 +34,12 @@
 .summary {
   p {
     padding: 72px 32px 32px 32px;
+    line-height: 24px;
+    font-weight: 700;
+
+    span {
+      font-size: 20px;
+    }
   }
 
   background-color: #dddaef;
@@ -46,22 +53,44 @@
 .caption {
   color: $gray4;
   text-align: center;
-  margin: 4px 0 4px 0;
+  margin: 4px 0 14px 0;
   font-size: 14px;
+}
+
+.content__title {
+  padding: 0 32px 0 32px;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 64px;
 }
 
 .content__ques {
   padding: 32px 32px 0 32px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
   word-break: keep-all;
 }
 
 .content__ans {
-  padding: 16px 32px 16px 32px;
+  padding: 16px 32px 28px 32px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 28px;
   word-break: keep-all;
+}
+
+.image {
+  margin: 0 32px 0 32px;
+
+  span {
+    position: unset !important;
+  }
+
+  img {
+    position: relative !important;
+    object-fit: contain !important;
+    height: auto !important;
+  }
 }
 
 .video__container {

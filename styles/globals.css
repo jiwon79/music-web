@@ -16,6 +16,11 @@
   src: url('/fonts/Galmuri11.ttf');
 }
 
+* {
+  font-family: Pretendard, sans-serif;
+}
+
+
 .text {
   font-family: galmuri, serif;
 }
