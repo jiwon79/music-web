@@ -2,6 +2,7 @@ import Link from "next/link";
 import MainLayout from "layout/MainLayout/MainLayout";
 import RowScroll from "components/common/RowScroll/RowScroll";
 import styles from "./time.module.scss";
+import NotYet from "components/common/NotYet/NotYet";
 
 const TimePage = () => {
   const maniaListInfo = [
@@ -29,13 +30,14 @@ const TimePage = () => {
 
   return (
     <MainLayout title={'TIME X MUSIC'}>
-      <div className={styles.title__wrap}>
-        <p className={styles.title}>매니아 발굴기</p>
-        <Link href={'/time/mania'}>
-          <p className={styles.link}>전체보기</p>
-        </Link>
-      </div>
-      <RowScroll listInfo={maniaListInfo} style={{ width: "148px" }} />
+      <NotYet title={'벗꽃이 피는 날 공개'}/>
+      {/*<div className={styles.title__wrap}>*/}
+      {/*  <p className={styles.title}>매니아 발굴기</p>*/}
+      {/*  <Link href={'/time/mania'}>*/}
+      {/*    <p className={styles.link}>전체보기</p>*/}
+      {/*  </Link>*/}
+      {/*</div>*/}
+      {/*<RowScroll listInfo={maniaListInfo} style={{ width: "148px" }} />*/}
     </MainLayout>
   )
 }

@@ -138,6 +138,15 @@ p {
   margin-left: 312px;
 }
 
+.yet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 /*.ql-editor span {*/
 /*  background: linear-gradient(to top, #f5fa10 50%, transparent 50%) !important;*/
 /*}*/
