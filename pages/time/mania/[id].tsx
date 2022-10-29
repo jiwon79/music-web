@@ -7,7 +7,7 @@ const ManiaDetailPage = () => {
     <MainLayout title={'매니아 발굴기'}>
       <div className={styles.title__wrap}>
         <Image
-          src={"/mania/mania_1_1.png"}
+          src={"/mania/mania_1_5.jpeg"}
           alt={"mania thumbnail"}
           width={480}
           height={480}
@@ -27,7 +27,7 @@ const ManiaDetailPage = () => {
 
         <p className={styles.content__title}>좋아하는 것을 마음껏 좋아하기</p>
         <p className={styles.content__ques}>
-          주변에서 '성덕'(성공한 덕후)로 불린다고 들었어요. 아티스트 분과 따로 아는 사이신가요?
+          주변에서 '성덕'(성공한 덕후)으로 불린다고 들었어요. 아티스트 분과 따로 아는 사이신가요?
         </p>
         <p className={styles.content__ans}>
           아! 10대 때부터 '한국사람'이라는 아티스트 분을 좋아했어요. 햇수로 따지면 5년째네요.
@@ -36,6 +36,15 @@ const ManiaDetailPage = () => {
           그렇게 고독방(팬 단톡방)의 방장까지 되면서 아티스트 분과 연이 이어졌어요.
           지금은 일을 맡겨주기도 하시고요.
         </p>
+
+        <div className={styles.image}>
+          <Image
+            src={"/mania/mania_1_1.png"}
+            alt={"한국사람과 예원"}
+            layout={"fill"}
+          />
+        </div>
+        <p className={styles.caption}>한국사람과 예원</p>
 
         <p className={styles.content__ques}>
           정말 말 그대로 성덕이시네요(웃음). 일을 맡겨주셨다고 했는데, 어떤 일인지 여쭤봐도 될까요?
@@ -101,7 +110,7 @@ const ManiaDetailPage = () => {
         <p className={styles.caption}>음감회 프리뷰 영상</p>
 
         <p className={styles.content__ques}>
-          공연에 요가매트와 안대라니, 듣기만 해도 너무 신선하네요. 또 기획해보고 싶은 공연이 있다면요?
+          공연에 요가매트와 안대라니, 듣기만 해도 너무 신선하네요. 또 기획해 보고 싶은 공연이 있다면요?
         </p>
         <p className={styles.content__ans}>
           이건 모든 공연기획자들의 꿈일 텐데(웃음), 제가 좋아하는 아티스트들을 모두 동원한 공연을 만들어보고 싶어요. 너무 교과서적인가요?
@@ -158,7 +167,7 @@ const ManiaDetailPage = () => {
           '한국사람'의 음악은 마이너 한 언더 힙합 신에서도 메이저에 속해요.
           마이너 한 것들을 선호하다 보니 자연스레 접하게 됐는데,
           그 어디서도 들어보지 못한 독특함에 매료됐어요.<br />
-          '이런 게 있다고?' 싶은 것들로 가득 차있어요.(웃음)
+          '이런 게 있다고?' 싶은 것들로 가득 차 있어요(웃음).
           녹음하다 감정이 북받쳐 울먹이는 부분을 그대로 낸다든지.
           저는 양산형 음악을 지양하는 사람 중 한 명인데,
           한국사람은 그에 '반'하는 음악의 정점을 보여주는 느낌이에요.
