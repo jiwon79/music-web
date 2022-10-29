@@ -1,5 +1,5 @@
 import MenuIcon from "/public/icons/ic_menu.svg";
-import Logo from "/public/images/logo.svg";
+import Image from "next/image";
 import styles from './MainHeader.module.scss';
 
 interface MainHeaderProps {
@@ -17,7 +17,12 @@ const MainHeader = ({ handleSideOpen, title }: MainHeaderProps) => {
         <MenuIcon />
       </button>
       {title === 'illusion'
-        ? <Logo />
+        ? <Image
+          src={'/images/illusion_logo.png'}
+          alt={"album image"}
+          width={112}
+          height={24}
+        />
         : <p className={styles.title}>{title}</p>}
       <div className={styles.button} />
     </header>
