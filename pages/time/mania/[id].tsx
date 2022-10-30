@@ -7,7 +7,7 @@ const ManiaDetailPage = () => {
     <MainLayout title={'매니아 발굴기'}>
       <div className={styles.title__wrap}>
         <Image
-          src={"/mania/mania_1_5.jpg"}
+          src={"/mania/mania_1_5.png"}
           alt={"mania thumbnail"}
           width={480}
           height={480}
