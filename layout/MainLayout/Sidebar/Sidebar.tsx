@@ -3,8 +3,8 @@ import Link from "next/link";
 import { motion, PanInfo, useAnimation } from "framer-motion";
 import cx from "classnames";
 
-import Logo from "/public/images/logo.svg";
 import styles from './Sidebar.module.scss';
+import Image from "next/image";
 
 interface SidebarProps {
   isSideOpen: boolean;
@@ -51,7 +51,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isSideOpen, handleSideOpen }) => {
       variants={sidekickBodyStyles}
       transition={{ type: "spring", damping: 20, stiffness: 500 }}
     >
-      <Logo className={styles.logo} />
+      <div className={styles.logo}>
+        <Image
+          src={'/images/illusion_logo.png'}
+          alt={"album image"}
+          width={112}
+          height={24}
+        />
+      </div>
       <Link href={"#"}>
         <a className={styles.link}>설정</a>
       </Link>
