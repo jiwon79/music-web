@@ -220,7 +220,7 @@ const ManiaDetailPage = () => {
           <span className={styles.highlight}>
             '무언가를 좋아하면 잘하게 된다.' or '무언가를 잘하면 좋아하게 된다.'
           </span>
-          예원 씨는 어느 쪽에 속하는 사람인가요?
+          &nbsp;예원 씨는 어느 쪽에 속하는 사람인가요?
         </p>
         <p className={styles.content__ans}>
           &nbsp;전자요. 무언가를 좋아하면 그만큼 시간과 돈을 투자하게 되고,
