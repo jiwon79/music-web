@@ -80,6 +80,16 @@
   font-size: 16px;
   line-height: 28px;
   word-break: keep-all;
+
+}
+
+.highlight {
+  background: linear-gradient(to top, #8fed98 50%, transparent 50%);
+}
+
+.big {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .image {
