@@ -33,7 +33,7 @@ export default function ListenerType() {
             <a className={styles.startButton}>
               <div>
                 <Image
-                  src={"/icons/musicalnote-light.png"}
+                  src={"/icons/musicalnote-gray.png"}
                   alt={"start button"}
                   width={76}
                   height={76}
