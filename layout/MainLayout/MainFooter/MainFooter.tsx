@@ -18,7 +18,7 @@ const MainFooter = () => {
         <div className={cx(
           styles.footer__item, {[styles.active]: type === '' }
         )}>
-          <HomeIcon />
+          <HomeIcon width={24} height={24} />
           <p className={styles.label}>홈</p>
         </div>
       </Link>
@@ -26,7 +26,7 @@ const MainFooter = () => {
         <div className={cx(
           styles.footer__item, {[styles.active]: type === 'time' }
         )}>
-          <TimeIcon />
+          <TimeIcon width={24} height={24} />
           <p className={styles.label}>타임X뮤직</p>
         </div>
       </Link>
@@ -34,7 +34,7 @@ const MainFooter = () => {
         <div className={cx(
           styles.footer__item, {[styles.active]: type === 'playlist' }
         )}>
-          <PlayListIcon />
+          <PlayListIcon width={24} height={24} />
           <p className={styles.label}>플레이리스트</p>
         </div>
       </Link>
@@ -42,7 +42,7 @@ const MainFooter = () => {
         <div className={cx(
           styles.footer__item, {[styles.active]: type === 'game' }
         )}>
-          <GameIcon />
+          <GameIcon width={24} height={24} />
           <p className={styles.label}>게임/테스트</p>
         </div>
       </Link>
