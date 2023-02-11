@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 import useLoad from "lib/hooks/useLoad";
 import styles from "pages/game/listener/loading/loading.module.scss";
 import { listenerTypeMap } from "lib/game/listener/constant";
+import HotBeverageIcon from "/public/icons/hot_beverage.svg";
 
 export default function ListenerLoadingPage() {
   const { loadText, loadAction } = useLoad({ timeToLoad: 4 });
@@ -54,12 +54,7 @@ export default function ListenerLoadingPage() {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image
-          src="/icons/hotbeverage-light.png"
-          alt="loading icon"
-          width={76}
-          height={76}
-        />
+        <HotBeverageIcon width={76} height={76} />
       </div>
       <p className={styles.text}>Loading{loadText}</p>
     </div>

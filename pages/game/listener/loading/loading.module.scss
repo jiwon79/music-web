@@ -1,8 +1,8 @@
-@import "../../../../components/common/styleGuide.module";
+@import "/components/common/styleGuide.module";
 
 .container {
   padding: 24px 32px 24px 32px;
-  background-color: $brand-01;
+  background-color: $game-listener-1;
 
   display: flex;
   justify-content: center;
@@ -20,6 +20,10 @@
     width: 156px;
     height: 156px;
     background-color: #000;
+
+    svg {
+      fill: $game-listener-1;
+    }
   }
 
   .text {

@@ -1,48 +1,27 @@
 import styles from "./style.module.scss"
-import Image from "next/image";
+import HouseIcon from "/public/icons/house.svg";
+import KeyIcon from "/public/icons/key.svg";
+import GuitarIcon from "/public/icons/guitar.svg";
+import HeavyHeartIcon from "/public/icons/heavy_heart.svg";
+import CameraIcon from "/public/icons/camera.svg";
 
 export default function Menu() {
   return (
     <div className={styles.menu}>
       <div className={styles.menu__item}>
-        <Image
-          src={"/icons/housebuilding-light.png"}
-          alt={"start button"}
-          width={32}
-          height={32}
-        />
+        <HouseIcon width={32} height={32} />
       </div>
       <div className={styles.menu__item}>
-        <Image
-          src={"/icons/key-light.png"}
-          alt={"start button"}
-          width={32}
-          height={32}
-        />
+        <KeyIcon width={32} height={32} />
       </div>
       <div className={styles.menu__item}>
-        <Image
-          src={"/icons/guitar-light.png"}
-          alt={"start button"}
-          width={32}
-          height={32}
-        />
+        <GuitarIcon width={32} height={32} />
       </div>
       <div className={styles.menu__item}>
-        <Image
-          src={"/icons/heavyblackheart-light.png"}
-          alt={"start button"}
-          width={32}
-          height={32}
-        />
+        <HeavyHeartIcon width={32} height={32} />
       </div>
       <div className={styles.menu__item}>
-        <Image
-          src={"/icons/camera-light.png"}
-          alt={"start button"}
-          width={32}
-          height={32}
-        />
+        <CameraIcon width={32} height={32} />
       </div>
     </div>
   )

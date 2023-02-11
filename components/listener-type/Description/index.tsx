@@ -1,5 +1,5 @@
-import Image from "next/image";
 import styles from "./style.module.scss";
+import KissMarkIcon from "/public/icons/kissmark.svg";
 
 interface props {
   title: string;
@@ -12,12 +12,7 @@ export default function Description({title, descList}: props) {
       <p className={styles.title}>{title}</p>
       <div className={styles.detailList}>
         <div className={styles.image}>
-          <Image
-            src={"/icons/kissmark32.png"}
-            alt={"kiss mark icon"}
-            width={32}
-            height={32}
-          />
+          <KissMarkIcon width={32} height={32} />
         </div>
         <div className={styles.detail}>
           <div className={styles.bullet}> </div>
