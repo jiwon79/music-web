@@ -1,5 +1,5 @@
 export interface questionType {
   question: string,
-  answers: string[],
+  answers: JSX.Element[],
   result: string[][],
 }

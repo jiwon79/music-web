@@ -16,12 +16,16 @@
         font-size: 20px;
         line-height: 27px;
         margin-bottom: 7px;
+        letter-spacing: 1px;
     }
 
     p:nth-child(2) {
         font-family: galmuri-bold, serif;
-        font-size: 32px;
+        font-size: 30px;
         line-height: 43px;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+        word-break: keep-all;
     }
 }
 
@@ -34,10 +38,20 @@
     margin-top: 24px;
     padding: 0 20px 0 20px;
 
-    font-family: galmuri-bold, serif;
-    font-size: 20px;
+    font-family: galmuri, serif;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-size: 18px;
+
     word-break: keep-all;
     cursor: pointer;
+
+    span {
+        font-family: galmuri, serif;
+        font-weight: 900;
+        font-size: 14px;
+    }
 }
 
 .progressBar {
