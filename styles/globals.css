@@ -71,6 +71,10 @@ p {
   box-sizing: border-box;
 }
 
+button {
+  color: black;
+}
+
 .ql-insert {
   background-color: aqua !important;
 }

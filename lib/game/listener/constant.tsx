@@ -93,7 +93,7 @@ export const questionList: Array<questionType> = [
   {
     question: '내가 인생곡을 만난 상황과 비슷한 것은?',
     answers: [
-      <>예상치 못한 상황에서 우연히<span>(드라마 OST, 카페 배경음 등)</span></>,
+      <>예상치 못한 상황에서 우연히<br /><span>(드라마 OST, 카페 배경음 등)</span></>,
       <>내 취향의 음악들을 파도타기 하다가 발견. 유레카!</>,
     ],
     result: [
