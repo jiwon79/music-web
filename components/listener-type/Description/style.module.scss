@@ -19,21 +19,24 @@
 
   .detail {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin: 6px 0 6px 0;
 
-    div {
+    .bullet {
       width: 6px;
       height: 6px;
       background-color: #000;
       margin-right: 14px;
       transform: rotate(45deg);
+      margin-top: 8px;
     }
 
     p {
       width: 90%;
-      font-family: galmuri-bold, serif;
-      font-size: 16px;
+      font-family: galmuri, serif;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: -1px;
       line-height: 21px;
       word-break: keep-all;
     }

@@ -52,16 +52,16 @@ export default function ResultPage({listenerType}: props) {
         descList={listenerType.listenMusic}
       />
       <Description
-        title={"내가 음악을 찾을 때,"}
+        title={"나는 이럴 때 음악을 찾는다!"}
         descList={listenerType.findMusic}
       />
       <Description
-        title={"좋아하는 음악을 즐길 때,"}
+        title={"좋아하는 음악을 즐길 땐?"}
         descList={listenerType.enjoyMusic}
       />
 
       <div className={styles.recommend}>
-        <p className={styles.title}>이런 음악과 잘 맞으실 거에요!</p>
+        <p className={styles.title}>이 곡과 잘 맞으실 거예요!</p>
         {listenerType.recommend.map((music, index) =>
           <Album
             key={JSON.stringify(music)}
