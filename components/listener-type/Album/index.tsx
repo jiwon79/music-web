@@ -25,10 +25,9 @@ export default function Album({music, type, index}: props) {
         <p className={styles.title}>{music.title}</p>
         <p className={styles.artist}>{music.artist}</p>
         <div className={styles.buttons}>
-          <p>PLAY</p>
           <Link href={music.youtube || ''} passHref>
             <a target="_blank">
-              <p>YOUTUBE</p>
+              <p>PLAY</p>
             </a>
           </Link>
         </div>

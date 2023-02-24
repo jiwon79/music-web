@@ -7,19 +7,24 @@ import Description from "components/listener-type/Description";
 import Album from "components/listener-type/Album";
 import ShareButton from "components/common/ShareButtons";
 
+import LinkShareIcon from "public/icons/ic_share.svg";
+import FacebookShareIcon from "public/icons/ic_facebook.svg";
+import TwitterShareIcon from "public/icons/ic_twitter.svg";
+import KaKaoShareIcon from "public/icons/ic_kakao.svg";
+
 import styles from "./result.module.scss"
-import { listenerTypeMap } from "lib/game/listener/constant";
-import { listenerType } from "lib/game/listener/types";
+import {listenerTypeMap} from "lib/game/listener/constant";
+import {listenerType} from "lib/game/listener/types";
 
 interface props {
   listenerType: listenerType
 }
 
-export default function ResultPage({ listenerType }: props) {
+export default function ResultPage({listenerType}: props) {
   return (
     <div className={styles.container}>
       <Header title={"Hello, CLASSIC!"}/>
-      <MusicBar />
+      <MusicBar/>
 
       <div className={styles.music}>
         <p className={styles.music__play}>00:03 / 2:35</p>
@@ -66,19 +71,6 @@ export default function ResultPage({ listenerType }: props) {
         )}
       </div>
 
-      <div className={styles.action}>
-        <Link href={"/game/listener"}>
-          <a>
-            <div className={styles.button}>
-              <p>Retry?</p>
-            </div>
-          </a>
-        </Link>
-        <div className={styles.button}>
-          <p>Share!</p>
-        </div>
-      </div>
-      
       <p className={styles.shareTitle}>공유하기</p>
 
       <div className={styles.shares}>
@@ -88,39 +80,49 @@ export default function ResultPage({ listenerType }: props) {
             description: "내용!",
             imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
             link: {
-              mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type,
+              mobileWebUrl: "https://music-web-indol.vercel.app/game/listener/result/" + listenerType.type,
             }
           }}
           className={styles.shareButton}
         >
-          <p>KaKao</p>
+          <KaKaoShareIcon fill={"#fff"} width={"32px"} height={"32px"} />
         </ShareButton.KaKao>
         <ShareButton.Twitter
-          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          url={"https://music-web-indol.vercel.app/game/listener/result/" + listenerType.type}
           text={"twitter share text"}
           className={styles.shareButton}
         >
-          <p>Twitter</p>
+          <TwitterShareIcon fill={"#fff"} width={"40px"} height={"40px"}/>
         </ShareButton.Twitter>
         <ShareButton.Facebook
-          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          url={"https://music-web-indol.vercel.app/game/listener/result/" + listenerType.type}
           className={styles.shareButton}
         >
-          <p>Facebook</p>
+          <div className={`${styles.icon} ${styles.icon__facebook}`}>
+            <FacebookShareIcon fill={"#fff"} width={"32px"} height={"32px"} />
+          </div>
         </ShareButton.Facebook>
         <ShareButton.Url
-          url={"https://music-web-indol.vercel.app/game/listener/result/"+listenerType.type}
+          url={"https://music-web-indol.vercel.app/game/listener/result/" + listenerType.type}
           className={styles.shareButton}
         >
-          <p>링크 복사</p>
+          <div className={`${styles.icon} ${styles.icon__link}`}>
+            <LinkShareIcon width={"32px"} height={"32px"} />
+          </div>
         </ShareButton.Url>
       </div>
+
+      <Link href={"/game/listener"}>
+        <div className={styles.action}>
+          <p>Retry?</p>
+        </div>
+      </Link>
 
     </div>
   )
 }
 
-export function getStaticProps({ params }) {
+export function getStaticProps({params}) {
   return {
     props: {
       listenerType: listenerTypeMap[params.type]
@@ -129,16 +131,16 @@ export function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  return  {
+  return {
     paths: [
-      { params: { type: 'cherish' }},
-      { params: { type: 'innocent' }},
-      { params: { type: 'antique' }},
-      { params: { type: 'bizarre' }},
-      { params: { type: 'tender' }},
-      { params: { type: 'spontaneous' }},
-      { params: { type: 'puzzling' }},
-      { params: { type: 'candid' }},
+      {params: {type: 'cherish'}},
+      {params: {type: 'innocent'}},
+      {params: {type: 'antique'}},
+      {params: {type: 'bizarre'}},
+      {params: {type: 'tender'}},
+      {params: {type: 'spontaneous'}},
+      {params: {type: 'puzzling'}},
+      {params: {type: 'candid'}},
     ],
     fallback: false
   }
