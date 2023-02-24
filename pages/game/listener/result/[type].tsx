@@ -37,7 +37,7 @@ export default function ResultPage({listenerType}: props) {
         <p className={styles.typeName}>{listenerType.name}</p>
         <p className={styles.typeDesc}>{listenerType.description}</p>
 
-        <p className={styles.title}>음악과 함께할 때, KEYWORD!</p>
+        <p className={styles.title}>음악과 함께라면? KEYWORD!</p>
         <div className={styles.keywords}>
           {listenerType.keywords.map(keyword =>
             <Border innerWidth={12} outerWidth={84} key={keyword}>
