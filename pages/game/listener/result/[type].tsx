@@ -21,9 +21,12 @@ interface props {
 }
 
 export default function ResultPage({listenerType}: props) {
+  const classicTypeList: String[] = ["cherish", "innocent", "antique", "bizarre"];
+  const timeTypeString: String = classicTypeList.includes(listenerType.type) ? "CLASSIC" : "TRENDY";
+
   return (
     <div className={styles.container}>
-      <Header title={"Hello, CLASSIC!"}/>
+      <Header title={`Hello, ${timeTypeString}!`}/>
       <MusicBar/>
 
       <div className={styles.music}>
