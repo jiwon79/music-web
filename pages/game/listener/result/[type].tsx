@@ -31,8 +31,6 @@ export default function ResultPage({listenerType}: props) {
 
       <div className={styles.music}>
         <p className={styles.music__play}>00:03 / 2:35</p>
-        <p className={styles.music__title}>{listenerType.recommend[0].title}</p>
-        <p className={styles.music__artist}>{listenerType.recommend[0].artist}</p>
       </div>
 
       <div className={styles.listenerType}>
